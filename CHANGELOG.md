@@ -1,5 +1,5 @@
 21/10/25:
-- Ableton link fix. Main clock was not sometimes was not starting when ableton link enabled. 
+- Ableton link fix. Main clock was sometimes not starting with ableton link enabled. 
 
 12/10/25:
 - **core.scales.shapes** now has easier ways to select common scales - via sliders or midi input.
