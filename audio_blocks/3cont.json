@@ -1,0 +1,244 @@
+{
+	"3cont" : 	{
+		"name" : "3cont",
+		"type" : "audio",
+		"patcher" : "3cont",
+		"block_ui_patcher" : "blank.ui",
+		"help_text" : "encapsulated block containing:midi.utility.values, midi.utility.values, midi.utility.values",
+		"max_polyphony" : 0,
+		"upsample" : 1,
+		"connections" : 		{
+			"in" : 			{
+				"midi" : [  ],
+				"audio" : [  ]
+			}
+,
+			"out" : 			{
+				"midi" : [  ],
+				"audio" : [  ]
+			}
+
+		}
+,
+		"param_offsets" : [ 0, 3, 6 ],
+		"input_offsets" : [  ],
+		"output_offsets" : [  ],
+		"groups" : [ 			{
+				"contains" : [ 0, 1, 2 ]
+			}
+, 			{
+				"contains" : [ 3, 4, 5 ]
+			}
+, 			{
+				"contains" : [ 6, 7, 8 ]
+			}
+ ],
+		"parameters" : [ 			{
+				"name" : "A",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "B",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "C",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "A",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "B",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "C",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "A",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "B",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "C",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+ ],
+		"panel" : 		{
+			"parameters" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ],
+			"enabled" : 1
+		}
+,
+		"encapsulated" : 		{
+			"blocks" : [ 				{
+					"patcher" : "midi.utility.values",
+					"name" : "midi.utility.values",
+					"label" : "midi.utility.values",
+					"type" : "note",
+					"poly" : 					{
+						"stack_mode" : "1x",
+						"choose_mode" : "cycle free",
+						"steal_mode" : "oldest",
+						"return_mode" : 1,
+						"latching_mode" : 0,
+						"voices" : 8
+					}
+,
+					"panel" : 					{
+						"parameters" : [ 0, 1, 2 ],
+						"enable" : 1
+					}
+,
+					"error" : 					{
+						"spread" : 0,
+						"drift" : 0,
+						"lockup" : 0
+					}
+,
+					"flock" : 					{
+						"weight" : 0.2,
+						"tension" : 0.2,
+						"friction" : 0.4,
+						"bounce" : 0.7,
+						"attrep" : 0.5,
+						"align" : 0.5,
+						"twist" : 0.5,
+						"brownian" : 0
+					}
+,
+					"space" : 					{
+						"x" : 0,
+						"y" : 2.335162726667972,
+						"colour" : [ 146, 96, 28 ]
+					}
+
+				}
+, 				{
+					"patcher" : "midi.utility.values",
+					"name" : "midi.utility.values",
+					"label" : "midi.utility.values",
+					"type" : "note",
+					"poly" : 					{
+						"stack_mode" : "1x",
+						"choose_mode" : "cycle free",
+						"steal_mode" : "oldest",
+						"return_mode" : 1,
+						"latching_mode" : 0,
+						"voices" : 8
+					}
+,
+					"panel" : 					{
+						"parameters" : [ 0, 1, 2 ],
+						"enable" : 1,
+						"parameters,enable" : [ 0, 1, 2 ]
+					}
+,
+					"error" : 					{
+						"spread" : 0,
+						"drift" : 0,
+						"lockup" : 0
+					}
+,
+					"flock" : 					{
+						"weight" : 0.2,
+						"tension" : 0.2,
+						"friction" : 0.4,
+						"bounce" : 0.7,
+						"attrep" : 0.5,
+						"align" : 0.5,
+						"twist" : 0.5,
+						"brownian" : 0
+					}
+,
+					"space" : 					{
+						"x" : 5.031041646886276,
+						"y" : 1.063163517832572,
+						"colour" : [ 146, 96, 28 ]
+					}
+,
+					"mute" : 0
+				}
+, 				{
+					"patcher" : "midi.utility.values",
+					"name" : "midi.utility.values",
+					"label" : "midi.utility.values",
+					"type" : "note",
+					"poly" : 					{
+						"stack_mode" : "1x",
+						"choose_mode" : "cycle free",
+						"steal_mode" : "oldest",
+						"return_mode" : 1,
+						"latching_mode" : 0,
+						"voices" : 8
+					}
+,
+					"panel" : 					{
+						"parameters" : [ 0, 1, 2 ],
+						"enable" : 1,
+						"parameters,enable,parameters,enable" : [ 0, 1, 2 ]
+					}
+,
+					"error" : 					{
+						"spread" : 0,
+						"drift" : 0,
+						"lockup" : 0
+					}
+,
+					"flock" : 					{
+						"weight" : 0.2,
+						"tension" : 0.2,
+						"friction" : 0.4,
+						"bounce" : 0.7,
+						"attrep" : 0.5,
+						"align" : 0.5,
+						"twist" : 0.5,
+						"brownian" : 0
+					}
+,
+					"space" : 					{
+						"x" : 9.986143042498803,
+						"y" : 0,
+						"colour" : [ 146, 96, 28 ]
+					}
+
+				}
+ ]
+		}
+,
+		"colour" : [ 255, 200, 25 ]
+	}
+
+}

@@ -1,94 +1,92 @@
 {
-	"io" : 	{
-		"keyboards" : [ "Xkey37", "Xkey25" ],
-		"controllers" : 		{
-			"Midi Fighter Twister" : 			{
-				"name" : "Midi Fighter Twister",
-				"driver" : "Midi Fighter Twister",
-				"substitute" : [ "JAMES_16e" ],
-				"outputs" : 16,
-				"scaling" : 1,
-				"type" : "encoder",
-				"channel" : 1,
-				"first" : 0,
-				"columns" : 4,
-				"rows" : 4,
-				"colour" : 				{
-					"type" : "midifighter",
-					"channel" : 2,
-					"first" : 0
-				}
-,
-				"brightness" : 				{
-					"type" : "midifighter",
-					"channel" : 3,
-					"first" : 0,
-					"dim" : 19,
-					"bright" : 48
-				}
-,
-				"value" : 				{
-					"type" : "cc",
-					"channel" : 1,
-					"first" : 0
-				}
-,
-				"resets" : 				{
-					"type" : "cc",
-					"channel" : 2,
-					"first" : 0
-				}
-,
-				"buttons" : 				{
-					"type" : "cc",
-					"globals" : 					{
-						"automap_toggle" : 0,
-						"automap_page" : 3
-					}
-,
-					"channel" : 4,
-					"first" : 8
-				}
-
-			}
-
-		}
-,
-		"matrix" : 		{
-
-		}
-
-	}
-,
-	"hardware" : 	{
-		"hardware.out.1+2" : 		{
-			"type" : "hardware",
-			"max_polyphony" : 2,
-			"help_text" : "pc speakers",
-			"connections" : 			{
-				"in" : 				{
-					"hardware" : [ "out" ],
-					"hardware_channels" : [ 1, 2 ]
-				}
-
-			}
-
-		}
-,
-		"hardware.in.1+2" : 		{
-			"type" : "hardware",
-			"max_polyphony" : 2,
-			"help_text" : "pc microphones/inputs",
-			"connections" : 			{
-				"out" : 				{
-					"hardware" : [ "in" ],
-					"hardware_channels" : [ 1, 2 ]
-				}
-
-			}
-
-		}
-
-	}
-
+    "io": {
+        "keyboards": [ "Xkey37", "Xkey25" ],
+        "controllers": {
+            "Midi Fighter Twister": {
+                "name": "Midi Fighter Twister",
+                "driver": "Midi Fighter Twister",
+                "substitute": [ "JAMES_16e" ],
+                "outputs": 16,
+                "scaling": 1,
+                "type": "encoder",
+                "channel": 1,
+                "first": 0,
+                "columns": 4,
+                "rows": 4,
+                "colour": {
+                    "type": "midifighter",
+                    "channel": 2,
+                    "first": 0
+                },
+                "brightness": {
+                    "type": "midifighter",
+                    "channel": 3,
+                    "first": 0,
+                    "dim": 19,
+                    "bright": 48
+                },
+                "value": {
+                    "type": "cc",
+                    "channel": 1,
+                    "first": 0
+                },
+                "resets": {
+                    "type": "cc",
+                    "channel": 2,
+                    "first": 0
+                },
+                "buttons": {
+                    "type": "cc",
+                    "globals": {
+                        "automap_toggle": 0,
+                        "automap_page": 3
+                    },
+                    "channel": 4,
+                    "first": 8
+                }
+            },
+            "LCXL3 1 MIDI Out": {
+                "name": "LCXL3 1 MIDI Out",
+                "substitute": [],
+                "outputs": 64,
+                "type": "potentiometer",
+                "channel": 2,
+                "first": 5,
+                "scaling": 0.125,
+                "columns": 16,
+                "rows": 4,
+                "buttons": {
+                    "first": 37,
+                    "type": "cc",
+                    "channel": 3,
+                    "count": 16
+                }
+            }
+        },
+        "matrix": {        }
+    },
+    "hardware": {
+        "hardware.out.1+2": {
+            "type": "hardware",
+            "max_polyphony": 2,
+            "help_text": "pc speakers",
+            "connections": {
+                "in": {
+                    "hardware": [ "out" ],
+                    "hardware_channels": [ 1, 2 ]
+                }
+            }
+        },
+        "hardware.in.1+2": {
+            "type": "hardware",
+            "max_polyphony": 2,
+            "help_text": "pc microphones/inputs",
+            "connections": {
+                "out": {
+                    "hardware": [ "in" ],
+                    "hardware_channels": [ 1, 2 ]
+                }
+            }
+        }
+    }
 }

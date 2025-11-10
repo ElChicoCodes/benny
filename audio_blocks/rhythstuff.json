@@ -1,0 +1,327 @@
+{
+	"rhythstuff" : 	{
+		"name" : "rhythstuff",
+		"type" : "audio",
+		"patcher" : "rhythstuff",
+		"block_ui_patcher" : "blank.ui",
+		"help_text" : "encapsulated block containing:seq.eight.step.rhythm, midi.rhythmes.alpes",
+		"max_polyphony" : 0,
+		"upsample" : 1,
+		"connections" : 		{
+			"in" : 			{
+				"midi" : [ "note in", "clock in", "resync" ],
+				"audio" : [  ]
+			}
+,
+			"out" : 			{
+				"midi" : [ "note out", "inverted note out", "clock out" ],
+				"audio" : [  ]
+			}
+
+		}
+,
+		"param_offsets" : [ 0, 14 ],
+		"input_offsets" : [ 0, 1 ],
+		"output_offsets" : [ 0, 2 ],
+		"groups" : [ 			{
+				"contains" : [ 0, 1, 2, 3 ],
+				"header" : "8 Step Controls"
+			}
+, 			{
+				"contains" : [ 4, 5, 6, 7, 8, 9, 10, 11 ],
+				"header" : "Velocities"
+			}
+, 			{
+				"contains" : [ 12, 13 ],
+				"header" : "Rules"
+			}
+, 			{
+				"contains" : [ 14, 14, 15, 15, 18 ]
+			}
+, 			{
+				"contains" : [ 16, 17, 19 ]
+			}
+ ],
+		"parameters" : [ 			{
+				"name" : "Density",
+				"type" : "int",
+				"values" : [ "uni", 0, 8, "lin" ],
+				"wrap" : 0,
+				"default" : 0.15
+			}
+, 			{
+				"name" : "Phase",
+				"type" : "int",
+				"values" : [ "uni", 0, 7, "lin" ],
+				"wrap" : 1,
+				"default" : 0
+			}
+, 			{
+				"name" : "Bunch",
+				"type" : "float",
+				"values" : [ "uni", 0, 1, "lin" ],
+				"wrap" : 1,
+				"default" : 0
+			}
+, 			{
+				"name" : "Length",
+				"type" : "int",
+				"values" : [ "uni", 1, 8, "lin" ],
+				"wrap" : 0,
+				"default" : 0.98
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "↓",
+				"type" : "int",
+				"values" : [ "uni", 0, 127, "lin" ],
+				"click_set" : 1,
+				"wrap" : 0,
+				"default" : 0.787
+			}
+, 			{
+				"name" : "trig_type",
+				"type" : "menu_l",
+				"values" : [ "Vel Lock", "Vel Phase", "Vel Trig" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "Bar Reset",
+				"type" : "int",
+				"values" : [ "uni", 0, 8, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+, 			{
+				"name" : "division",
+				"type" : "float",
+				"values" : [ "uni", 6, 1, "lin" ],
+				"wrap" : 0,
+				"default" : 1
+			}
+, 			{
+				"name" : "width",
+				"type" : "float",
+				"values" : [ "uni", 1, 6, "lin" ],
+				"wrap" : 0,
+				"default" : 0.26
+			}
+, 			{
+				"name" : "velocity shape",
+				"type" : "menu_f",
+				"values" : [ "slowshelf", "bell", "fastshelf" ],
+				"wrap" : 0,
+				"default" : 0.5
+			}
+, 			{
+				"name" : "velocity drive",
+				"type" : "float",
+				"values" : [ "uni", 0.1, 1.1, "lin" ],
+				"wrap" : 0,
+				"default" : 0.5
+			}
+, 			{
+				"name" : "rotate",
+				"type" : "int",
+				"values" : [ "uni", 0, 16, "lin" ],
+				"wrap" : 1,
+				"default" : 0
+			}
+, 			{
+				"name" : "velocity gate",
+				"type" : "int",
+				"values" : [ "uni", 0, 126, "lin" ],
+				"wrap" : 0,
+				"default" : 0
+			}
+ ],
+		"panel" : 		{
+			"parameters" : [ 0, 1, 2, 3, 4, 5, 6, 14, 15, 18 ],
+			"enabled" : 1
+		}
+,
+		"encapsulated" : 		{
+			"blocks" : [ 				{
+					"patcher" : "abb.eight.step",
+					"name" : "seq.eight.step.rhythm",
+					"label" : "seq.eight.step.rhythm",
+					"type" : "note",
+					"poly" : 					{
+						"stack_mode" : "1x",
+						"choose_mode" : "cycle free",
+						"steal_mode" : "oldest",
+						"return_mode" : 1,
+						"latching_mode" : 0,
+						"voices" : 1
+					}
+,
+					"panel" : 					{
+						"parameters" : [ 0, 1, 2, 3, 4, 5, 6 ],
+						"enable" : 1
+					}
+,
+					"error" : 					{
+						"spread" : 0,
+						"drift" : 0,
+						"lockup" : 0
+					}
+,
+					"flock" : 					{
+						"weight" : 0.2,
+						"tension" : 0.2,
+						"friction" : 0.4,
+						"bounce" : 0.7,
+						"attrep" : 0.5,
+						"align" : 0.5,
+						"twist" : 0.5,
+						"brownian" : 0
+					}
+,
+					"space" : 					{
+						"x" : 0.037490924351288,
+						"y" : 0,
+						"colour" : [ 153, 58, 0 ]
+					}
+,
+					"automap_to" : 0,
+					"mute" : 0
+				}
+, 				{
+					"patcher" : "midi.rhythmes.alpes",
+					"name" : "midi.rhythmes.alpes",
+					"label" : "midi.rhythmes.alpes",
+					"type" : "note",
+					"poly" : 					{
+						"stack_mode" : "1x",
+						"choose_mode" : "cycle free",
+						"steal_mode" : "oldest",
+						"return_mode" : 1,
+						"latching_mode" : 0,
+						"voices" : 1
+					}
+,
+					"panel" : 					{
+						"parameters" : [ 0, 1, 4 ],
+						"enable" : 1
+					}
+,
+					"error" : 					{
+						"spread" : 0,
+						"drift" : 0,
+						"lockup" : 0
+					}
+,
+					"flock" : 					{
+						"weight" : 0.2,
+						"tension" : 0.2,
+						"friction" : 0.4,
+						"bounce" : 0.7,
+						"attrep" : 0.5,
+						"align" : 0.5,
+						"twist" : 0.5,
+						"brownian" : 0
+					}
+,
+					"space" : 					{
+						"x" : 0,
+						"y" : 1.30314829713426,
+						"colour" : [ 131, 70, 0 ]
+					}
+,
+					"automap_to" : 0,
+					"bypass" : 0
+				}
+ ],
+			"connections" : [ 				{
+					"from" : 					{
+						"number" : 1,
+						"output" : 						{
+							"type" : "midi",
+							"number" : 0
+						}
+,
+						"voice" : "all"
+					}
+,
+					"to" : 					{
+						"number" : 0,
+						"input" : 						{
+							"type" : "midi",
+							"number" : 0
+						}
+,
+						"voice" : 1
+					}
+,
+					"conversion" : 					{
+						"mute" : 0,
+						"scale" : 1,
+						"vector" : 0,
+						"offset" : 0.5,
+						"offset2" : 0.5
+					}
+
+				}
+ ]
+		}
+,
+		"colour" : [ 255, 200, 25 ]
+	}
+
+}

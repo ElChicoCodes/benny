@@ -66,11 +66,11 @@
 	"pattern_recall_timing_quantise" : "1n",
 	"waves_preloading" : 1,
 	"consolevsts" : {
-		"bus" : "console7buss64",
-		"channel" : "console7channel64",
-		"cascade" : "console7cascade64",
-		"crunch" : "console7crunch64",
-		"tape" : "totape664"
+		"bus" : "Console7Buss",
+		"channel" : "Console7Channel",
+		"cascade" : "Console7Cascade",
+		"crunch" : "Console7Crunch",
+		"tape" : "ToTape6"
 	},
 	"maxmsp" : {
 		"preempt" : 1,
