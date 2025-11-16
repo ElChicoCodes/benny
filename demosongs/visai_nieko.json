@@ -1,0 +1,3741 @@
+{
+    "MAX_WAVES": 256,
+    "version": 0.555,
+    "notepools": {
+        "shape": {
+            "1": [ 1, 2, 3, 4, 5, 6, 7 ],
+            "2": [ 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 4, 3, 5, 2, 1, 3, 5, 2, 1, 4, 3, 5 ]
+        },
+        "notes": {
+            "1": [ 2, 4, 6, 7, 9, 11, 13, 14, 16, 18, 19, 21, 23, 25, 26, 28, 30, 31, 33, 35, 37, 38, 40, 42, 43, 45, 47, 49, 50, 52, 54, 55, 57, 59, 61, 62, 64, 66, 67, 69, 71, 73, 74, 76, 78, 79, 81, 83, 85, 86, 88, 90, 91, 93, 95, 97, 98, 100, 102, 103, 105, 107, 109, 110, 112, 114, 115, 117, 119, 121 ],
+            "2": [ 2, 9, 11, 16, 19, 26, 33, 35, 40, 43, 50, 57, 59, 64, 67, 74, 81, 83, 88, 91, 98, 105, 107, 112, 115 ]
+        }
+    },
+    "waves": [
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        }
+    ],
+    "connections": [
+        {        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 24
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 25
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 2
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 26
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 3
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 27
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 4
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 28
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 5
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 29
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 6
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 30
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 7
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 31
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 5,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 8
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 40
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 41
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 2
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 42
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 3
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 43
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 4
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 44
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 5
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 45
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 6
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 46
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 7
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 47
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 6,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 8
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 56
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 57
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 2
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 58
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 3
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 59
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 4
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 60
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 5
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 61
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 6
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 62
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 7
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "from": {
+                "number": 4,
+                "output": {
+                    "type": "parameters",
+                    "number": 63
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 7,
+                "input": {
+                    "type": "parameters",
+                    "number": 0
+                },
+                "voice": 8
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0
+            }
+        },
+        {
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 1,
+                "offset2": 0.5,
+                "force_unity": 1
+            },
+            "from": {
+                "number": 8,
+                "voice": "all",
+                "output": {
+                    "number": 0,
+                    "type": "audio"
+                }
+            },
+            "to": {
+                "number": 9,
+                "voice": "all",
+                "input": {
+                    "number": 0,
+                    "type": "audio"
+                }
+            }
+        },
+        {
+            "from": {
+                "number": 9,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 3,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 1,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 11,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 11,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 10,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 10,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 1, 2 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 12,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 12,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 13,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 13,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 3, 4 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 15,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 14,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 15,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 14,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 5, 6 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 23,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 16,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 17,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 17,
+                "output": {
+                    "type": "hardware",
+                    "number": 1
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 7, 8 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0.47354497354497355,
+                "offset": 0.8077601410934744,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 17,
+                "output": {
+                    "type": "hardware",
+                    "number": 1
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 18,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 18,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 7, 8 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.8641975308641975,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 23,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 20,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 20,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 16,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 18,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 17,
+                "input": {
+                    "type": "hardware",
+                    "number": 1
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 17,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 24,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 24,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 7, 8 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5361552028218695,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 15,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 25,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 25,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 5, 6 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 11,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 27,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 27,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 23,
+                "input": {
+                    "type": "midi",
+                    "number": 3
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 34,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 30,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 30,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 28,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 20,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 32,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 28,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 31,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 31,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 9, 10 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 33,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 22,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 2
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 32,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 33,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 2,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 34,
+                "input": {
+                    "type": "midi",
+                    "number": 4
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5007812499999987,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 36,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 34,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 31,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 35,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 35,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 9, 10 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 36,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 20,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 37,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 38,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 40,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 38,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 11, 12 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 37,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 39,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 39,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 38,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 39,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 41,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 41,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 40,
+                "input": {
+                    "type": "hardware",
+                    "number": 2
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 40,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 8,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 11, 12 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "offset": 0,
+                "offset2": 0.5
+            }
+        }
+    ],
+    "blocks": [
+        {
+            "patcher": "core.clock",
+            "name": "core.clock",
+            "label": "core.clock",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -9.25,
+                "y": 3.25,
+                "colour": [ 131, 30, 0 ]
+            },
+            "mute": 0,
+            "automap_to": 1
+        },
+        {
+            "patcher": "core.input.control.auto",
+            "name": "core.input.control.auto",
+            "label": "core.input.control.auto",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -7,
+                "y": 3.25,
+                "colour": [ 155, 74, 45 ]
+            },
+            "mute": 0,
+            "selected_controller": "Midi Fighter Twister",
+            "voice_data": {
+                "0": [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
+            }
+        },
+        {
+            "patcher": "core.input.keyboard",
+            "name": "core.input.keyboard",
+            "label": "core.input.keyboard",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 10.229054899601318,
+                "y": 3.9775375913319806,
+                "colour": [ 136, 49, 0 ]
+            },
+            "mute": 0
+        },
+        {
+            "name": "hardware.out.1+2",
+            "label": "hardware.out.1+2",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "latching_mode": 0,
+                "voices": 2
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -14.055587287009104,
+                "y": -9.863591477078629,
+                "colour": [ 183, 49, 151 ]
+            }
+        },
+        {
+            "patcher": "core.input.control",
+            "name": "core.input.control.basic",
+            "label": "core.input.control.basic",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -15.930604908380296,
+                "y": 4.084892670652967,
+                "colour": [ 187, 66, 32 ]
+            },
+            "automap_to": 0,
+            "selected_controller": "LCXL3 1 MIDI Out",
+            "voice_data": {
+                "0": [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.8999999761581421, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
+            },
+            "mute": 0
+        },
+        {
+            "patcher": "midi.utility.values",
+            "name": "midi.utility.values",
+            "label": "midi.utility.values",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 8
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -22.23692881316672,
+                "y": 2.1443165283421686,
+                "colour": [ 142, 98, 21 ]
+            },
+            "mute": 0
+        },
+        {
+            "patcher": "midi.utility.values",
+            "name": "midi.utility.values",
+            "label": "midi.utility.values",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 8
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2 ],
+                "enable": 1,
+                "parameters,enable": [ 0, 1, 2 ]
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -22.317681542392435,
+                "y": 1.054426788996651,
+                "colour": [ 142, 98, 21 ]
+            },
+            "mute": 0
+        },
+        {
+            "patcher": "midi.utility.values",
+            "name": "midi.utility.values",
+            "label": "midi.utility.values",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 8
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2 ],
+                "enable": 1,
+                "parameters,enable,parameters,enable": [ 0, 1, 2 ]
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -22.35404600413112,
+                "y": -0.16930905868954538,
+                "colour": [ 142, 98, 21 ]
+            },
+            "mute": 0
+        },
+        {
+            "patcher": "mixer.stereo.ms.comp.abb",
+            "name": "mixer.stereo.comp",
+            "label": "mixer.stereo.comp",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 8
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -11.249949143992055,
+                "y": -6.008689264935255,
+                "colour": [ 183, 49, 151 ]
+            },
+            "upsample": 2,
+            "subvoices": 2,
+            "automap_to": 0
+        },
+        {
+            "patcher": "mix.bus",
+            "name": "mixer.bus",
+            "label": "mixer.bus",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -13,
+                "y": -7.25,
+                "colour": [ 158, 0, 122 ]
+            },
+            "upsample": 2,
+            "subvoices": 2,
+            "selected_controller": "LCXL3 1 MIDI Out"
+        },
+        {
+            "name": "hardware.Kick",
+            "substitute": [],
+            "label": "hardware.Kick",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -14.576568921375667,
+                "y": -2.750243959036935,
+                "colour": [ 75, 78, 152 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "abb.eight.step",
+            "name": "seq.eight.step.rhythm",
+            "label": "seq.eight.step.rhythm",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2, 3, 4, 5, 6 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -11.965840390525592,
+                "y": 1.9308108801109722,
+                "colour": [ 153, 58, 0 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "abb.eight.step",
+            "name": "seq.eight.step.rhythm",
+            "label": "seq.eight.step.rhythm",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2, 3, 4, 5, 6 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -9.142727031530953,
+                "y": 0.12339567854266065,
+                "colour": [ 153, 58, 0 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "name": "hardware.Snare",
+            "substitute": [],
+            "label": "hardware.Snare",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -9,
+                "y": -2,
+                "colour": [ 45, 49, 118 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "name": "hardware.Metal1",
+            "substitute": [],
+            "label": "hardware.Metal1",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -6.924705807599725,
+                "y": -1.9225376918076982,
+                "colour": [ 88, 95, 204 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "abb.eight.step",
+            "name": "seq.eight.step.rhythm",
+            "label": "seq.eight.step.rhythm",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2, 3, 4, 5, 6 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -6.293717011136529,
+                "y": 0.5440548761847919,
+                "colour": [ 153, 58, 0 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "voice.harmonic",
+            "name": "voice.harmonic",
+            "label": "voice.harmonic",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 3
+            },
+            "panel": {
+                "parameters": [ 11, 12, 13 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0.5317460317460316,
+                "drift": 0.6093474426807759,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -2,
+                "y": -1,
+                "colour": [ 0, 95, 208 ]
+            },
+            "upsample": 2,
+            "subvoices": 1,
+            "automap_to": 0
+        },
+        {
+            "name": "hardware.sem",
+            "substitute": [],
+            "label": "hardware.sem",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -2,
+                "y": -5,
+                "colour": [ 0, 33, 101 ]
+            }
+        },
+        {
+            "name": "hardware.polyphaser",
+            "substitute": [],
+            "label": "hardware.polyphaser",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 2,
+                "y": -5,
+                "colour": [ 45, 49, 118 ]
+            }
+        },
+        {
+            "patcher": "midi.wait",
+            "name": "midi.wait",
+            "label": "midi.wait",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 3
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 5.205766532250764,
+                "y": -0.4697961853193412,
+                "colour": [ 116, 57, 6 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "midi.scale.quantise",
+            "name": "midi.scale.quantise",
+            "label": "midi.scale.quantise",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -2.4493913012471324,
+                "y": 0.43056709906920654,
+                "colour": [ 146, 96, 28 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "core.scales.shapes",
+            "name": "core.scales.shapes",
+            "label": "core.scales.shapes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 0,
+                "latching": 0,
+                "voices": 2
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -3,
+                "y": 5,
+                "colour": [ 131, 30, 0 ]
+            }
+        },
+        {
+            "patcher": "core.scales.shapes",
+            "name": "core.scales.shapes",
+            "label": "core.scales.shapes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 0,
+                "latching": 0,
+                "voices": 2
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 5,
+                "y": 1,
+                "colour": [ 131, 30, 0 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "seq.values",
+            "name": "seq.values",
+            "label": "seq.values",
+            "type": "note",
+            "poly": {
+                "stack_mode": "unison all",
+                "choose_mode": "blind cycle",
+                "steal_mode": "cyclic",
+                "return_mode": 1,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 7 ],
+                "enable": 1
+            },
+            "patterns": {
+                "parameter": 7,
+                "pattern_storage": "data",
+                "playhead_offset": 0,
+                "pattern_size": 128,
+                "pattern_start": 1,
+                "names": [ "1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ]
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 0.9530768801688865,
+                "y": 3.1307855965300346,
+                "colour": [ 153, 58, 0 ]
+            },
+            "automap_to": 4,
+            "voice_data": {
+                "0": [ 0.20000000298023224, 0.5184038877487183, 0.5916938185691833, 0.5135179162025452, 0.45488598942756653, 0.5574918389320374 ]
+            }
+        },
+        {
+            "name": "hardware.delaySara",
+            "substitute": [],
+            "label": "hardware.delaySara",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -1,
+                "y": -9,
+                "colour": [ 88, 95, 204 ]
+            }
+        },
+        {
+            "name": "hardware.Metal2",
+            "substitute": [],
+            "label": "hardware.Metal2",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -5,
+                "y": -2,
+                "colour": [ 0, 69, 206 ]
+            },
+            "automap_to": 0
+        },
+        {        },
+        {
+            "patcher": "midi.rhythmes.alpes",
+            "name": "midi.rhythmes.alpes",
+            "label": "midi.rhythmes.alpes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 4 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 1.7366842068812753,
+                "y": 0.27307819527920696,
+                "colour": [ 131, 70, 0 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "patcher": "voice.basic",
+            "name": "voice.basic",
+            "label": "voice.basic",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 6, 7, 8 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 6.5367395029121305,
+                "y": -4.377502323193539,
+                "colour": [ 0, 84, 172 ]
+            },
+            "upsample": 1,
+            "subvoices": 1,
+            "automap_to": 0
+        },
+        {
+            "patcher": "core.scales.shapes",
+            "name": "core.scales.shapes",
+            "label": "core.scales.shapes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 0,
+                "latching": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 11,
+                "y": 0,
+                "colour": [ 131, 30, 0 ]
+            }
+        },
+        {
+            "patcher": "midi.scale.quantise",
+            "name": "midi.scale.quantise",
+            "label": "midi.scale.quantise",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 13.021862009200978,
+                "y": -1.1012866237153158,
+                "colour": [ 146, 96, 28 ]
+            },
+            "automap_to": 0
+        },
+        {
+            "name": "hardware.wasp",
+            "substitute": [],
+            "label": "hardware.wasp",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 5,
+                "y": -6,
+                "colour": [ 75, 78, 152 ]
+            }
+        },
+        {
+            "patcher": "midi.sustain",
+            "name": "midi.sustain",
+            "label": "midi.sustain",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 5.316928656765754,
+                "y": 8.548692694266652,
+                "colour": [ 116, 57, 6 ]
+            }
+        },
+        {
+            "patcher": "midi.chord.hold",
+            "name": "midi.chord.hold",
+            "label": "midi.chord.hold",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 6,
+                "y": 4,
+                "colour": [ 157, 90, 25 ]
+            }
+        },
+        {
+            "patcher": "seq.values",
+            "name": "seq.values",
+            "label": "seq.values",
+            "type": "note",
+            "poly": {
+                "stack_mode": "unison all",
+                "choose_mode": "blind cycle",
+                "steal_mode": "cyclic",
+                "return_mode": 1,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 7 ],
+                "enable": 1
+            },
+            "patterns": {
+                "parameter": 7,
+                "pattern_storage": "data",
+                "playhead_offset": 0,
+                "pattern_size": 128,
+                "pattern_start": 1,
+                "names": [ "1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ]
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 13.751043571277044,
+                "y": 0.8955490385852973,
+                "colour": [ 153, 58, 0 ]
+            },
+            "voice_data": {
+                "0": [ 0.625, 0.46875, 0.515625, 0.4375, 0.4375, 0.4375, 0.4375, 0.4375, 0.4375, 0.4375, 0.4375, 0.4375, 0.453125, 0.46875, 0.515625, 0.4375, 0.453125 ]
+            }
+        },
+        {
+            "name": "hardware.ddelay",
+            "substitute": [],
+            "label": "hardware.ddelay",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 8,
+                "y": -6,
+                "colour": [ 75, 78, 152 ]
+            }
+        },
+        {
+            "patcher": "midi.rhythmes.alpes",
+            "name": "midi.rhythmes.alpes",
+            "label": "midi.rhythmes.alpes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 4 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 14.079311461641268,
+                "y": 2.4442764895639026,
+                "colour": [ 131, 70, 0 ]
+            }
+        },
+        {
+            "patcher": "midi.rhythmes.alpes",
+            "name": "midi.rhythmes.alpes",
+            "label": "midi.rhythmes.alpes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 4 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 9,
+                "y": -0.0,
+                "colour": [ 131, 70, 0 ]
+            }
+        },
+        {
+            "patcher": "voice.harmonic",
+            "name": "voice.harmonic",
+            "label": "voice.harmonic",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 3
+            },
+            "panel": {
+                "parameters": [ 11, 12, 13 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 3.0722431758299997,
+                "y": -1.6088779543185932,
+                "colour": [ 0, 95, 208 ]
+            },
+            "upsample": 2,
+            "subvoices": 1
+        },
+        {
+            "patcher": "midi.fold.transpose",
+            "name": "midi.fold.transpose",
+            "label": "midi.fold.transpose",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2, 3 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 8,
+                "y": -2,
+                "colour": [ 134, 72, 22 ]
+            }
+        },
+        {
+            "name": "hardware.ripples_lpg2",
+            "substitute": [],
+            "label": "hardware.ripples_lpg2",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 2.663444258901733,
+                "y": -3.5345403971569374,
+                "colour": [ 0, 55, 147 ]
+            }
+        },
+        {
+            "patcher": "utility.env.ping",
+            "name": "utility.env.ping",
+            "label": "utility.env.ping",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 5,
+                "y": -3,
+                "colour": [ 173, 61, 154 ]
+            },
+            "upsample": 1,
+            "subvoices": 1
+        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        },
+        {        }
+    ],
+    "states": {
+        "current": {
+            "static_mod": {
+                "2": {
+                    "0": [ 0.0, 0.0, 0.44999998807907104, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                },
+                "8": {
+                    "0": [ 0.18281249701976776, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "1": [ -0.18437500298023224, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "2": [ -0.09062500298023224, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.6700000166893005, 0.0 ],
+                    "3": [ 0.03437500074505806, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.6700000166893005, 0.0 ],
+                    "4": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "5": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "6": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                },
+                "9": {
+                    "0": [ 0.0, 0.5049999952316284 ]
+                },
+                "11": {
+                    "0": [ 0.1436508148908615, 0.0, 0.30511462688446045, -0.24867725372314453, 0.21299999952316284, 0.0, 0.21299999952316284, -0.4285714328289032, -0.29805997014045715, -0.3633157014846802, 0.0, -0.2063492089509964, 0.0, 0.34567901492118835 ]
+                },
+                "12": {
+                    "0": [ 0.13932979106903076, 0.0, 0.6155202984809875, -0.27248677611351013, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                },
+                "15": {
+                    "0": [ 0.5873016119003296, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                },
+                "22": {
+                    "0": [ 0.13844797015190125, 0.18871252238750458 ]
+                },
+                "23": {
+                    "0": [ 0.0, 0.0, 0.0, -0.0873015820980072, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                }
+            },
+            "0": [ 0, 0.4166666567325592, 0.0, 0.0, 0.09000000357627869, 0.5561618208885193, 0.22273202240467072, 0.0234375, 0.2109375, 0.6000000238418579, 0.5, 0.25, 0.5, 0.5, 0.5, 0.5, 0.0, 0.0 ],
+            "1": [ 0, 0.3712500035762787, 0.800000011920929 ],
+            "2": [ 0, 0.0, 0.0, 0.550000011920929, 0.0, 0.75, 0.06666667014360428, 0.028761902824044228, 0.0, 0.0, 0.6000000238418579 ],
+            "3": [ 0 ],
+            "4": [ 0, 0.8662499785423279, 0.0 ],
+            "5": [ 0, 0.9999998807907104, 0.0, 0.0 ],
+            "6": [ 0, 0.9999998807907104, 0.0, 0.0 ],
+            "7": [ 0, 0.9999998807907104, 0.0, 0.0 ],
+            "8": [ 0, 0.699999988079071, 0.5, 0.0, 0.0, 0.5, 0.0, 0.0, 0.10000000149011612, 0.5 ],
+            "9": [ 0, 0.800000011920929, 0.25 ],
+            "10": [ 0 ],
+            "11": [ 0, 0.15000000596046448, 0.0, 0.0, 0.9800000190734863, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.4000000059604645, 0.0 ],
+            "12": [ 0, 0.15000000596046448, 0.0, 0.0, 0.9800000190734863, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.0, 0.0 ],
+            "13": [ 0, 0.0, 0.0 ],
+            "14": [ 0 ],
+            "15": [ 0, 0.15000000596046448, 0.0, 0.0, 0.9800000190734863, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.0, 0.0 ],
+            "16": [ 0, 1.0, 0.6904761791229248, 0.44587478041648865, 0.7402998208999634, 0.43985891342163086, 0.746065080165863, 0.4189141094684601, 0.125, 0.5, 0.5, 0.5, 0.0793650820851326, 0.0, 0.33908456563949585, 0.20000000298023224, 0.0, 1.0, 0.5, 0.75, 0.0, 0.30000001192092896 ],
+            "17": [ 0 ],
+            "18": [ 0 ],
+            "19": [ 0 ],
+            "20": [ 0, 0.146597221493721, 0.0, 0.4375, 0.0, 0.10000000149011612 ],
+            "21": [ 0, 0.0, 0.0 ],
+            "22": [ 0, 0.0, 0.0 ],
+            "23": [ 0, 0.5600000023841858, 0.5, 0.0, 0.125, 0.25, 0.0, 0.0, 0.03125, 0.25, 0.0 ],
+            "24": [ 0 ],
+            "25": [ 0 ],
+            "27": [ 0, 1.0, 0.25999999046325684, 0.5, 0.5, 0.0, 0.0 ],
+            "28": [ 0, 0.380952388048172, 0.875, 0.019999999552965164, 0.019999999552965164, 0.5, 0.30000001192092896, 0.0, 0.0, 0.3502645790576935, 0.20000000298023224, 0.0, 1.0, 0.5, 0.0, 0.75, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.30000001192092896 ],
+            "29": [ 0, 0.0, 0.0 ],
+            "30": [ 0, 0.17215165495872498, 0.0, 0.6216930747032166, 0.0, 0.10000000149011612 ],
+            "31": [ 0 ],
+            "32": [ 0, 0.3474426865577698 ],
+            "33": [ 0 ],
+            "34": [ 0, 0.5600000023841858, 0.5, 0.0, 0.125, 0.25, 0.0, 0.0, 0.03125, 0.0, 0.0 ],
+            "35": [ 0 ],
+            "36": [ 0, 0.3977072238922119, 0.2335449606180191, 0.5, 0.5, 0.0, 0.0 ],
+            "37": [ 0, 0.4135802388191223, 0.25999999046325684, 0.5, 0.5, 0.07407407462596893, 0.0 ],
+            "38": [ 0, 1.0, 0.5, 0.3330000042915344, 0.6089065074920654, 0.5245149731636047, 0.5626435875892639, 0.37570422887802124, 0.125, 0.5, 0.5, 0.5, 0.05000000074505806, 0.0, 0.3440035283565521, 0.20000000298023224, 0.0, 1.0, 0.5, 0.8602292537689209, 0.0, 0.30000001192092896 ],
+            "39": [ 0, 0.5, 0.5, 0.4761904776096344, 0.6710758209228516, 0.0, 0.0 ],
+            "40": [ 0 ],
+            "41": [ 0, 0.3135988116264343, 0.5, 0.03262786567211151, 0.7081128358840942, 0.05026457831263542, 1.0, 0.5, 0.15000000596046448, 0.0, 0.0, 1.0, 0.30000001192092896, 0.0 ]
+        }
+    }
+}
