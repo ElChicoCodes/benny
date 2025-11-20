@@ -3380,7 +3380,10 @@ function store_wave_slices(waveno){
 	if(d>0){
 		//post("\ncalculating ",d,"slices ")
 		var l = waves_dict.get("waves["+waveno+"]::length");
-
+		if(isNaN(l)){
+			post("\nproblem getting wave length?");
+			l=1000;
+		} 
 		var s = l * waves_dict.get("waves["+waveno+"]::start");
 		var e = l * waves_dict.get("waves["+waveno+"]::end");
 		var m = (e-s) / d;
@@ -3390,6 +3393,7 @@ function store_wave_slices(waveno){
 		for(i=0;i<d;i++){
 			waves_slices_buffer.poke(1, o+i, i*m+s);
 		}
+		waves_slices_buffer.poke(1, o+d, d*m+s);
 		//post("writing slices to buffer",waveno,/*o,*/l,s,e,d,m,"\n");
 	}
 }
@@ -4233,7 +4237,7 @@ function show_and_search_new_block_menu(key){
 		menu.search = "";
 		show_new_block_menu();
 		end_of_frame_fn = function(){type_to_search(key);};
-	}else if((((key>=-42)&&(key<-32))||((key>=44)&&(key<58)))&&(usermouse.caps==0)){ //numbers do direct entry on values.	
+	}else if((((key>=-42)&&(key<-32))||((key>=44)&&(key<58))||((key>=560)&&(key<570)))&&(usermouse.caps==0)){ //numbers do direct entry on values.	
 		if((sidebar.mode == "block")&&(usermouse.got_t>=2) && (usermouse.got_t<=4) && (usermouse.got_i) && (usermouse.x > sidebar.x)){
 			var pno = mouse_click_parameters[usermouse.got_i][0];
 			//0-3 coords, 456 colour, 8 is the block (we know that already) 9 is the param no
@@ -4241,6 +4245,7 @@ function show_and_search_new_block_menu(key){
 			if(((key>=-42)&&(key<-32))){
 				key = -key + 15;
 			}
+			if(key>512) key -= 512;
 			sidebar.param_number_entry = String.fromCharCode(key);
 			sidebar.param_number = pno;
 			draw_number_entry(pno, sidebar.param_number_entry);
