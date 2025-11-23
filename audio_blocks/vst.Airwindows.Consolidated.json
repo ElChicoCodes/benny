@@ -1,0 +1,120 @@
+{
+    "vst.Airwindows.Consolidated": {
+        "patcher": "vst.loader",
+        "type": "audio",
+        "help_text": "Airwindows Consolidated",
+        "block_ui_patcher": "blank.ui",
+        "max_polyphony": 0,
+        "plugin_name": "Airwindows Consolidated",
+        "plugin_type": "vst3",
+        "pitchbend_range": 2,
+        "compatibility_mode": 0,
+        "upsample": 1,
+        "subvoices": 2,
+        "connections": {
+            "in": {
+                "audio": [ "audio in" ],
+                "midi": [ "notes in", "pitchbend", "modulation", "aftertouch", "sustain" ],
+                "automap_poly": 0
+            },
+            "out": {
+                "audio": [ "audio out" ],
+                "midi": [ "notes out" ],
+                "parameters": [ "pitchbend", "modulation", "aftertouch", "sustain" ]
+            }
+        },
+        "parameters": [
+            {
+                "name": "Replace",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Brightness",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Detune",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Bigness",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Dry/Wet",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "-",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "-",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "-",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "-",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "-",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Bypass",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Input Level",
+                "default": 0.5011872053146362,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Output Level",
+                "default": 0.5011872053146362,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            }
+        ]
+    }
+}

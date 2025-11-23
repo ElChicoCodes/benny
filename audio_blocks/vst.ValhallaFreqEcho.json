@@ -1,0 +1,92 @@
+{
+    "vst.Valhalla.FreqEcho": {
+        "patcher": "vst.loader",
+        "type": "audio",
+        "help_text": "ValhallaFreqEcho",
+        "block_ui_patcher": "blank.ui",
+        "max_polyphony": 0,
+        "plugin_name": "ValhallaFreqEcho",
+        "plugin_type": "vst3",
+        "pitchbend_range": 2,
+        "compatibility_mode": 0,
+        "upsample": 1,
+        "subvoices": 2,
+        "connections": {
+            "in": {
+                "audio": [ "audio in" ],
+                "midi": [ "notes in", "pitchbend", "modulation", "aftertouch", "sustain" ],
+                "automap_poly": 0
+            },
+            "out": {
+                "audio": [ "audio out" ],
+                "midi": [ "notes out" ],
+                "parameters": [ "pitchbend", "modulation", "aftertouch", "sustain" ]
+            }
+        },
+        "parameters": [
+            {
+                "name": "wetDry",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "shift",
+                "default": 0.5000749826431274,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "delay",
+                "default": 0.000990009866654873,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "sync",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "feedback",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "lowCut",
+                "default": 0.06040268391370773,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "highCut",
+                "default": 0.33110368251800537,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "stereo",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Bypass",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            }
+        ]
+    }
+}
