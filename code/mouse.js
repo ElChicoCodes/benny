@@ -262,7 +262,9 @@ function omouse(x,y,leftbutton,ctrl,shift,caps,alt,e){
 			if(displaymode=="blocks"){
 				redraw_flag.flag |= 10;
 			}
-		}	
+		}else if(ctrl==0 && sidebar.ctrl_scrl && x<sidebar.x){
+			back_button();
+		}
 		/*if(sidebar.mode == "file_menu")*/ redraw_flag.flag |= 2;
 	}
 	if(alt!=usermouse.alt){
@@ -996,7 +998,7 @@ function omouse(x,y,leftbutton,ctrl,shift,caps,alt,e){
 													subvoices = blocks.get("blocks["+ob+"]::subvoices");
 													if(subvoices<1)subvoices = 1;
 												}
-												blocks_cube[ob][usermouse.drag.dragging.voices[t][1]].position = [ bdx + (0.125*subvoices + 0.125)*(usermouse.drag.dragging.voices[t][1]>0)+ 0.5*usermouse.drag.dragging.voices[t][1]/subvoices, bdy, -0.25];//-usermouse.drag.dragging.voices[t][1]-0.2];
+												blocks_cube[ob][usermouse.drag.dragging.voices[t][1]].position = [ bdx + (0.125*subvoices + 0.125)*(usermouse.drag.dragging.voices[t][1]>0)+ 0.5*usermouse.drag.dragging.voices[t][1]/subvoices, bdy, SELECTED_BLOCK_Z_MOVE -0.25];//-usermouse.drag.dragging.voices[t][1]-0.2];
 												//post("\nset position of block",ob,"voice",usermouse.drag.dragging.voices[t][1],"to:",blocks_cube[ob][usermouse.drag.dragging.voices[t][1]].position);
 											}
 											if(bl.length>0){
@@ -1314,16 +1316,14 @@ function mousewheel(x,y,leftbutton,ctrl,shift,caps,alt,e,f, scroll){
 						if(selected.wire[bulgingwire]!=1){
 							for(var si=0;si<selected.wire.length;si++) selected.wire[si]=0;
 							selected.wire[bulgingwire]=1;
-							//redraw_flag.flag |= 8; //block_and_wire_colours();
-							//redraw_flag.flag |= 2;
 							redraw_flag.flag |= 10;
 						}
 					}else{
 						for(var si=0;si<selected.block.length;si++) selected.block[si]=0;
 						for(var si=0;si<selected.wire.length;si++) selected.wire[si]=0;
 						selected.wire[bulgingwire]=1;
-						redraw_flag.flag |= 8; //block_and_wire_colours();
-						redraw_flag.flag |= 2;
+						redraw_flag.flag |= 10;
+						sidebar.ctrl_scrl = 1;
 					}
 				} //todo? ctrl-scroll a block
 			}else if((usermouse.shift)&&(usermouse.alt)){

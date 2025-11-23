@@ -24,7 +24,7 @@ function play(state){
 				if(playing){
 					ext_sync.state = 1;
 				}else{
-	
+					if(config.get("STOP_EXT_CLOCK_WHEN_BENNY_STOPS")) stop_ext_clocks();
 				}
 			}
 		}
@@ -3390,10 +3390,9 @@ function store_wave_slices(waveno){
 		var i;
 		var o = (waveno - 1) * MAX_WAVES_SLICES;
 		
-		for(i=0;i<d;i++){
+		for(i=0;i<=d;i++){
 			waves_slices_buffer.poke(1, o+i, i*m+s);
 		}
-		waves_slices_buffer.poke(1, o+d, d*m+s);
 		//post("writing slices to buffer",waveno,/*o,*/l,s,e,d,m,"\n");
 	}
 }
@@ -4345,7 +4344,7 @@ function parameter_list_entry(){
 
 	for(var i=0;i<list.length;i++){
 		if(typeof list[i] == 'number' && !isNaN(list[i])){
-			list[i] = (1 + 128*parseFloat(list[i]))/128;
+			list[i] = (1 + 128*parseFloat(list[i]))/127.999;
 		}else{
 			list[i] = 0;
 		}

@@ -198,8 +198,8 @@ function preload_all_waves(){
 
 function create_blank_wave_buffer(number,length, channels,name){
 	polybuffer_create_blank(length,channels);
-	get_polybuffer_info();
 	var buffername = "waves."+polybuffer_names.length;
+	post("\ncreating buffer name:",buffername);
 	waves_buffer[number]= new Buffer(buffername);
 	// post("length",waves_buffer[number].length(),waves_buffer[number].framecount(),waves_buffer[number].channelcount(),"name",name,buffername);
 	var d = new Dict;
@@ -256,7 +256,8 @@ function check_exists(filepath){
 }
 
 function polybuffer_load_wave(wavepath,wavename,dictpath){ //loads wave into polybuffer if not already loaded.
-	if(wavename.split("$")[0] == "unsaved.looper"){ //creates a blank buffer if a looper block needs one
+	post("\n\nPB LOAD WAVE, path:",wavepath,"\n\nname",wavepath,"\ndict",dictpath);
+	if((wavename.split("-")[0] == "unsaved.looper")||(wavename.split("$")[0] == "unsaved.looper")){ //creates a blank buffer if a looper block needs one
 		var length = wavename.split("$")[1];
 		var channels = wavename.split("$")[2];
 		if(typeof length != 'number') length = 1000000;
@@ -277,7 +278,6 @@ function polybuffer_load_wave(wavepath,wavename,dictpath){ //loads wave into pol
 				return -2;
 			}else if(check_exists(wavepath)){
 				waves_polybuffer.append(wavepath);
-				//post("\n(loading)")
 				get_polybuffer_info();
 				return -1;
 			}else{
@@ -402,8 +402,7 @@ function get_polybuffer_info(){
 //max calls this once a buffer is loaded
 function buffer_loaded(number,path,name,buffername){
 	waves_buffer[number]= new Buffer(buffername);
-	post("buffer",number,"has loaded into polyslot",number,/*path,buffername);
-	post("length",waves_buffer[number].length(),waves_buffer[number].framecount(),waves_buffer[number].channelcount(),*/"name",name);
+	post("buffer",number,"has loaded into polyslot",buffername,"name",name);
 	var tn=+number+1;
 	var exists=0;
 	if(tn>=waves_dict.getsize("waves"))	extend_waves_dict(tn);
@@ -429,7 +428,7 @@ function buffer_loaded(number,path,name,buffername){
 		d.replace("divisions",0);
 		d.replace("buffername",buffername);
 		waves_dict.replace("waves["+tn+"]",d);
-		tn++;
+		// tn++;
 	}
 	var tc = (waves_buffer[number].channelcount() | 0);
 	if(tc <= 0) tc = 2;
@@ -603,16 +602,17 @@ function import_song(){
 						t = waves.remapping[i];
 						if(t==-1)t=i;
 						var tt = t+1;
-						//post("\n loading song wave"+i+" into slot "+t+" its path is "+songs.get(loading.songname+"::waves["+ii+"]::path"));
 						var pat = songs.get(loading.songname+"::waves["+ii+"]::path");
 						var nam = songs.get(loading.songname+"::waves["+ii+"]::name");
+						post("\n loading song wave"+i+" into slot "+t+" its path is "+pat+"its name is"+nam);
 						var polyslot = polybuffer_load_wave(pat,nam);
 						if(polyslot == -1 ){
 							polyslot = waves_polybuffer.count;
 						}else{
 							polyslot++;
 						}
-						// post("this wave is in polyslot",polyslot);
+						if(isNaN(polyslot) || !(polyslot > 1))polyslot = 1;
+						post("\n\n\n\nthis wave is in polyslot",polyslot);
 						waves_dict.replace("waves["+tt+"]", songs.get(loading.songname+"::waves["+ii+"]"));
 						waves_dict.replace("waves["+tt+"]::buffername","waves."+polyslot);
 						buffer_loaded(t,pat,nam,"waves."+polyslot);
@@ -863,8 +863,8 @@ function import_song(){
 		for(i=0;i<loading.mutelist.length;i++){
 			mute_particular_block(loading.mutelist[i][0],loading.mutelist[i][1]);
 		}
-		messnamed("update_wave_colls","bang");
 		post("\nmarker");
+		messnamed("update_wave_colls","bang");
 		if((still_checking_polys&7)==0){
 			update_all_voices_mutestatus();
 		}
@@ -1254,6 +1254,10 @@ function load_block(block_name,block_index,paramvalues,was_exclusive){
 			hardware_metermap.replace(block_index,ts);
 			if(blocktypes.get(block_name+"::max_polyphony")>1){
 				voicecount(block_index,blocktypes.get(block_name+"::max_polyphony"));
+			}
+		}else{
+			if(hardware_metermap.contains(block_index)){
+				hardware_metermap.remove(block_index);
 			}
 		}
 	}

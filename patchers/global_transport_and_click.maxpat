@@ -4,12 +4,12 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 0,
+            "revision": 1,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 77.0, 1852.0, 921.0 ],
+        "rect": [ 34.0, 76.0, 1221.0, 701.0 ],
         "boxes": [
             {
                 "box": {
@@ -68,7 +68,7 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 1,
                             "architecture": "x64",
                             "modernui": 1
                         },
@@ -751,7 +751,7 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 0,
+                            "revision": 1,
                             "architecture": "x64",
                             "modernui": 1
                         },
@@ -2346,7 +2346,7 @@
                     "numinlets": 1,
                     "numoutlets": 2,
                     "outlettype": [ "bang", "int" ],
-                    "patching_rect": [ 465.0, 628.0, 32.0, 22.0 ],
+                    "patching_rect": [ 476.0, 598.0, 32.0, 22.0 ],
                     "text": "t b 0"
                 }
             },
