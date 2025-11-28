@@ -93,10 +93,9 @@
             "mixer_bus": "LPD8 mk2"
         },
         "sync": {
-            "audio_clock_out": {
-                "enable": 1,
-                "ppqn": 4,
-                "channel": 30
+            "midi_clock_in": {
+                "selected": "LCXL3 1 MIDI Out",
+                "ppqn": 24
             }
         }
     },
