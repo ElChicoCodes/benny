@@ -133,7 +133,7 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
             "connections": {
                 "in": {
                     "midi": [ "midiin" ],
@@ -147,6 +147,13 @@
                     "hardware_channels": [ 1 ],
                     "dc_block": [ 1 ]
                 }
+            },
+            "parameters": {
+                "name": "decay",
+                "cc_channel": 1,
+                "cc_number": 1,
+                "values": [ "uni", 0, 127, "lin" ],
+                "type": "int"
             }
         },
         "hardware.Snare": {
@@ -159,7 +166,7 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
             "parameters": [
                 {
                     "name": "n-decay",
@@ -202,7 +209,7 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
             "connections": {
                 "in": {
                     "midi": [ "metal1" ],
@@ -215,6 +222,13 @@
                     "hardware": [ "out" ],
                     "hardware_channels": [ 3 ]
                 }
+            },
+            "parameters": {
+                "name": "decay",
+                "cc_channel": 1,
+                "cc_number": 1,
+                "values": [ "uni", 0, 127, "lin" ],
+                "type": "int"
             }
         },
         "hardware.Metal2": {
@@ -227,7 +241,7 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
             "connections": {
                 "in": {
                     "midi": [ "midiin" ],
@@ -240,6 +254,13 @@
                     "hardware": [ "out" ],
                     "hardware_channels": [ 4 ]
                 }
+            },
+            "parameters": {
+                "name": "decay",
+                "cc_channel": 4,
+                "cc_number": 1,
+                "values": [ "uni", 0, 127, "lin" ],
+                "type": "int"
             }
         },
         "hardware.Res4": {

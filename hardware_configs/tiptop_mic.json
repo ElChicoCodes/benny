@@ -439,6 +439,7 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
+            "midi_in": "POLY2",
             "connections": {
                 "in": {
                     "midi": [ "in_trigger" ],
@@ -453,8 +454,23 @@
                     "dc_block": [ 0 ],
                     "input_gate": [ 0 ]
                 }
-            },
-            "midi_in": "POLY2"
+            }
+        },
+        "hardware.mic": {
+            "type": "hardware",
+            "substitute": [],
+            "max_polyphony": 1,
+            "help_text": "about your block",
+            "exclusive": 0,
+            "click_out": 0,
+            "cue_out": 0,
+            "talk_in": 0,
+            "connections": {
+                "out": {
+                    "hardware": [ "in" ],
+                    "hardware_channels": [ 33 ]
+                }
+            }
         }
     }
 }

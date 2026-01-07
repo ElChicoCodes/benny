@@ -1,0 +1,57 @@
+{
+    "vst.Little.Micro.Shift": {
+        "patcher": "vst.loader",
+        "type": "audio",
+        "help_text": "Little MicroShift",
+        "block_ui_patcher": "blank.ui",
+        "max_polyphony": 0,
+        "plugin_name": "Little MicroShift",
+        "plugin_type": "vst3",
+        "pitchbend_range": 2,
+        "compatibility_mode": 0,
+        "upsample": 1,
+        "subvoices": 2,
+        "connections": {
+            "in": {
+                "audio": [ "audio in" ],
+                "midi": [ "notes in", "pitchbend", "modulation", "aftertouch", "sustain" ],
+                "automap_poly": 0
+            },
+            "out": {
+                "audio": [ "audio out" ],
+                "midi": [ "notes out" ],
+                "parameters": [ "pitchbend", "modulation", "aftertouch", "sustain" ]
+            }
+        },
+        "parameters": [
+            {
+                "name": "Bypass",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "InputGain",
+                "default": 0.3333333432674408,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Mix",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Style",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            }
+        ]
+    }
+}

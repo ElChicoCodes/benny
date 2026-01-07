@@ -133,7 +133,23 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
+            "parameters": [
+                {
+                    "name": "decay",
+                    "cc_channel": 1,
+                    "cc_number": 1,
+                    "values": [ "uni", 0, 127, "lin" ],
+                    "type": "int"
+                },
+                {
+                    "name": "accent",
+                    "cc_channel": 1,
+                    "cc_number": 2,
+                    "values": [ "uni", 0, 127, "lin" ],
+                    "type": "int"
+                }
+            ],
             "connections": {
                 "in": {
                     "midi": [ "midiin" ],
@@ -159,7 +175,7 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
             "parameters": [
                 {
                     "name": "n-decay",
@@ -202,7 +218,16 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
+            "parameters": [
+                {
+                    "name": "decay",
+                    "cc_channel": 3,
+                    "cc_number": 1,
+                    "values": [ "uni", 0, 127, "lin" ],
+                    "type": "int"
+                }
+            ],
             "connections": {
                 "in": {
                     "midi": [ "metal1" ],
@@ -227,7 +252,16 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
+            "midi_in": "Shuttle Control v4.0",
+            "parameters": [
+                {
+                    "name": "decay",
+                    "cc_channel": 4,
+                    "cc_number": 1,
+                    "values": [ "uni", 0, 127, "lin" ],
+                    "type": "int"
+                }
+            ],
             "connections": {
                 "in": {
                     "midi": [ "midiin" ],
@@ -393,14 +427,22 @@
             "talk_in": 0,
             "connections": {
                 "in": {
-                    "hardware": [ "in", "modin", "cv_bp_lpg", "cv_hp_lpg" ],
-                    "hardware_channels": [ 12, 21, 20, 19 ]
+                    "midi": [ "midi_pulser_bp", "midi_pulser_lp_hp" ],
+                    "midi_channels": [ 7, 8 ],
+                    "midi_ranges": [
+                        [ 0, 127 ],
+                        [ 0, 127 ]
+                    ],
+                    "hardware": [ "audio_in", "mod" ],
+                    "hardware_channels": [ 12, 21 ]
                 },
                 "out": {
                     "hardware": [ "out_bp", "out_hp" ],
                     "hardware_channels": [ 23, 24 ]
                 }
-            }
+            },
+            "midi_handler": "generic.hardware.midi.handler",
+            "midi_in": "Shuttle Control v4.0"
         },
         "hardware.abacus1": {
             "type": "hardware",
