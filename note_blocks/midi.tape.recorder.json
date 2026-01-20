@@ -1,0 +1,94 @@
+{
+  "midi.tape.recorder": {
+    "patcher": "midi.tape.recorder",
+    "type": "note",
+    "block_ui_patcher": "blank.ui",
+    "help_text": "Single-track MIDI tape looper using miditaperecorder~. Notes/pressure/CC inputs are separate; punch and rewind are MIDI-triggered. Transport controls play and tempo.",
+    "max_polyphony": 1,
+    "connections": {
+      "in": {
+        "midi": [
+          "notes",
+          "pressure",
+          "cc 1",
+          "cc 2",
+          "cc 3",
+          "cc 4",
+          "cc 5",
+          "cc 6",
+          "cc 7",
+          "cc 8",
+          "punch",
+          "rewind",
+          "clear"
+        ],
+        "default": 0
+      },
+      "out": {
+        "midi": [
+          "notes",
+          "pressure"
+        ]
+      }
+    },
+    "groups": [
+      {
+        "contains": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "height": 1
+      }
+    ],
+    "parameters": [
+      {
+        "name": "record",
+        "type": "menu_b",
+        "values": [
+          "record_off",
+          "record_on"
+        ],
+        "wrap": 1,
+        "default": 0.25
+      },
+      {
+        "name": "loopend_beats",
+        "type": "menu_i",
+        "values": [
+          "4",
+          "6",
+          "8",
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "wrap": 0,
+        "default": 0.07
+      },
+      {
+        "name": "punchmode",
+        "type": "menu_i",
+        "values": [
+          "all",
+          "per_lane",
+          "touch"
+        ],
+        "wrap": 0,
+        "default": 0.07
+      },
+      {
+        "name": "commitloop",
+        "type": "menu_b",
+        "values": [
+          "commit_off",
+          "commit_on"
+        ],
+        "wrap": 1,
+        "default": 0.75
+      }
+    ]
+  }
+}

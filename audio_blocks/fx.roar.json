@@ -1,0 +1,72 @@
+{
+	"fx.roar" : {
+		"patcher" : "fx.roar",
+		"type" : "audio",
+		"block_ui_patcher" : "blank.ui",
+		"help_text" : "Wrapper for the abl.device.roar~ external. Multi-stage distortion and filtering.",
+		"max_polyphony" : 0,
+		"upsample" : 1,
+		"subvoices" : 2,
+		"connections" : {
+			"in" : { 
+				"audio" : [ "in" ]
+			},
+			"out" : {
+				"audio" : [ "out" ]
+			}
+		},
+		"groups" : [
+			{ "contains": [0, 1, 2, 3], "height": 2 },
+			{ "contains": [4, 5, 6], "height": 2 },
+			{ "contains": [7, 8, 9], "height": 2 },
+			{ "contains": [10, 11, 12], "height": 2 },
+			{ "contains": [13, 14], "height": 2, "header": "Stage 1" },
+			{ "contains": [15, 16], "height": 2 },
+			{ "contains": [17, 18], "height": 2 },
+			{ "contains": [19, 20], "height": 2, "header": "Stage 2" },
+			{ "contains": [21, 22], "height": 2 },
+			{ "contains": [23, 24], "height": 2 },
+			{ "contains": [25, 26], "height": 2, "header": "Stage 3" },
+			{ "contains": [27, 28], "height": 2 },
+			{ "contains": [29, 30], "height": 2 }
+		],
+		"parameters" : [
+			{ "name" : "input_gain", "type" : "float", "values" : ["bi", -24.0, 24.0, "lin"], "default" : 0.5, "unit" : "db" },
+			{ "name" : "output_gain", "type" : "float", "values" : ["bi", -48.0, 12.0, "lin"], "default" : 0.5, "unit" : "db" },
+			{ "name" : "mix", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 1.0, "unit" : "%" },
+			{ "name" : "routing", "type" : "menu_l", "values" : ["Single", "Serial", "Parallel", "Multiband", "Mid-Side", "Feedback", "Delay"], "default" : 0 },
+			
+			{ "name" : "tone_amount", "type" : "float", "values" : ["bi", -1.0, 1.0, "lin"], "default" : 0.5 },
+			{ "name" : "tone_frequency", "type" : "float", "values" : ["uni", 80.0, 2000.0, "lin"], "default" : 0.5, "unit" : "hz" },
+			{ "name" : "tone_color_compensation", "type" : "menu_b", "values" : ["Off", "On"], "default" : 0 },
+
+			{ "name" : "feedback_amount", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0, "unit" : "%" },
+			{ "name" : "feedback_delay", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0, "unit" : "s" },
+			{ "name" : "feedback_tone", "type" : "float", "values" : ["bi", -1, 1, "lin"], "default" : 0.5 },
+			{ "name" : "feedback_polarity", "type" : "menu_b", "values" : ["Negative", "Positive"], "default" : 0 },
+			{ "name" : "feedback_post_shaper", "type" : "menu_b", "values" : ["Pre-Shaper", "Post-Shaper"], "default" : 0 },
+			{ "name" : "feedback_source", "type" : "menu_l", "values" : ["Stage 1", "Stage 2", "Stage 3"], "default" : 0 },
+
+			{ "name" : "shaper_amount_1", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0.5, "unit" : "%" },
+			{ "name" : "shaper_level_1", "type" : "float", "values" : ["bi", -24.0, 24.0, "lin"], "default" : 0.5, "unit" : "db" },
+			{ "name" : "shaper_type_1", "type" : "menu_l", "values" : ["Soft sine", "Hard clip", "Bit crusher", "Diode clipper", "Tube preamp", "Half wave rectifier", "Full wave rectifier", "Polynomial", "Fractal", "Fold tri", "Noise inject", "Shards"], "default" : 0 },
+			{ "name" : "filter_frequency_1", "type" : "float", "values" : ["uni", 20.0, 20000.0, "log"], "default" : 0.75, "unit" : "hz" },
+			{ "name" : "filter_resonance_1", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0, "unit" : "%" },
+			{ "name" : "filter_type_1", "type" : "menu_l", "values" : ["Lowpass", "Bandpass", "Highpass", "Notch", "Peak", "Morph", "Comb", "Resampling"], "default" : 0 },
+
+			{ "name" : "shaper_amount_2", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0.0, "unit" : "%" },
+			{ "name" : "shaper_level_2", "type" : "float", "values" : ["bi", -24.0, 24.0, "lin"], "default" : 0.5, "unit" : "db" },
+			{ "name" : "shaper_type_2", "type" : "menu_l", "values" : ["Soft sine", "Hard clip", "Bit crusher", "Diode clipper", "Tube preamp", "Half wave rectifier", "Full wave rectifier", "Polynomial", "Fractal", "Fold tri", "Noise inject", "Shards"], "default" : 0 },
+			{ "name" : "filter_frequency_2", "type" : "float", "values" : ["uni", 20.0, 20000.0, "log"], "default" : 0.25, "unit" : "hz" },
+			{ "name" : "filter_resonance_2", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0, "unit" : "%" },
+			{ "name" : "filter_type_2", "type" : "menu_l", "values" : ["Lowpass", "Bandpass", "Highpass", "Notch", "Peak", "Morph", "Comb", "Resampling"], "default" : 0 },
+
+			{ "name" : "shaper_amount_3", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0.0, "unit" : "%" },
+			{ "name" : "shaper_level_3", "type" : "float", "values" : ["bi", -24.0, 24.0, "lin"], "default" : 0.5, "unit" : "db" },
+			{ "name" : "shaper_type_3", "type" : "menu_l", "values" : ["Soft sine", "Hard clip", "Bit crusher", "Diode clipper", "Tube preamp", "Half wave rectifier", "Full wave rectifier", "Polynomial", "Fractal", "Fold tri", "Noise inject", "Shards"], "default" : 0 },
+			{ "name" : "filter_frequency_3", "type" : "float", "values" : ["uni", 20.0, 20000.0, "log"], "default" : 0.5, "unit" : "hz" },
+			{ "name" : "filter_resonance_3", "type" : "float", "values" : ["uni", 0, 1, "lin"], "default" : 0, "unit" : "%" },
+			{ "name" : "filter_type_3", "type" : "menu_l", "values" : ["Lowpass", "Bandpass", "Highpass", "Notch", "Peak", "Morph", "Comb", "Resampling"], "default" : 0 }
+		]
+	}
+}
