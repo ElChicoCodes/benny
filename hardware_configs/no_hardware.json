@@ -1,94 +1,125 @@
 {
-	"io" : 	{
-		"keyboards" : [ "Xkey37", "Xkey25" ],
-		"controllers" : 		{
-			"Midi Fighter Twister" : 			{
-				"name" : "Midi Fighter Twister",
-				"driver" : "Midi Fighter Twister",
-				"substitute" : [ "JAMES_16e" ],
-				"outputs" : 16,
-				"scaling" : 1,
-				"type" : "encoder",
-				"channel" : 1,
-				"first" : 0,
-				"columns" : 4,
-				"rows" : 4,
-				"colour" : 				{
-					"type" : "midifighter",
-					"channel" : 2,
-					"first" : 0
-				}
-,
-				"brightness" : 				{
-					"type" : "midifighter",
-					"channel" : 3,
-					"first" : 0,
-					"dim" : 19,
-					"bright" : 48
-				}
-,
-				"value" : 				{
-					"type" : "cc",
-					"channel" : 1,
-					"first" : 0
-				}
-,
-				"resets" : 				{
-					"type" : "cc",
-					"channel" : 2,
-					"first" : 0
-				}
-,
-				"buttons" : 				{
-					"type" : "cc",
-					"globals" : 					{
-						"automap_toggle" : 0,
-						"automap_page" : 3
-					}
-,
-					"channel" : 4,
-					"first" : 8
-				}
-
-			}
-
-		}
-,
-		"matrix" : 		{
-
-		}
-
-	}
-,
-	"hardware" : 	{
-		"hardware.out.1+2" : 		{
-			"type" : "hardware",
-			"max_polyphony" : 2,
-			"help_text" : "pc speakers",
-			"connections" : 			{
-				"in" : 				{
-					"hardware" : [ "out" ],
-					"hardware_channels" : [ 1, 2 ]
-				}
-
-			}
-
-		}
-,
-		"hardware.in.1+2" : 		{
-			"type" : "hardware",
-			"max_polyphony" : 2,
-			"help_text" : "pc microphones/inputs",
-			"connections" : 			{
-				"out" : 				{
-					"hardware" : [ "in" ],
-					"hardware_channels" : [ 1, 2 ]
-				}
-
-			}
-
-		}
-
-	}
-
+    "io": {
+        "keyboards": [ "Xkey37", "Xkey25" ],
+        "controllers": {
+            "Midi Fighter Twister": {
+                "name": "Midi Fighter Twister",
+                "driver": "Midi Fighter Twister",
+                "substitute": [ "JAMES_16e" ],
+                "outputs": 16,
+                "scaling": 1,
+                "type": "encoder",
+                "channel": 1,
+                "first": 0,
+                "columns": 4,
+                "rows": 4,
+                "colour": {
+                    "type": "midifighter",
+                    "channel": 2,
+                    "first": 0
+                },
+                "brightness": {
+                    "type": "midifighter",
+                    "channel": 3,
+                    "first": 0,
+                    "dim": 19,
+                    "bright": 48
+                },
+                "value": {
+                    "type": "cc",
+                    "channel": 1,
+                    "first": 0
+                },
+                "resets": {
+                    "type": "cc",
+                    "channel": 2,
+                    "first": 0
+                },
+                "buttons": {
+                    "type": "cc",
+                    "globals": {
+                        "automap_toggle": 0,
+                        "automap_page": 3
+                    },
+                    "channel": 4,
+                    "first": 8
+                }
+            },
+            "LPD8 mk2": {
+                "name": "LPD8 mk2",
+                "substitute": [ "LPD8", "Launch Control XL" ],
+                "outputs": 8,
+                "type": "potentiometer",
+                "channel": 1,
+                "first": 1,
+                "scaling": 0.125,
+                "columns": 4,
+                "rows": 2,
+                "buttons": {
+                    "type": "cc",
+                    "channel": 1,
+                    "first": 36,
+                    "count": 8,
+                    "globals": {
+                        "automap_toggle": -1,
+                        "automap_page": 1
+                    }
+                }
+            }
+        },
+        "matrix": {        }
+    },
+    "hardware": {
+        "hardware.out.1+2": {
+            "type": "hardware",
+            "max_polyphony": 2,
+            "help_text": "pc speakers",
+            "connections": {
+                "in": {
+                    "hardware": [ "out" ],
+                    "hardware_channels": [ 1, 2 ]
+                }
+            }
+        },
+        "hardware.in.1+2": {
+            "type": "hardware",
+            "max_polyphony": 2,
+            "help_text": "pc microphones/inputs",
+            "connections": {
+                "out": {
+                    "hardware": [ "in" ],
+                    "hardware_channels": [ 1, 2 ]
+                }
+            }
+        },
+        "hardware.akaicontrol": {
+            "type": "hardware",
+            "substitute": [],
+            "max_polyphony": 1,
+            "help_text": "about your block",
+            "exclusive": 0,
+            "click_out": 0,
+            "cue_out": 0,
+            "talk_in": 0,
+            "midi_handler": "generic.hardware.midi.handler",
+            "midi_out": "LPD8 mk2",
+            "midi_in": "LPD8 mk2",
+            "connections": {
+                "in": {
+                    "midi": [ "akai_control" ],
+                    "midi_channels": [ 1 ],
+                    "midi_ranges": [
+                        [ 0, 127 ]
+                    ]
+                },
+                "out": {
+                    "midi": [ "new" ],
+                    "midi_channels": [ 1 ],
+                    "midi_ranges": [
+                        [ 0, 127 ]
+                    ]
+                }
+            }
+        }
+    }
 }
