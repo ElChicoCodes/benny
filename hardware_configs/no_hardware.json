@@ -1,6 +1,6 @@
 {
     "io": {
-        "keyboards": [ "Xkey37", "Xkey25" ],
+        "keyboards": [ "LPD8 mk2", "Midi Fighter Twister" ],
         "controllers": {
             "Midi Fighter Twister": {
                 "name": "Midi Fighter Twister",
@@ -44,27 +44,6 @@
                     "channel": 4,
                     "first": 8
                 }
-            },
-            "LPD8 mk2": {
-                "name": "LPD8 mk2",
-                "substitute": [ "LPD8", "Launch Control XL" ],
-                "outputs": 8,
-                "type": "potentiometer",
-                "channel": 1,
-                "first": 1,
-                "scaling": 0.125,
-                "columns": 4,
-                "rows": 2,
-                "buttons": {
-                    "type": "cc",
-                    "channel": 1,
-                    "first": 36,
-                    "count": 8,
-                    "globals": {
-                        "automap_toggle": -1,
-                        "automap_page": 1
-                    }
-                }
             }
         },
         "matrix": {        }
@@ -89,35 +68,6 @@
                 "out": {
                     "hardware": [ "in" ],
                     "hardware_channels": [ 1, 2 ]
-                }
-            }
-        },
-        "hardware.akaicontrol": {
-            "type": "hardware",
-            "substitute": [],
-            "max_polyphony": 1,
-            "help_text": "about your block",
-            "exclusive": 0,
-            "click_out": 0,
-            "cue_out": 0,
-            "talk_in": 0,
-            "midi_handler": "generic.hardware.midi.handler",
-            "midi_out": "LPD8 mk2",
-            "midi_in": "LPD8 mk2",
-            "connections": {
-                "in": {
-                    "midi": [ "akai_control" ],
-                    "midi_channels": [ 1 ],
-                    "midi_ranges": [
-                        [ 0, 127 ]
-                    ]
-                },
-                "out": {
-                    "midi": [ "new" ],
-                    "midi_channels": [ 1 ],
-                    "midi_ranges": [
-                        [ 0, 127 ]
-                    ]
                 }
             }
         }

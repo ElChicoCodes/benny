@@ -24,6 +24,7 @@
 	"AUTO_INCREMENT_SAVE_KEY" : 0,
 	"monofont" : "Consolas",
 	"mainfont" : "Arial",
+	"STOP_EXT_CLOCK_WHEN_BENNY_STOPS" : 0,
 	"sidebar_scrollbar_width" : 27,
 	"sidebar_width_in_units" : 10,
 	"click_buffer_scaledown" : 2,
@@ -32,8 +33,8 @@
 	"UNIVERSAL_PATTERNS" : 16,
 	"wire_dia" : 0.032,
 	"MAX_BEZIER_SEGMENTS" : 16,
-	"SELECTED_BLOCK_Z_MOVE" : 0.3,
-	"SELECTED_BLOCK_DEPENDENTS_Z_MOVE" : 0.15,
+	"SELECTED_BLOCK_Z_MOVE" : 1,
+	"SELECTED_BLOCK_DEPENDENTS_Z_MOVE" : 0.3,
 	"TARGET_FPS" : [30, 5],
 	"METER_TINT" : 0.3,
 	"MAX_BLOCKS" : 128,
@@ -66,11 +67,11 @@
 	"pattern_recall_timing_quantise" : "1n",
 	"waves_preloading" : 1,
 	"consolevsts" : {
-		"bus" : "console7buss64",
-		"channel" : "console7channel64",
-		"cascade" : "console7cascade64",
-		"crunch" : "console7crunch64",
-		"tape" : "totape664"
+		"bus" : "Console7Buss",
+		"channel" : "Console7Channel",
+		"cascade" : "Console7Cascade",
+		"crunch" : "Console7Crunch",
+		"tape" : "ToTape6"
 	},
 	"maxmsp" : {
 		"preempt" : 1,

@@ -1,0 +1,610 @@
+{
+    "vst.Triple.Cheese": {
+        "patcher": "vst.loader",
+        "type": "audio",
+        "help_text": "TripleCheese",
+        "block_ui_patcher": "blank.ui",
+        "max_polyphony": 0,
+        "plugin_name": "TripleCheese",
+        "plugin_type": "au",
+        "pitchbend_range": 2,
+        "compatibility_mode": 0,
+        "upsample": 1,
+        "subvoices": 2,
+        "connections": {
+            "in": {
+                "audio": [ "audio in" ],
+                "midi": [ "notes in", "pitchbend", "modulation", "aftertouch", "sustain" ],
+                "automap_poly": 0
+            },
+            "out": {
+                "audio": [ "audio out" ],
+                "midi": [ "notes out" ],
+                "parameters": [ "pitchbend", "modulation", "aftertouch", "sustain" ]
+            }
+        },
+        "parameters": [
+            {
+                "name": "Output",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Active #LFOG",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Active #FXU1",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Sync",
+                "default": 0.26923078298568726,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Phase",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Waveform",
+                "default": 0.1428571492433548,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Polarity",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Active #VBR",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Active #CSO1",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Active #CSO2",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Active #CSO3",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Voices",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Voice Stack",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Mode",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Glide",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Attack",
+                "default": 0.009999999776482582,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Decay",
+                "default": 0.7149999737739563,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Sustain",
+                "default": 0.8050000071525574,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Fall - Rise",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Release",
+                "default": 0.10000000149011612,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Velocity",
+                "default": 0.75,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Attack",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Decay",
+                "default": 0.5600000023841858,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Sustain",
+                "default": 0.4950000047683716,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Fall - Rise",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Release",
+                "default": 0.10000000149011612,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Velocity",
+                "default": 0.9800000190734863,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Sync",
+                "default": 0.26923078298568726,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Delay",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Restart",
+                "default": 0.3333333432674408,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Waveform",
+                "default": 0.1428571492433548,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Phase",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Polarity",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "DepthMod Dpt1",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Rate",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "FreqMod Dpt",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Tune",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Detune",
+                "default": 0.5400000214576721,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Vibrato",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Damp",
+                "default": 0.14499999582767487,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "DampModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Volume",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "VolumeModSrc",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "VolumeModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Pan",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "PanModSrc",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "PanModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Tone",
+                "default": 0.800000011920929,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "ToneMod",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Tune",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Detune",
+                "default": 0.46000000834465027,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Vibrato",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Damp",
+                "default": 0.19499999284744263,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "DampModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Volume",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "VolumeModSrc",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "VolumeModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Pan",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "PanModSrc",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "PanModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Tone",
+                "default": 0.8050000071525574,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "ToneMod",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Tune",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Detune",
+                "default": 0.5600000023841858,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Vibrato",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Damp",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "DampModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Volume",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "VolumeModSrc",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "VolumeModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Pan",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "PanModSrc",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "PanModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Tone",
+                "default": 0.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "ToneMod",
+                "default": 1.0,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Pan",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Volume",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "ModDepth",
+                "default": 0.5,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Speed",
+                "default": 0.3499999940395355,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Modulation",
+                "default": 0.6000000238418579,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Feedback",
+                "default": 0.1850000023841858,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Damp",
+                "default": 0.46000000834465027,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            },
+            {
+                "name": "Mix",
+                "default": 0.3700000047683716,
+                "type": "float",
+                "wrap": 0,
+                "values": [ "uni", 0, 1, "lin" ]
+            }
+        ]
+    }
+}

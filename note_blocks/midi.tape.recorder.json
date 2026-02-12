@@ -17,11 +17,12 @@
           "cc 5",
           "cc 6",
           "cc 7",
-          "cc 8",
-          "punch",
-          "rewind",
-          "clear"
-        ],
+        "cc 8",
+        "punch",
+        "rewind",
+        "clear",
+        "capture"
+      ],
         "default": 0
       },
       "out": {
@@ -73,6 +74,17 @@
         "type": "menu_i",
         "values": [
           "all",
+          "per_lane",
+          "touch"
+        ],
+        "wrap": 0,
+        "default": 0.07
+      },
+      {
+        "name": "capturemode",
+        "type": "menu_i",
+        "values": [
+          "global",
           "per_lane",
           "touch"
         ],
