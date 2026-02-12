@@ -1,3 +1,26 @@
+3/2/25:
+- **OSC input** added, with smart address parsing for a variety of OSC data formats
+
+6/12/25:
+- **fx.squeeze** added, a wrapper for the GMaudio squeeze multiband upward compressor.
+- **voice.grains** granular synth building block. each voice of this plays an overlapping pair of grains from your sample.
+- **seq.strudel.mini** EXPERIMENTAL ALPHA but so fun i'm mentioning it here: this block lets you enter patterns in strudel/tidalcycles mini-notation eg `[c4*7 <g3 g4>]/2,[bd sd]*2` - see https://strudel.cc/learn/mini-notation/
+- when importing waves if the filename contains a number benny uses it for the number of slices. useful if you're preparing sample banks.
+
+17/11/25:
+- quick midi mapping: press `\` while your mouse is over a sidebar slider and it'll go into midi map mode, move a midi control to make the mapping. if your controller supports per-knob led colours benny tries to make it match the slider you just assigned to.
+
+15/11/25:
+- **important warning** this version brings a big improvement but: although benny will load and attempt to convert old songfiles, gains and spread rotate settings may not exactly match and songs saved with this version will not open in older versions.
+- big update to connections. now almost all connections have a spread/rotate control when there are >1 voices at either end. this means you can, for example, modulate a parameter a different amount for each voice.
+- the spread rotate control itself has been updated - you can go past 1, for extra-separated sources, and you can also go negative, which sends an inverted copy to the opposite channels. in stereo this creates a super-wide spread effect (that cancels in mono..) but for example with parameter modulation you can have one lfo going forward to some voices and antiphase to some other voices.
+- midi to parameter/audio connections now ignore noteoffs, which works better for most use cases (eg making cutoff follow note pitch, or making a parameter respond to velocity)
+- when you shift-click a state to trigger it on the next bar (after shift is released) there's a visual indication of this
+
+14/11/25:
+- improved file menu to remove the chance of using 'save selected' by accident
+- typing to set or automate sidebar parameters is now possible on the panels page too
+
 12/11/25:
 - **abl.drumbuss** added - a wrapper for the ableton drum buss plugin
 - in the sidebar you can hover over a slider and type a value to set it. now additionally you can hover over a slider and type a comma separated list of values (eg `3,4,,,,5,1,23,,1`) and benny will automatically create a seq.values block attached to that slider ready to create that modulation pattern. additionally, if you end your list with / and a time value then a clock will be created and connected for the new seq.values. eg `3,4,,,,6/4n`

@@ -1,0 +1,138 @@
+{
+	"seq.strudel.mini" : {
+		"patcher" : "seq.strudel.mini",
+		"type" : "note",
+		"block_ui_patcher" : "seq.strudel.mini.ui",
+		"help_text" : "the strudel mini notation in benny. experimental beta.££eg [c4 g4 <f3 [f2 f4, c4]>],[bd sd]££you can write midi notes (eg c#3), note numbers (which are then picked from the selected scale), drum names (bd sd cp hh oh rd lt mt ht) or scale names (rootnote then nothing for maj, m for aeolian minor, h for harmonic, d for dorian. eg c#d)",
+		"max_polyphony" : 0,
+		"ui_in_sidebar_height" : 2,
+		"ui_in_sidebar_expands" : 1,
+		"ui_in_sidebar_gets_keypresses" : 1,
+		"default_polymode" : 	{
+				"stack_mode" : "unison all",
+				"choose_mode" : "blind cycle",
+				"steal_mode" : "cyclic",
+				"return_mode" : 1
+		},
+		"connections" : {
+			"in" : {
+				"midi" : [ "reset cycle count" ],
+				"default" : 0, 
+				"dontdefaultall" : 1,
+				"automap_poly" : 0,
+				"automap_to" : 0
+			},
+			"out" : {
+				"midi" : [ "notes out","bd","sd","cp","hh","oh","rd","lt","mt","ht" ],
+				"midi_scopes_types" : [ 0,3,3,3,3,3,3,3,3,3],
+				"dontdefaultall" : 1,
+				"default" : 0
+			}
+		},
+		"groups" : [
+			{ 
+				"contains" : [0],
+				"patterncontrols" : 1
+			},
+			{ 
+				"contains" : [1],
+				"height":0,
+				"onepervoice" :1
+			},
+			{ 
+				"contains" : [2],
+				"height":0,
+				"onepervoice" :1
+			},
+			{ 
+				"contains" : [3,3,3,4],
+				"colour" : 10,
+				"height":0
+			},
+			{ 
+				"contains" : [6],
+				"height":0,
+				"onepervoice" :1
+			},
+			{ 
+				"contains" : [7],
+				"height":0,
+				"onepervoice" :1
+			},
+			{
+				"contains" : [5],
+				"colour" : 20,
+				"height" : 1,
+				"onepervoice" : 1
+			}
+		],
+		"patterns" : {
+			"parameter" : 0,
+			"pattern_storage" : "dict",
+			"playhead_offset" : 1
+		},
+		"panel" : {
+			"parameters" : [5]
+		},
+		"parameters" : [
+			{
+				"name" : "pattern",
+				"type" : "int",
+				"values" : ["uni", 0, 15, "lin"],
+				"error_scale" : 0,
+				"default" : 0.03125,
+				"wrap" : 1
+			},
+			{
+				"name" : "base cycle length (beats)",
+				"type" : "int",
+				"values" : ["uni",1,64,"lin"],
+				"error_scale" : 0,
+				"nomap" : 1,
+				"default" : 0.055
+			},
+			{
+				"name" : "time offset",
+				"type" : "float",
+				"values" : ["bi", -1, 1, "lin"],
+				"wrap" : 0,
+				"default" : 0.5
+			},
+			{
+				"name" : "scale",
+				"type" : "scale",
+				"values" : ["1", "2", "3", "4", "5", "6", "7", "8"],
+				"wrap" : 0,
+				"columns" : 8,
+				"error_scale" : 0,
+				"default" : 0
+			},
+			{
+				"name" : "edit_scales",
+				"type" : "button",
+				"values" : ["core","jump to_scales_block","jump_to_scales_shapes"],
+				"default" : 0
+			},
+			{
+				"name" : "rev",
+				"type" : "menu_l",
+				"columns" : 3,
+				"values" : ["normal", "rev", "jux rev"],
+				"wrap" : 0,
+				"default" : 0
+			},{
+				"name" : "add_(scale degree steps)",
+				"type" : "int",
+				"values" : ["bi", -64, 64, "lin"],
+				"wrap" : 0,
+				"default" : 0.5
+			},{
+				"name" : "add_(octave steps)",
+				"type" : "int",
+				"values" : ["bi", -8, 8, "lin"],
+				"wrap" : 0,
+				"default" : 0.5
+			}
+		]
+	}
+}

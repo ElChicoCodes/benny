@@ -198,8 +198,8 @@ function preload_all_waves(){
 
 function create_blank_wave_buffer(number,length, channels,name){
 	polybuffer_create_blank(length,channels);
-	get_polybuffer_info();
 	var buffername = "waves."+polybuffer_names.length;
+	post("\ncreating buffer name:",buffername);
 	waves_buffer[number]= new Buffer(buffername);
 	// post("length",waves_buffer[number].length(),waves_buffer[number].framecount(),waves_buffer[number].channelcount(),"name",name,buffername);
 	var d = new Dict;
@@ -243,12 +243,12 @@ function polybuffer_create_blank(length,channels){
 function check_exists(filepath){
 	var testfile = new File(filepath);
 	if(testfile.isopen){
-		post(/*"\n",filepath,*/" found OK");
+		// post(/*"\n",filepath,*/" found OK");
 		testfile.close();
 		testfile.freepeer();
 		return 1;
 	}else{
-		post("NOT FOUND:",filepath );
+		// post("NOT FOUND:",filepath );
 		testfile.close();
 		testfile.freepeer();
 		return 0;
@@ -256,7 +256,8 @@ function check_exists(filepath){
 }
 
 function polybuffer_load_wave(wavepath,wavename,dictpath){ //loads wave into polybuffer if not already loaded.
-	if(wavename.split("$")[0] == "unsaved.looper"){ //creates a blank buffer if a looper block needs one
+	// post("\n\nPB LOAD WAVE, path:",wavepath,"\n\nname",wavepath,"\ndict",dictpath);
+	if((wavename.split("-")[0] == "unsaved.looper")||(wavename.split("$")[0] == "unsaved.looper")){ //creates a blank buffer if a looper block needs one
 		var length = wavename.split("$")[1];
 		var channels = wavename.split("$")[2];
 		if(typeof length != 'number') length = 1000000;
@@ -273,11 +274,10 @@ function polybuffer_load_wave(wavepath,wavename,dictpath){ //loads wave into pol
 		}
 		if(exists==-1){
 			if((wavepath==null)||(wavepath=="")){
-				post("\nbad filename, skipping load fn");
+				post("\nbad filename or unsaved temporary wave buffer slot, skipping load fn");
 				return -2;
 			}else if(check_exists(wavepath)){
 				waves_polybuffer.append(wavepath);
-				//post("\n(loading)")
 				get_polybuffer_info();
 				return -1;
 			}else{
@@ -287,7 +287,7 @@ function polybuffer_load_wave(wavepath,wavename,dictpath){ //loads wave into pol
 				last_folder = last_slash.pop();
 				var up_one = pathonly.split(last_folder)[0];
 				if(waves_search_paths.indexOf(up_one)<0){
-					post("\n added ",up_one,"to search path");
+					// post("\n added ",up_one,"to search path");
 					waves_search_paths.push(up_one);
 				}
 				waves_search_paths.push(SONGS_FOLDER);
@@ -299,7 +299,7 @@ function polybuffer_load_wave(wavepath,wavename,dictpath){ //loads wave into pol
 						//post("\nfound something!",r);
 						s=99999;
 					}else{
-						post("\n - not found in ",waves_search_paths[s]);
+						// post("\n - not found in ",waves_search_paths[s]);
 					}
 				}
 				if(r==-1){
@@ -402,17 +402,16 @@ function get_polybuffer_info(){
 //max calls this once a buffer is loaded
 function buffer_loaded(number,path,name,buffername){
 	waves_buffer[number]= new Buffer(buffername);
-	post("buffer",number,"has loaded into polyslot",number,/*path,buffername);
-	post("length",waves_buffer[number].length(),waves_buffer[number].framecount(),waves_buffer[number].channelcount(),*/"name",name);
+	post("buffer",number,"has loaded into polyslot",buffername,"name",name);
 	var tn=+number+1;
 	var exists=0;
 	if(tn>=waves_dict.getsize("waves"))	extend_waves_dict(tn);
 	if(waves_dict.contains("waves["+tn+"]::name")){
 		if(waves_dict.get("waves["+tn+"]::path")==path){
-			//post("not overwriting existing wave info in dictionary");
+			// post("not overwriting existing wave info in dictionary");
 			exists=1;
 		}else{
-			//post("\npath doesn't match so overwriting",waves_dict.get("waves["+tn+"]::path"),path);
+			// post("\npath doesn't match so overwriting",waves_dict.get("waves["+tn+"]::path"),path);
 		}
 	}
 	if(!exists){
@@ -426,10 +425,16 @@ function buffer_loaded(number,path,name,buffername){
 		d.replace("samplerate",waves_buffer[number].framecount()/waves_buffer[number].length());
 		d.replace("start",0);
 		d.replace("end",1);
-		d.replace("divisions",0);
+		var matches = name.match(/(\d+)/);
+		if(matches){
+			post("\nset slice count from filename",matches[0]);
+			d.replace("divisions",matches[0]/MAX_WAVES_SLICES);
+		}else{
+			d.replace("divisions",0);
+		}
 		d.replace("buffername",buffername);
 		waves_dict.replace("waves["+tn+"]",d);
-		tn++;
+		// tn++;
 	}
 	var tc = (waves_buffer[number].channelcount() | 0);
 	if(tc <= 0) tc = 2;
@@ -579,11 +584,7 @@ function import_song(){
 			loading.xoffset = current_x_max + 4 - new_x_min;
 		}
 		sidebar.notification = null;
-		if(songs.contains(loading.songname+"::version")){
-			bennyversion = songs.get(loading.songname+"::version");
-		}else{
-			bennyversion = 0;
-		}
+
 		if(songs.contains(loading.songname+"::notepad")){ 
 			sidebar.notification = songs.get(loading.songname+"::notepad");
 			set_sidebar_mode("notification");
@@ -607,16 +608,17 @@ function import_song(){
 						t = waves.remapping[i];
 						if(t==-1)t=i;
 						var tt = t+1;
-						//post("\n loading song wave"+i+" into slot "+t+" its path is "+songs.get(loading.songname+"::waves["+ii+"]::path"));
 						var pat = songs.get(loading.songname+"::waves["+ii+"]::path");
 						var nam = songs.get(loading.songname+"::waves["+ii+"]::name");
+						post("\n loading song wave"+i+" into slot "+t+" its path is "+pat+"its name is"+nam);
 						var polyslot = polybuffer_load_wave(pat,nam);
 						if(polyslot == -1 ){
 							polyslot = waves_polybuffer.count;
 						}else{
 							polyslot++;
 						}
-						// post("this wave is in polyslot",polyslot);
+						if(isNaN(polyslot) || !(polyslot > 1))polyslot = 1;
+						post("\n\n\n\nthis wave is in polyslot",polyslot);
 						waves_dict.replace("waves["+tt+"]", songs.get(loading.songname+"::waves["+ii+"]"));
 						waves_dict.replace("waves["+tt+"]::buffername","waves."+polyslot);
 						buffer_loaded(t,pat,nam,"waves."+polyslot);
@@ -699,7 +701,7 @@ function import_song(){
 						if(loading.wait>1) post("\nblock flagged as exclusive: searching for existing copy of ",block_name);
 						for(i=0;i<MAX_BLOCKS;i++){
 							if(blocks.get("blocks["+i+"]::name") == block_name){
-								post("found:",i)
+								post("found existing copy of",block_name,":",i);
 								t= 1;
 								loading.mapping[b] = i; //this next line stops orphaned bits of clock being left behind
 								if(thisblock.get("poly::voices")<blocks.get("blocks["+i+"]::poly::voices")) thisblock.replace("poly::voices",blocks.get("blocks["+i+"]::poly::voices"));
@@ -768,6 +770,9 @@ function import_song(){
 				new_connection = songs.get(loading.songname+"::connections["+b+"]");
 				new_connection.replace("from::number", loading.mapping[new_connection.get("from::number")]);
 				new_connection.replace("to::number", loading.mapping[new_connection.get("to::number")]);
+				if(!new_connection.contains("conversion::projectionAngle")){
+					convert_pre_0_6_connection();
+				}
 				connections.append("connections",new_connection);
 				var co = connections.getsize("connections")-1;
 				make_connection(co,0);
@@ -864,8 +869,8 @@ function import_song(){
 		for(i=0;i<loading.mutelist.length;i++){
 			mute_particular_block(loading.mutelist[i][0],loading.mutelist[i][1]);
 		}
-		messnamed("update_wave_colls","bang");
 		post("\nmarker");
+		messnamed("update_wave_colls","bang");
 		if((still_checking_polys&7)==0){
 			update_all_voices_mutestatus();
 		}
@@ -1256,6 +1261,10 @@ function load_block(block_name,block_index,paramvalues,was_exclusive){
 			if(blocktypes.get(block_name+"::max_polyphony")>1){
 				voicecount(block_index,blocktypes.get(block_name+"::max_polyphony"));
 			}
+		}else{
+			if(hardware_metermap.contains(block_index)){
+				hardware_metermap.remove(block_index);
+			}
 		}
 	}
 
@@ -1328,8 +1337,8 @@ function save_song(selectedonly, saveas){ //saveas == 1 -> prompt for name
 	}
 	var songsettings = new Dict;
 	songsettings.name = "songsettings";
-	songsettings.parse('{ "MAX_WAVES": '+MAX_WAVES+', "version":'+bennyversion+'}');
-	post("\nstored version : ",'{ "MAX_WAVES": '+MAX_WAVES+', "version":'+bennyversion+'}');
+	songsettings.parse('{ "MAX_WAVES": '+MAX_WAVES+'}');
+	post("\nstored version : ",'{ "MAX_WAVES": '+MAX_WAVES+'}');
 	for(b=0;b<MAX_BLOCKS;b++){
 		if(store[b].length) states.replace("states::current::"+b,store[b]);
 		//if(per_v[b].length) states.replace("states::current::static_mod::"+b,per_v[b]);
@@ -1860,4 +1869,42 @@ function write_blockipedia(){
 		}
 	}
 	blocki.close();
+}
+
+function convert_pre_0_6_connection(){
+	// if it's too param/audio/hw/block then the offset is in offset2, and projectionAngle replaces rotate for 1d-2d,2d-1d
+	if(new_connection.contains("to::input::type")){
+		var ttype = new_connection.get("to::input::type");
+		var ftype = new_connection.get("from::output::type");
+		if(ttype == "parameters" || ttype == "audio" || ttype == "hardware" || ttype == "block"){
+			//to is 1d
+			if(ftype == "midi"){
+				var ro = new_connection.get("conversion::rotate");
+				if(ro == null) ro = 0;
+				if(typeof ro === 'string') ro = parseFloat(ro);
+				post("replaced rotate with projection for this connection,",ftype,ttype,ro);
+				new_connection.replace("conversion::projectionAngle", ro);
+				new_connection.replace("conversion::offset2",new_connection.get("conversion::offset"));
+				new_connection.replace("conversion::offset",0.5);
+			}else if((ftype == "audio" || ftype == "hardware") && (ttype == "audio" || ttype == "hardware")){
+				post("O");
+				new_connection.replace("conversion::offset",0.5+ 0.25*new_connection.get("conversion::offset"));
+				new_connection.replace("conversion::projectionAngle",0);
+			}else{
+				post(".");
+				new_connection.replace("conversion::projectionAngle",0);
+				new_connection.replace("conversion::offset2",new_connection.get("conversion::offset"));
+				new_connection.replace("conversion::offset",0.5);
+			}
+		}else{
+			if(ftype == "parameters" || ftype == "audio" || ftype == "hardware"){
+				post("replaced rotate with projection for this connection,",ftype,ttype);
+				new_connection.replace("conversion::projectionAngle",new_connection.get("conversion::rotate"));
+			}else{
+				post(".");
+				new_connection.replace("conversion::projectionAngle",0);
+			}
+		}
+		if(new_connection.contains("overlap"))new_connection.remove("overlap");
+	}
 }

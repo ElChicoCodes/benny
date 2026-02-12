@@ -262,8 +262,10 @@ function omouse(x,y,leftbutton,ctrl,shift,caps,alt,e){
 			if(displaymode=="blocks"){
 				redraw_flag.flag |= 10;
 			}
-		}	
-		/*if(sidebar.mode == "file_menu")*/ redraw_flag.flag |= 2;
+		}else if(ctrl==0 && sidebar.ctrl_scrl && x<sidebar.x){
+			back_button();
+		}
+		redraw_flag.flag |= 2;
 	}
 	if(alt!=usermouse.alt){
 		usermouse.alt = alt;
@@ -428,9 +430,14 @@ function omouse(x,y,leftbutton,ctrl,shift,caps,alt,e){
 					if((usermouse.last.got_t == 2) && (usermouse.drag.distance<100)){ //its a slider
 						if(mouse_click_actions[usermouse.last.got_i]==sidebar_parameter_knob){
 							var pb = mouse_click_parameters[usermouse.last.got_i];
-							//post("params",pb);
 							if(alt == 1){
-								sidebar_parameter_knob(pb,param_defaults[pb[1]][pb[0]]);
+								if(pb[0]>MAX_BLOCKS){
+									//little hack to make this work on panels sliders too:
+									pb[1] = paramslider_details[pb[0]][8];
+									sidebar_parameter_knob(pb,param_defaults[pb[1]][paramslider_details[pb[0]][9]]);
+								}else{
+									sidebar_parameter_knob(pb,param_defaults[pb[1]][pb[0]]);
+								}
 								redraw_flag.flag|=2;								
 							}else if(usermouse.ctrl == 1){
 								if(usermouse.shift == 1){
@@ -996,7 +1003,7 @@ function omouse(x,y,leftbutton,ctrl,shift,caps,alt,e){
 													subvoices = blocks.get("blocks["+ob+"]::subvoices");
 													if(subvoices<1)subvoices = 1;
 												}
-												blocks_cube[ob][usermouse.drag.dragging.voices[t][1]].position = [ bdx + (0.125*subvoices + 0.125)*(usermouse.drag.dragging.voices[t][1]>0)+ 0.5*usermouse.drag.dragging.voices[t][1]/subvoices, bdy, -0.25];//-usermouse.drag.dragging.voices[t][1]-0.2];
+												blocks_cube[ob][usermouse.drag.dragging.voices[t][1]].position = [ bdx + (0.125*subvoices + 0.125)*(usermouse.drag.dragging.voices[t][1]>0)+ 0.5*usermouse.drag.dragging.voices[t][1]/subvoices, bdy, SELECTED_BLOCK_Z_MOVE -0.25];//-usermouse.drag.dragging.voices[t][1]-0.2];
 												//post("\nset position of block",ob,"voice",usermouse.drag.dragging.voices[t][1],"to:",blocks_cube[ob][usermouse.drag.dragging.voices[t][1]].position);
 											}
 											if(bl.length>0){
@@ -1270,6 +1277,9 @@ function um_scroll_wait(){
 }
 
 function mousewheel(x,y,leftbutton,ctrl,shift,caps,alt,e,f, scroll){
+	// temporary? fix for max bug where scroll events are reported twice (?)
+	scroll /= 2;
+	
 	usermouse.shift = shift;
 	usermouse.ctrl = ctrl;
 	usermouse.alt = alt;
@@ -1314,16 +1324,14 @@ function mousewheel(x,y,leftbutton,ctrl,shift,caps,alt,e,f, scroll){
 						if(selected.wire[bulgingwire]!=1){
 							for(var si=0;si<selected.wire.length;si++) selected.wire[si]=0;
 							selected.wire[bulgingwire]=1;
-							//redraw_flag.flag |= 8; //block_and_wire_colours();
-							//redraw_flag.flag |= 2;
 							redraw_flag.flag |= 10;
 						}
 					}else{
 						for(var si=0;si<selected.block.length;si++) selected.block[si]=0;
 						for(var si=0;si<selected.wire.length;si++) selected.wire[si]=0;
 						selected.wire[bulgingwire]=1;
-						redraw_flag.flag |= 8; //block_and_wire_colours();
-						redraw_flag.flag |= 2;
+						redraw_flag.flag |= 10;
+						sidebar.ctrl_scrl = 1;
 					}
 				} //todo? ctrl-scroll a block
 			}else if((usermouse.shift)&&(usermouse.alt)){
@@ -1384,7 +1392,7 @@ function mousewheel(x,y,leftbutton,ctrl,shift,caps,alt,e,f, scroll){
 				var t=paramslider_details[p[0]][13];
 				var p_values= blocktypes.get(paramslider_details[p[0]][15]+"::parameters["+paramslider_details[p[0]][9]+"]::values");
 			}
-			if(t=="int"){
+			if((t=="int")||(t=="note")){
 				if(p_values.length==5) scalar *= p_values[4];
 				usermouse.scroll_accumulator += scroll*scalar;
 				if(usermouse.scroll_accumulator > 0.22 ){
@@ -1409,10 +1417,10 @@ function mousewheel(x,y,leftbutton,ctrl,shift,caps,alt,e,f, scroll){
 					usermouse.scroll_accumulator += scroll;
 					if(usermouse.scroll_accumulator > 0.22 ){
 						usermouse.scroll_accumulator = 0;
-						tv += scalar / (p_values.length+1);
+						tv += 0.5 * scalar / Math.max(1,p_values.length);
 					}else if(usermouse.scroll_accumulator < -0.22){
 						usermouse.scroll_accumulator = 0;
-						tv -= scalar / (p_values.length+1);
+						tv -= 0.5 * scalar / Math.max(1,p_values.length);
 					}
 				}else{
 					if(scroll>0){
@@ -1502,11 +1510,16 @@ function keydown(key){
 	}
 	if((sidebar.panel) && (displaymode!="custom")){ //some sidebar panels capture keypresses
 		if((usermouse.x>sidebar.x) && (usermouse.y>sidebar.panel_y_range[0]) && (usermouse.y<sidebar.panel_y_range[1])){
-			post("\n sending keypress to sidebar ui instead ");
+			// post("\n sending keypress to sidebar ui instead ");
 			ui_poly.message("setvalue",  custom_block+1, "keydown", key, usermouse.x, usermouse.y);
 			return 1;
 		}
-	}
+	}else if((displaymode=="panels") && 
+			(mouse_click_actions[usermouse.got_i] == custom_mouse_passthrough)){
+		// post("\n sending keypress to panel ui instead ");
+		ui_poly.message("setvalue", mouse_click_values[usermouse.got_i] + 1, "keydown", key, usermouse.x, usermouse.y);
+		return 1;
+	}//else if((displaymode=="panels")) post("\npanels keypress:",JSON.stringify(mouse_click_actions[usermouse.got_i]),"p:",mouse_click_parameters[usermouse.got_i],"v:",mouse_click_values[usermouse.got_i])
 	if(keymap.contains("modal::"+displaymode)){
 		if(keymap.contains("modal::"+displaymode+"::"+key)){
 			var action = keymap.get("modal::"+displaymode+"::"+key);
@@ -1558,16 +1571,16 @@ function keydown(key){
 		// post("\nfound in keymap for sidebar mode", sidebar.mode,":", action, "paras",paras);
 		(eval(action[1])).apply(this,paras);
 		return 1;
+	}else if(keymap.contains(displaymode+"::"+key)){
+		var action = keymap.get(displaymode+"::"+key);
+		var paras = action.slice(2,99);
+		// post("\nfound in keymap for mode", displaymode,":", action, "paras",paras);
+		(eval(action[1])).apply(this,paras);
+		return 1;		
 	}else if(keymap.contains("global::"+key)){
 		var action = keymap.get("global::"+key);
 		var paras = action.slice(2,99);
 		// post("\nfound in global keymap", action[0],action[1], "paras",paras);
-		(eval(action[1])).apply(this,paras);
-		return 1;		
-	}else if(keymap.contains(displaymode+"::"+key)){
-		var action = keymap.get(displaymode+"::"+key);
-		var paras = action.slice(2,99);
-		//post("\nfound in keymap for mode", displaymode,":", action, "paras",paras);
 		(eval(action[1])).apply(this,paras);
 		return 1;		
 	}else if(keymap.contains(displaymode+"::all")){

@@ -460,7 +460,6 @@ var blocks_page = {
 var menucolour, menudark, menudarkest;
 var greycolour, greydark, greydarkest;
 var bg_dark_ratio = 0.2;
-var bennyversion = 0;
 var fontheight,fontsmall;
 var fo1;
 var backgroundcolour;
@@ -607,8 +606,10 @@ var sidebar = {
 	files_page : "songs",
 	notification : "",
 	text_being_edited : "",
+	ctrl_scrl : 0,
 	channelnaming : ["block","channel"], //set when you bring up the edit channel name mode
 	dropdown : null,
+	midiMapTarget : null, //target for midimapping
 	show_help : 0 //once you add a block to a song this turns on and it always shows help
 }
 

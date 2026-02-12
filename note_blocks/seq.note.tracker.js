@@ -432,15 +432,15 @@ function mouse(x,y,lb,sh,al,ct,scr){
 	var oy = cursory;
 	var barpos = -1;
 	if(x>=discont_x){
-		post("\nx was",x,"discont",discont_x,"end",discont_x2);
+		// post("\nx was",x,"discont",discont_x,"end",discont_x2);
 		if(x>=discont_x2){
 			x = x - 0.5*cw;
 		}else{
 			barpos = 2*(x - discont_x)/cw;
 			x = discont_x-20;
 		}
-		post(" is now ",x);
-	}else{post("\nx",x,"discont",discont_x);}
+		// post(" is now ",x);
+	}//else{post("\nx",x,"discont",discont_x);}
 	var xx = x-x_pos;
 	var yy = y-y_pos;
 	var clickx = (xx-sx)/cw;
@@ -547,7 +547,7 @@ function mouse(x,y,lb,sh,al,ct,scr){
 			}
 			//post("\nselection ",sel_sx,sel_ex,sel_sy,sel_ey,sel_sx2,sel_ex2);
 			drawflag=1;
-		}else{
+		}else if(!((clickx<0)||(clickx>v_list.length-1)||(clicky<0)||(clicky>maxl))){
 			cursorx2 = clickx2;
 			cursorx = Math.min(v_list.length-1,Math.floor(clickx));	
 			cursory = clicky;

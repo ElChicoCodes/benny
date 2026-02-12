@@ -24,7 +24,7 @@ function play(state){
 				if(playing){
 					ext_sync.state = 1;
 				}else{
-	
+					if(config.get("STOP_EXT_CLOCK_WHEN_BENNY_STOPS")) stop_ext_clocks();
 				}
 			}
 		}
@@ -340,6 +340,8 @@ function blocks_paste(outside_connections,target){
 					}
 					if(new_block_index==-1){
 						if(excl!=2)post("\nerror pasting, "+name+" not found");
+						error("\naborting whole paste/undo action for safety");
+						return -1;
 					}else{
 						new_blocks_indexes.push(new_block_index);
 						paste_mapping[copied_blocks[b]] = new_block_index;
@@ -911,7 +913,6 @@ function select_voice(parameter,value){
 }
 
 function sidebar_select_connection(num,val){
-	post("\nSSC");
 	if(usermouse.ctrl){
 		if(!connections.contains("connections["+num+"]::conversion")) post("\n?????",num);
 		var m = !connections.get("connections["+num+"]::conversion::mute");
@@ -1559,7 +1560,8 @@ function fire_block_state(state, block){
 			if(state=="current") state = -1;//lol
 			queue_quantised_notification(fire_block_state,state,block);
 			patternpage.held_state_fires[block] = state;
-			if(sidebar.selected==block) redraw_flag.flag |= 2; 
+			//if(sidebar.selected==block) 
+			redraw_flag.flag |= 2; 
 		}else{
 			patternpage.held_state_fires[block] = null;
 			var pv=[];
@@ -3380,14 +3382,17 @@ function store_wave_slices(waveno){
 	if(d>0){
 		//post("\ncalculating ",d,"slices ")
 		var l = waves_dict.get("waves["+waveno+"]::length");
-
+		if(isNaN(l)){
+			post("\nproblem getting wave length?");
+			l=1000;
+		} 
 		var s = l * waves_dict.get("waves["+waveno+"]::start");
 		var e = l * waves_dict.get("waves["+waveno+"]::end");
 		var m = (e-s) / d;
 		var i;
 		var o = (waveno - 1) * MAX_WAVES_SLICES;
 		
-		for(i=0;i<d;i++){
+		for(i=0;i<=d;i++){
 			waves_slices_buffer.poke(1, o+i, i*m+s);
 		}
 		//post("writing slices to buffer",waveno,/*o,*/l,s,e,d,m,"\n");
@@ -4054,15 +4059,21 @@ function convert_regular_to_matrix(cno, channels){
 
 function fold_menus(){
 	post("\nfold",sidebar.connection.default_out_applied);
-	if(sidebar.connection.default_out_applied>0){
-		sidebar.connection.show_from_outputs = 0;
-		sidebar.connection.default_out_applied = 0;
-	} 
-	if(sidebar.connection.default_in_applied>0){
-		sidebar.connection.show_to_inputs = 0;
-		sidebar.connection.default_in_applied = 0;
+	if(sidebar.connection.show_to_inputs || sidebar.connection.show_from_outputs){
+		if(sidebar.connection.default_out_applied>0){
+			sidebar.connection.show_from_outputs = 0;
+			sidebar.connection.default_out_applied = 0;
+		} 
+		if(sidebar.connection.default_in_applied>0){
+			sidebar.connection.show_to_inputs = 0;
+			sidebar.connection.default_in_applied = 0;
+		}
+		wire_ends[selected.wire.indexOf(1)][0]=-0.96969696; //forces it to redraw it
+	}else{
+		var s = selected.wire.indexOf(1);
+		select_block(0,connections.get("connections["+s+"]::to::number"));
+		selected.wire[s]=0;
 	}
-	wire_ends[selected.wire.indexOf(1)][0]=-0.96969696; //forces it to redraw it
 	sidebar.scroll.position = 0;
 	redraw_flag.flag |= 10;
 }
@@ -4228,12 +4239,12 @@ function squash_block_menu(){
 }
 
 function show_and_search_new_block_menu(key){
-	if(!usermouse.caps && (key>=97)&& (key<=122)){
+	if((displaymode=="blocks") && !usermouse.caps && (key>=97)&& (key<=122)){
 		blocks_page.new_block_click_pos = screentoworld(usermouse.x,usermouse.y);// [usermouse.x,usermouse.y];
 		menu.search = "";
 		show_new_block_menu();
 		end_of_frame_fn = function(){type_to_search(key);};
-	}else if((((key>=-42)&&(key<-32))||((key>=44)&&(key<58)))&&(usermouse.caps==0)){ //numbers do direct entry on values.	
+	}else if((((key>=-42)&&(key<-32))||((key>=44)&&(key<58))||((key>=560)&&(key<570)))&&(usermouse.caps==0)){ //numbers do direct entry on values.	
 		if((sidebar.mode == "block")&&(usermouse.got_t>=2) && (usermouse.got_t<=4) && (usermouse.got_i) && (usermouse.x > sidebar.x)){
 			var pno = mouse_click_parameters[usermouse.got_i][0];
 			//0-3 coords, 456 colour, 8 is the block (we know that already) 9 is the param no
@@ -4241,6 +4252,7 @@ function show_and_search_new_block_menu(key){
 			if(((key>=-42)&&(key<-32))){
 				key = -key + 15;
 			}
+			if(key>512) key -= 512;
 			sidebar.param_number_entry = String.fromCharCode(key);
 			sidebar.param_number = pno;
 			draw_number_entry(pno, sidebar.param_number_entry);
@@ -4316,6 +4328,7 @@ function parameter_list_entry(){
 	new_connection.replace("conversion::mute" , 0);
 	new_connection.replace("conversion::scale", 1);
 	new_connection.replace("conversion::vector", 0);	
+	new_connection.replace("conversion::projectionAngle", 0);	
 	new_connection.replace("conversion::offset", 0.5);
 	new_connection.replace("conversion::offset2", 0.5);
 	new_connection.replace("from::number",seqblock);
@@ -4339,7 +4352,7 @@ function parameter_list_entry(){
 
 	for(var i=0;i<list.length;i++){
 		if(typeof list[i] == 'number' && !isNaN(list[i])){
-			list[i] = (1 + 128*parseFloat(list[i]))/128;
+			list[i] = (1 + 128*parseFloat(list[i]))/127.999;
 		}else{
 			list[i] = 0;
 		}
@@ -4368,6 +4381,7 @@ function parameter_list_entry(){
 		new_connection.replace("conversion::mute" , 0);
 		new_connection.replace("conversion::scale", 1);
 		new_connection.replace("conversion::vector", 0);	
+		new_connection.replace("conversion::projectionAngle", 0);	
 		new_connection.replace("conversion::offset", 0.5);
 		new_connection.replace("conversion::offset2", 0.5);
 		new_connection.replace("from::number",clockblock);
@@ -4602,15 +4616,40 @@ function automap_q_click(p,v){
 	}
 }
 
-function conn_assign_controller_moved(type,number){
+function conn_assign_controller_moved(type,number,block){
 	if(type == "parameters"){
 		post("\nyou moved controller param number",number);
 	}else{
 		post("\nyou pressed controller button number",number);
 	}
-	i = selected.wire.indexOf(1);
-	if(i>-1){
-		conn_set_from_output(i, [type, number]);
+	if(sidebar.mode=="wire"){
+		i = selected.wire.indexOf(1);
+		if(i>-1){
+			conn_set_from_output(i, [type, number]);
+		}
+	}else if(sidebar.mode=="midimap"){
+		post("creating midi mapping");//,block,number,type);
+		new_connection.parse('{}');
+		new_connection.replace("conversion::mute" , 0);
+		new_connection.replace("conversion::scale", 1);
+		new_connection.replace("conversion::vector", 0);	
+		new_connection.replace("conversion::projectionAngle", 0);	
+		new_connection.replace("conversion::offset", 0.5);
+		new_connection.replace("conversion::offset2", 0.5);
+		new_connection.replace("from::number",block);
+		new_connection.replace("to::number",sidebar.midiMapTarget[1]);
+		new_connection.replace("to::voice","all");
+		new_connection.replace("from::voice","all");
+		new_connection.replace("to::input::number",sidebar.midiMapTarget[0]);
+		new_connection.replace("to::input::type","parameters");
+		new_connection.replace("from::output::number",number);
+		new_connection.replace("from::output::type","parameters");
+		connections.append("connections",new_connection);
+		make_connection(connections.getsize("connections")-1,0);
+		ui_poly.message("setvalue",block+1,"set_knob_colour",number,sidebar.midiMapTarget[3],sidebar.midiMapTarget[4],sidebar.midiMapTarget[5]);
+		redraw_flag.flag |= 4;
+		setAllControllerBlocksAssignMode(0);
+		set_sidebar_mode("block");
 	}
 }
 
@@ -4702,7 +4741,8 @@ function reify_automap_k(){
 	
 	new_connection.replace("conversion::mute" , 0);
 	new_connection.replace("conversion::scale", 1);
-	new_connection.replace("conversion::vector", 0);	
+	new_connection.replace("conversion::vector", 0);
+	new_connection.replace("conversion::projectionAngle", 0);		
 	new_connection.replace("conversion::offset", 0.5);	
 	new_connection.replace("conversion::offset2", 0.5);	
 	connections.append("connections", new_connection);
@@ -4996,5 +5036,34 @@ function scroll_pattern(p,v){
 		// request_set_block_parameter(p[0],param,p[1]+d);
 		
 		redraw_flag.deferred |= 4;
+	}
+}
+
+function enter_midi_map_mode(){
+	if(usermouse.got_t>=2 && usermouse.got_t<=4){	
+		if(usermouse.got_i>=0){
+			// var f = mouse_click_actions[usermouse.got_i];
+			var p = mouse_click_parameters[usermouse.got_i];
+			if(mouse_click_actions[usermouse.got_i]==sidebar_parameter_knob){
+				var c = paramslider_details[p[0]];
+				sidebar.midiMapTarget = [p[0],p[1],p[2],c[4],c[5],c[6]];
+				setAllControllerBlocksAssignMode(1);
+				set_sidebar_mode("midimap");
+			}
+		}
+	}
+}
+
+
+function setAllControllerBlocksAssignMode(m) {
+	for (var i = 0; i < MAX_BLOCKS; i++) {
+		if (blocks.contains("blocks[" + i + "]::name")) {
+			var n = blocks.get("blocks[" + i + "]::name").split('.');
+			if (n[0] == 'core' && n[1] == 'input' && n[2] == 'control') {
+				var v = voicemap.get(i);
+				if (Array.isArray(v)) v = v[0];
+				note_poly.message("setvalue", v + 1, "connection_assign_mode", m);
+			}
+		}
 	}
 }

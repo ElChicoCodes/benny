@@ -287,7 +287,12 @@ function new_block(block_name,x,y, no_smart_stuff){ //final param =1 if pasting 
 			if(blocktypes.get(block_name+"::max_polyphony")>1){
 				voicecount(new_block_index,blocktypes.get(block_name+"::max_polyphony"));
 			}
-		}	
+		}else{
+			if(hardware_metermap.contains(new_block_index)){
+				hardware_metermap.remove(new_block_index);
+			}
+		}
+
 	}
 //	draw_block(new_block_index);
 	if(type == "note"){
@@ -328,6 +333,7 @@ function new_block(block_name,x,y, no_smart_stuff){ //final param =1 if pasting 
 			new_connection.replace("conversion::mute" , 0);
 			new_connection.replace("conversion::scale", 1);
 			new_connection.replace("conversion::vector", 0);	
+			new_connection.replace("conversion::projectionAngle", 0);	
 			new_connection.replace("conversion::offset", 1);
 			new_connection.replace("conversion::offset2", 0.5);
 			new_connection.replace("conversion::force_unity", 1);
@@ -340,7 +346,12 @@ function new_block(block_name,x,y, no_smart_stuff){ //final param =1 if pasting 
 			new_connection.replace("from::output::number",0);
 			new_connection.replace("from::output::type","audio");
 			connections.append("connections",new_connection);
-			make_connection(connections.getsize("connections")-1,0);
+			if(check_for_connection_overlap(new_connection)){
+				connections.remove("connections["+new_connection+"]");
+				error("\ntried to add a connection that seems to already exist");
+			}else{
+				make_connection(connections.getsize("connections")-1,0);
+			}
 			if(bottombar.block==bus){
 				bottombar.right = -1;
 				setup_bottom_bar(bus);
@@ -609,7 +620,7 @@ function find_audio_voice_to_recycle(pa,up){ //ideally needs to match up upsampl
 	for(i=0;i<MAX_AUDIO_VOICES;i++){
 		if(audio_patcherlist[i]=="recycling") return [i,0];
 	}
-	post("\nERROR : can't find a free voice or one to recycle.",pa,"\n");
+	error("\nERROR : can't find a free voice or one to recycle.",pa,"\n");
 	return -1;
 }
 
@@ -627,7 +638,7 @@ function find_note_voice_to_recycle(pa){
 	for(i=0;i<MAX_NOTE_VOICES;i++){
 		if(note_patcherlist[i]=="recycling") return [i,0];
 	}
-	post("\nERROR : can't find a free voice or one to recycle.",pa,"\n");
+	error("\nERROR : can't find a free voice or one to recycle.",pa,"\n");
 	return -1;
 }
 
@@ -670,9 +681,9 @@ function next_free_voice(t,n){
 			return -1;
 		}
 	}else{
-		post("\nUNKNOWN BLOCK TYPE. EITHER HW CONFIG OR BLOCK JSON FILE ARE CORRUPT.")
+		error("\nUNKNOWN BLOCK TYPE. EITHER HW CONFIG OR BLOCK JSON FILE ARE CORRUPT.")
 	}
-	post("\ncan't find a free voice, this block will not load. type:",t,"name",n,"\n");
+	error("\ncan't find a free voice, this block will not load. type:",t,"name",n,"\n");
 	return -1;
 }
 
@@ -1892,7 +1903,7 @@ function make_connection(cno,existing){
 					var scale = conversion.get("scale");
 					var offn = conversion.get("offset");
 					var offv = conversion.get("offset2");
-					var vect = conversion.get("vector");
+					var vect = conversion.get("projectionAngle");
 					if(t_type == "midi"){
 						set_routing(f_voices[i]+f_o_no*MAX_AUDIO_VOICES+MAX_AUDIO_VOICES,0,enab,2,1,t_block,t_i_no,scale*Math.sin(Math.PI*vect*2),scale*Math.cos(Math.PI*vect*2),offn*256-128,offv*256-128,cno,0);
 					}else{
@@ -1904,7 +1915,7 @@ function make_connection(cno,existing){
 					var scale = conversion.get("scale");
 					var offn = conversion.get("offset");
 					var offv = conversion.get("offset2");
-					var vect = conversion.get("vector");
+					var vect = conversion.get("projectionAngle");
 					if(t_type == "midi"){
 						set_routing(f_voices[i],f_o_no, enab,2,1,t_block,t_i_no,scale*Math.sin(Math.PI*vect*2),scale*Math.cos(Math.PI*vect*2),offn*256-128,offv*256-128,cno,0);
 					}else{
@@ -1932,6 +1943,7 @@ function make_connection(cno,existing){
 					if(t_type == "midi"){ //midi to an individual voice, so we need to offset
 						t_voice += MAX_BLOCKS;
 					}
+					var spread_l = spread_level(i, v, conversion.get("offset"),conversion.get("vector"),f_voices.length, t_voices.length);
 
 					// find the route, then enable / set parameters of this connection
 					if(f_type == "audio" || f_type == "hardware"){
@@ -1945,7 +1957,6 @@ function make_connection(cno,existing){
 								outmsg[1] = audioiolists[1][t_voice - 1 - MAX_AUDIO_VOICES * NO_IO_PER_BLOCK]-1;
 								outmsg[2] = conversion.get("scale") * (1-(hw_mute || conversion.get("mute")));
 								if(outmsg[2]!=0){
-									var spread_l = spread_level(i, v, conversion.get("offset"),conversion.get("vector"),f_voices.length, t_voices.length);
 									outmsg[2] *= spread_l;
 								}
 								//post(">>  "+outmsg[0]+" "+outmsg[1]+" "+outmsg[2]);
@@ -1978,7 +1989,6 @@ function make_connection(cno,existing){
 								}else{
 									outmsg[2] = conversion.get("scale") * (1-(hw_mute || conversion.get("mute")));
 									if(outmsg[2]!=0){
-										var spread_l = spread_level(i, v, conversion.get("offset"),conversion.get("vector"),f_voices.length, t_voices.length);
 										outmsg[2] *= spread_l;
 									}
 								}
@@ -1998,7 +2008,7 @@ function make_connection(cno,existing){
 							var scale = conversion.get("scale");
 							var offn = conversion.get("offset");
 							var offv = conversion.get("offset2");
-							var vect = conversion.get("vector");
+							var vect = conversion.get("projectionAngle");
 							t_voice -= MAX_BLOCKS;
 							//post("\nrouting",f_voice+f_o_no*MAX_AUDIO_VOICES+MAX_AUDIO_VOICES,0,enab,2,2,t_voice,t_i_no);
 							if(t_voice<MAX_NOTE_VOICES){
@@ -2063,7 +2073,7 @@ function make_connection(cno,existing){
 							}
 							add_to_mod_routemap(t_voice,tmod_id,t_i_no,wrap);  
 							enab = 1-conversion.get("mute");
-							var scale = conversion.get("scale");
+							var scale = conversion.get("scale") * spread_l;
 							var offv = conversion.get("offset2");
 							set_routing(f_voice+f_o_no*MAX_AUDIO_VOICES+MAX_AUDIO_VOICES,0,enab,1,6,tmod_id,t_i_no,0,scale,offv*256-128,0,cno,v); //offn*256-128,offv*256-128
 						}
@@ -2134,8 +2144,8 @@ function make_connection(cno,existing){
 							add_to_mod_routemap(tvv,tmod_id,0,0); 
 							//post("midi to audio",tvv);
 							enab = 1-conversion.get("mute");
-							var scale = conversion.get("scale");
-							var offs = conversion.get("offset");
+							var scale = conversion.get("scale") * spread_l;
+							var offs = conversion.get("offset2");
 							if(typeof offs === "number"){
 								var offn = offs;
 								var offv = 0.5;
@@ -2143,12 +2153,12 @@ function make_connection(cno,existing){
 								var offn = offs[0];
 								var offv = offs[1];
 							}
-							var vect = conversion.get("vector");
+							var vect = conversion.get("projectionAngle");
 							set_routing(f_voice,f_o_no,enab,3,6,tmod_id,t_i_no,scale*Math.sin(Math.PI*vect*2),scale*Math.cos(Math.PI*vect*2),offn*256-128,offv*256-128,cno,v);
 						}else if(t_type == "midi"){
 							//this is a midi-midi connection for a single voice
 							enab = 1-conversion.get("mute");
-							var scale = conversion.get("scale");
+							var scale = conversion.get("scale") * spread_l;
 							var offn = conversion.get("offset");
 							var offv = conversion.get("offset2");
 							t_voice-=MAX_BLOCKS;
@@ -2158,20 +2168,7 @@ function make_connection(cno,existing){
 							}else{
 								set_routing(f_voice,f_o_no,enab,4,3,t_voice-MAX_NOTE_VOICES,t_i_no,1,scale,offn*256-128,offv*256-128,cno,v);
 							}
-						}/*else if(t_type == "block"){
-							//this is a midi-block control connection for a single voice
-							//post("fv",f_voice,"f_o",f_o_no);
-							//m_index = (f_voice)*128+f_o_no;
-							//add_to_midi_routemap(m_index,t_voice);
-							post("\nper-voice muting isn't supported (yet) TODO it shouldn't let you make this connection");
-							enab = 1-conversion.get("mute");
-							var scale = conversion.get("scale");
-							var offn = conversion.get("offset");
-							var offv = conversion.get("offset2");
-							var vect = conversion.get("vector");
-							var m_index_mult = MAX_MOD_IDS * m_index;
-							//set_conversion(m_index_mult + t_voice,enab,4,scale,offn,offv,vect,-(1+t_i_no));
-						}*/else if(t_type == "parameters"){
+						}else if(t_type == "parameters"){
 							// parameter connections are just like midi ones really
 							m_index = (f_voice)*128+f_o_no; 
 							t_voice += NO_IO_PER_BLOCK * MAX_AUDIO_VOICES + MAX_AUDIO_OUTPUTS;
@@ -2220,8 +2217,8 @@ function make_connection(cno,existing){
 							}
 							add_to_mod_routemap(t_voice,tmod_id,t_i_no,wrap);  
 							enab = 1-conversion.get("mute");
-							var scale = conversion.get("scale");
-							var offs = conversion.get("offset");
+							var scale = conversion.get("scale") * spread_l;
+							var offs = conversion.get("offset2");
 							if(typeof offs === "number"){
 								var offn = offs;
 								var offv = 0;
@@ -2229,7 +2226,7 @@ function make_connection(cno,existing){
 								var offn = offs[0];
 								var offv = offs[1];
 							}
-							var vect = conversion.get("vector");
+							var vect = conversion.get("projectionAngle");
 							set_routing(f_voice,f_o_no,enab,3,6,tmod_id,t_i_no,scale*Math.sin(Math.PI*vect*2),scale*Math.cos(Math.PI*vect*2),offn*256-128,offv*256-128,cno,v);
 						}		
 					}else if(f_type == "parameters"){
@@ -2276,7 +2273,7 @@ function make_connection(cno,existing){
 							add_to_mod_routemap(tvv,tmod_id,0,0); 
 							//post("param to audio",tvv);
 							enab = 1-conversion.get("mute");
-							var scale = conversion.get("scale");
+							var scale = conversion.get("scale") * spread_l;
 							/*var offs = conversion.get("offset");
 							if(typeof offs === "number"){
 								var offn = offs;
@@ -2294,7 +2291,7 @@ function make_connection(cno,existing){
 							var scale = conversion.get("scale");
 							var offn = conversion.get("offset");
 							var offv = conversion.get("offset2");
-							var vect = conversion.get("vector");
+							var vect = conversion.get("projectionAngle");
 							t_voice-=MAX_BLOCKS;
 							if(t_voice<MAX_NOTE_VOICES){
 								set_routing(f_voice,f_o_no,enab,2,2,t_voice,t_i_no,scale*Math.sin(Math.PI*vect*2),scale*Math.cos(Math.PI*vect*2),offn*256-128,offv*256-128,cno,v);
@@ -2352,7 +2349,6 @@ function make_connection(cno,existing){
 									mod_buffer.poke(1, mod_id, 0);
 								}
 							}
-
 							add_to_midi_routemap(m_index,tmod_id+MAX_BLOCKS+MAX_NOTE_VOICES+MAX_AUDIO_VOICES+MAX_HARDWARE_MIDI_OUTS);
 							var wrap = 0;
 							if(blocktypes.contains(blocks.get("blocks["+t_block+"]::name")+"::parameters["+t_i_no+"]::wrap")){
@@ -2360,8 +2356,8 @@ function make_connection(cno,existing){
 							}
 							add_to_mod_routemap(t_voice,tmod_id,t_i_no,wrap);  
 							enab = 1-conversion.get("mute");
-							var scale = conversion.get("scale");
-							var offs = conversion.get("offset");
+							var scale = conversion.get("scale") * spread_l;
+							var offs = conversion.get("offset2");
 							if(typeof offs === "number"){
 								var offn = offs;
 								var offv = 0;
@@ -2369,7 +2365,7 @@ function make_connection(cno,existing){
 								var offn = offs[0];
 								var offv = offs[1];
 							}
-							var vect = conversion.get("vector");
+							//var vect = conversion.get("vector");
 							set_routing(f_voice,f_o_no,enab,1 ,6,tmod_id,t_i_no,scale/*Math.sin(Math.PI*vect*2)*/,scale/*Math.cos(Math.PI*vect*2)*/,offn*256-128,offv*256-128,cno,v);
 						}		
 					}
@@ -2429,8 +2425,9 @@ function build_new_connection_menu(from, to, fromv,tov){
 	new_connection.replace("conversion::mute" , usermouse.ctrl);
 	new_connection.replace("conversion::scale", 1);
 	new_connection.replace("conversion::vector", 0);	
-	new_connection.replace("conversion::offset", 0);	
-	
+	new_connection.replace("conversion::projectionAngle", 0);	
+	new_connection.replace("conversion::offset", 0.5);	
+	new_connection.replace("conversion::offset2", 0.5);	
 	sidebar.connection.default_out_applied = 0;
 	sidebar.connection.default_in_applied = 0;
 	var defaultSpread = 0;
@@ -2521,7 +2518,7 @@ function build_new_connection_menu(from, to, fromv,tov){
 					new_connection.replace("to::input::number",0);
 				}
 				new_connection.replace("to::input::type","hardware");
-				new_connection.replace("conversion::offset", defaultSpread);
+				new_connection.replace("conversion::offset", 0.5 + 0.25*defaultSpread);
 				new_connection.replace("conversion::offset2", 0.5);
 			}else if(sidebar.connection.default_out_applied==1){
 				new_connection.replace("conversion::offset", 0.5);
@@ -2538,7 +2535,7 @@ function build_new_connection_menu(from, to, fromv,tov){
 					new_connection.replace("to::input::number",0);
 				}
 				new_connection.replace("to::input::type","audio");
-				new_connection.replace("conversion::offset", defaultSpread);
+				new_connection.replace("conversion::offset",  0.5 + 0.25*defaultSpread);
 				new_connection.replace("conversion::offset2", 0.5);
 			}else if(sidebar.connection.default_out_applied==1){
 				new_connection.replace("conversion::offset", 0.5);
@@ -2611,8 +2608,8 @@ function build_new_connection_menu(from, to, fromv,tov){
 		if(!Array.isArray(tcn)) tcn=[tcn];
 		var inname = tcn[new_connection.get("from::output::number")];
 		if((inname == "notes")||(inname == "notes in")||(inname == "pitch")){//sidebar.connection.default_in_applied||sidebar.connection.default_out_applied){
-			new_connection.replace("conversion::vector", 0.25);
-			new_connection.replace("conversion::offset2",0.787);
+			new_connection.replace("conversion::projectionAngle", 0.25);
+			new_connection.replace("conversion::offset2",0.505);
 			post("\nthis looks like a param->note connection so i've set the vector and velocity offset accordingly");
 		}
 	}
@@ -2653,53 +2650,50 @@ function check_for_connection_overlap(n){
 	for(var ti=0;ti<l;ti++){
 		if(ti==n){
 		}else{
-			if((connections.contains("connections["+ti+"]::from::number"))&&(connections.get("connections["+ti+"]::from::number")==f_n)){
-				if(connections.get("connections["+ti+"]::to::number")==t_n){
-					//post("\nfrom and to match");
-					if((connections.get("connections["+ti+"]::from::output::type")==f_t)&&(connections.get("connections["+ti+"]::to::input::type")==t_t)){
-						//post("\ntypes match");
-						if((connections.get("connections["+ti+"]::from::output::number")==f_i)&&(connections.get("connections["+ti+"]::to::input::number")==t_i)){
-							//inputs / outputs match	
-							var frommatch=0;
-							var fv = new_connection.get("from::voice");
-							if((f_v == "all") || (fv == "all")){
+			if((connections.contains("connections["+ti+"]::from::number"))&&(connections.get("connections["+ti+"]::from::number")==f_n)
+				&&(connections.get("connections["+ti+"]::to::number")==t_n)
+				&&(connections.get("connections["+ti+"]::from::output::type")==f_t)&&(connections.get("connections["+ti+"]::to::input::type")==t_t)
+				&&(connections.get("connections["+ti+"]::from::output::number")==f_i)&&(connections.get("connections["+ti+"]::to::input::number")==t_i)){
+				//now have to check if voices match
+				var frommatch=0;
+				var fv = connections.get("connections["+ti+"]::from::voice");
+				// post("\ntesting",ti,"against",n,"fv",fv,"f_v",f_v);
+				if((f_v == "all") || (fv == "all")){
+					frommatch = 1;
+				}else{
+					if(!Array.isArray(fv)) fv = [fv];
+					for(vi=0;vi<fv.length;vi++){
+						for(vii=0;vii<f_v.length;vii++){
+							if(fv[vi]==f_v[vii]){
 								frommatch = 1;
-							}else{
-								if(!Array.isArray(fv)) fv = [fv];
-								for(vi=0;vi<fv.length;vi++){
-									for(vii=0;vii<f_v.length;vii++){
-										if(fv[vi]==f_v[vii]){
-											frommatch = 1;
-											vii = 9999; vi = 9999;
-										}
-									}
-								}
-							}
-							if(frommatch){
-								var tomatch=0;
-								var tv = new_connection.get("to::voice");
-								if((t_v == "all") || (tv == "all")){
-									tomatch = 1;
-								}else{
-									if(!Array.isArray(tv)) tv = [tv];
-									for(vi=0;vi<tv.length;vi++){
-										for(vii=0;vii<t_v.length;vii++){
-											if(tv[vi]==t_v[vii]){
-												tomatch = 1;
-												vii = 9999; vi = 9999;
-											}
-										}
-									}
-								}
-								if(tomatch){
-									return 1;
-									//post("\noverlapping connection");
-									//ti=99999;
-									//overlap = 1;
-								}	
+								vii = 9999; vi = 9999;
 							}
 						}
 					}
+				}
+				if(frommatch){
+					var tomatch=0;
+					var tv = connections.get("connections["+ti+"]::to::voice");
+					// post("tv",tv,"t_v",t_v);
+					if((t_v == "all") || (tv == "all")){
+						tomatch = 1;
+					}else{
+						if(!Array.isArray(tv)) tv = [tv];
+						for(vi=0;vi<tv.length;vi++){
+							for(vii=0;vii<t_v.length;vii++){
+								if(tv[vi]==t_v[vii]){
+									tomatch = 1;
+									vii = 9999; vi = 9999;
+								}
+							}
+						}
+					}
+					if(tomatch){
+						post("\noverlapping connection, f:",fv,f_v,"t:",tv,t_v,"in connection",ti,"\n",JSON.stringify(connections.get("connections["+ti+"]")));
+						//ti=99999;
+						//overlap = 1;
+						return 1;
+					}	
 				}
 			}
 		}
@@ -3437,6 +3431,7 @@ function insert_block_in_connection(newblockname,newblock){
 		new_connection.replace("conversion::mute" , 0);
 		new_connection.replace("conversion::scale", 1);
 		new_connection.replace("conversion::vector", 0);	
+		new_connection.replace("conversion::projectionAngle", 0);	
 		new_connection.replace("conversion::offset", 0);
 		new_connection.replace("conversion::offset2", 0.5);
 		if(((f_type=="midi")||(f_type=="parameters"))&&(intypes[i_no]=="midi")) new_connection.replace("conversion::offset", 0.5);
@@ -3459,6 +3454,7 @@ function insert_block_in_connection(newblockname,newblock){
 		new_connection.replace("conversion::mute" , 0);
 		new_connection.replace("conversion::scale", 1);
 		new_connection.replace("conversion::vector", 0);	
+		new_connection.replace("conversion::projectionAngle", 0);	
 		new_connection.replace("conversion::offset", (defaultpos==3)|0);//and this is making the spread wide for mixer channels
 		new_connection.replace("conversion::offset2", 0.5);
 		if(((t_type=="midi")||(t_type=="parameters"))&&(outtypes[o_no]=="midi")) new_connection.replace("conversion::offset", 0.5);
@@ -3942,6 +3938,7 @@ function spawn_player(keyblock,auto){
 								new_connection.replace("conversion::mute" , 0);
 								new_connection.replace("conversion::scale", 1);
 								new_connection.replace("conversion::vector", 0);	
+								new_connection.replace("conversion::projectionAngle", 0);	
 								new_connection.replace("conversion::offset", 0.5);	
 								new_connection.replace("conversion::offset2", 0.5);	
 								remove_connection(c);
@@ -3973,6 +3970,7 @@ function spawn_player(keyblock,auto){
 		new_connection.replace("conversion::mute" , 0);
 		new_connection.replace("conversion::scale", 1);
 		new_connection.replace("conversion::vector", 0);	
+		new_connection.replace("conversion::projectionAngle", 0);	
 		new_connection.replace("conversion::offset", 0.5);	
 		new_connection.replace("conversion::offset2", 0.5);	
 		
