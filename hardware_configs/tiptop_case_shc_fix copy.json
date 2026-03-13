@@ -425,8 +425,6 @@
             "click_out": 0,
             "cue_out": 0,
             "talk_in": 0,
-            "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "Shuttle Control v4.0",
             "connections": {
                 "in": {
                     "midi": [ "midi_pulser_bp", "midi_pulser_lp_hp" ],
@@ -442,7 +440,9 @@
                     "hardware": [ "out_bp", "out_hp" ],
                     "hardware_channels": [ 23, 24 ]
                 }
-            }
+            },
+            "midi_handler": "generic.hardware.midi.handler",
+            "midi_in": "Shuttle Control v4.0"
         },
         "hardware.abacus1": {
             "type": "hardware",
@@ -481,7 +481,6 @@
             "cue_out": 0,
             "talk_in": 0,
             "midi_handler": "generic.hardware.midi.handler",
-            "midi_in": "POLY2",
             "connections": {
                 "in": {
                     "midi": [ "in_trigger" ],
@@ -496,39 +495,8 @@
                     "dc_block": [ 0 ],
                     "input_gate": [ 0 ]
                 }
-            }
-        },
-        "hardware.MIC1": {
-            "type": "hardware",
-            "substitute": [],
-            "max_polyphony": 1,
-            "help_text": "MIC1",
-            "exclusive": 0,
-            "click_out": 0,
-            "cue_out": 0,
-            "talk_in": 0,
-            "connections": {
-                "out": {
-                    "hardware": [ "IN" ],
-                    "hardware_channels": [ 33 ]
-                }
-            }
-        },
-        "hardware.MIC2": {
-            "type": "hardware",
-            "substitute": [],
-            "max_polyphony": 1,
-            "help_text": "MIC2",
-            "exclusive": 0,
-            "click_out": 0,
-            "cue_out": 0,
-            "talk_in": 0,
-            "connections": {
-                "out": {
-                    "hardware": [ "IN" ],
-                    "hardware_channels": [ 34 ]
-                }
-            }
+            },
+            "midi_in": "POLY2"
         }
     }
 }

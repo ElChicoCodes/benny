@@ -1,8 +1,12 @@
 {
     "MAX_WAVES": 256,
     "notepools": {
-        "shape": {        },
-        "notes": {        }
+        "shape": {
+            "1": [ 1, 2, 3, 4, 5, 6, 7 ]
+        },
+        "notes": {
+            "1": [ 2, 4, 6, 7, 9, 11, 13, 14, 16, 18, 19, 21, 23, 25, 26, 28, 30, 31, 33, 35, 37, 38, 40, 42, 43, 45, 47, 49, 50, 52, 54, 55, 57, 59, 61, 62, 64, 66, 67, 69, 71, 73, 74, 76, 78, 79, 81, 83, 85, 86, 88, 90, 91, 93, 95, 97, 98, 100, 102, 103, 105, 107, 109, 110, 112, 114, 115, 117, 119, 121 ]
+        }
     },
     "waves": [
         {        },
@@ -268,20 +272,72 @@
         {        },
         {
             "from": {
-                "number": 14,
+                "number": 0,
                 "output": {
-                    "type": "audio",
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 4,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 3
+            },
+            "to": {
+                "number": 9,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 18,
+                "output": {
+                    "type": "hardware",
                     "number": 0
                 },
                 "voice": "all"
             },
             "to": {
-                "number": 21,
+                "number": 28,
                 "input": {
-                    "type": "hardware",
+                    "type": "audio",
                     "number": 0
                 },
-                "voice": "all"
+                "voice": [ 3, 4 ]
             },
             "conversion": {
                 "mute": 0,
@@ -320,38 +376,12 @@
         },
         {
             "from": {
-                "number": 0,
+                "number": 10,
                 "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "to": {
-                "number": 4,
-                "input": {
                     "type": "midi",
                     "number": 0
                 },
                 "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 0,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
             },
             "to": {
                 "number": 7,
@@ -372,12 +402,12 @@
         },
         {
             "from": {
-                "number": 0,
+                "number": 5,
                 "output": {
                     "type": "midi",
                     "number": 0
                 },
-                "voice": 1
+                "voice": "all"
             },
             "to": {
                 "number": 8,
@@ -398,38 +428,12 @@
         },
         {
             "from": {
-                "number": 0,
+                "number": 4,
                 "output": {
                     "type": "midi",
                     "number": 0
                 },
-                "voice": 1
-            },
-            "to": {
-                "number": 9,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 0,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
+                "voice": "all"
             },
             "to": {
                 "number": 10,
@@ -450,93 +454,67 @@
         },
         {
             "from": {
-                "number": 0,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "to": {
-                "number": 18,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 0,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "to": {
-                "number": 19,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 4,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 14,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
                 "number": 7,
                 "output": {
-                    "type": "midi",
+                    "type": "audio",
                     "number": 0
                 },
                 "voice": "all"
             },
             "to": {
-                "number": 15,
+                "number": 28,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 1, 2 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0.07671957671957672,
+                "projectionAngle": 0,
+                "offset": 0.7610229276895943,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 17,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 28,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 5, 6 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 2
+            },
+            "to": {
+                "number": 5,
                 "input": {
                     "type": "midi",
                     "number": 0
@@ -554,7 +532,7 @@
         },
         {
             "from": {
-                "number": 8,
+                "number": 9,
                 "output": {
                     "type": "midi",
                     "number": 0
@@ -567,7 +545,7 @@
                     "type": "midi",
                     "number": 0
                 },
-                "voice": 1
+                "voice": "all"
             },
             "conversion": {
                 "mute": 0,
@@ -588,7 +566,33 @@
                 "voice": "all"
             },
             "to": {
-                "number": 17,
+                "number": 16,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 12,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 14,
                 "input": {
                     "type": "midi",
                     "number": 0
@@ -606,7 +610,7 @@
         },
         {
             "from": {
-                "number": 10,
+                "number": 20,
                 "output": {
                     "type": "midi",
                     "number": 0
@@ -632,7 +636,7 @@
         },
         {
             "from": {
-                "number": 18,
+                "number": 2,
                 "output": {
                     "type": "midi",
                     "number": 0
@@ -640,9 +644,87 @@
                 "voice": "all"
             },
             "to": {
-                "number": 12,
+                "number": 24,
                 "input": {
                     "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 11,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 17,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 8,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 18,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 26,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 19,
+                "input": {
+                    "type": "hardware",
                     "number": 0
                 },
                 "voice": "all"
@@ -660,15 +742,41 @@
             "from": {
                 "number": 19,
                 "output": {
-                    "type": "midi",
+                    "type": "hardware",
                     "number": 0
                 },
                 "voice": "all"
             },
             "to": {
-                "number": 16,
+                "number": 28,
                 "input": {
-                    "type": "midi",
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 13, 14 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 22,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 23,
+                "input": {
+                    "type": "hardware",
                     "number": 0
                 },
                 "voice": "all"
@@ -684,43 +792,17 @@
         },
         {
             "from": {
-                "number": 21,
+                "number": 14,
                 "output": {
-                    "type": "hardware",
+                    "type": "midi",
                     "number": 0
                 },
-                "voice": "all"
+                "voice": 1
             },
             "to": {
                 "number": 20,
                 "input": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": [ 1, 2 ]
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 15,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 21,
-                "input": {
-                    "type": "hardware",
+                    "type": "midi",
                     "number": 0
                 },
                 "voice": "all"
@@ -744,7 +826,7 @@
                 "voice": "all"
             },
             "to": {
-                "number": 21,
+                "number": 22,
                 "input": {
                     "type": "hardware",
                     "number": 0
@@ -762,96 +844,122 @@
         },
         {
             "from": {
+                "number": 24,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 25,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 25,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 26,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 26,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 22,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 9,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 27,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 27,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
                 "number": 17,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 21,
                 "input": {
                     "type": "hardware",
                     "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 16,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 21,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 0,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "to": {
-                "number": 22,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 22,
-                "output": {
-                    "type": "audio",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 21,
-                "input": {
-                    "type": "hardware",
-                    "number": 1
                 },
                 "voice": "all"
             },
@@ -875,7 +983,7 @@
                 "force_unity": 1
             },
             "from": {
-                "number": 20,
+                "number": 28,
                 "voice": "all",
                 "output": {
                     "number": 0,
@@ -893,7 +1001,7 @@
         },
         {
             "from": {
-                "number": 11,
+                "number": 31,
                 "output": {
                     "type": "audio",
                     "number": 0
@@ -901,241 +1009,59 @@
                 "voice": "all"
             },
             "to": {
-                "number": 21,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 27,
-                "output": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 23,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 23,
-                "output": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 20,
-                "input": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": [ 9, 10 ]
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 15,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 24,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 11,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 24,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 17,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 24,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 13,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 24,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 24,
-                "output": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 20,
-                "input": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": [ 5, 6 ]
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 14,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 25,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
                 "number": 28,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 11, 12 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 1,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 29,
                 "output": {
                     "type": "hardware",
-                    "number": 1
+                    "number": 0
                 },
                 "voice": "all"
             },
             "to": {
-                "number": 20,
+                "number": 30,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 23,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 28,
                 "input": {
                     "type": "audio",
                     "number": 0
@@ -1153,241 +1079,7 @@
         },
         {
             "from": {
-                "number": 25,
-                "output": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 28,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 0,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "to": {
-                "number": 26,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 26,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 4,
-                "input": {
-                    "type": "midi",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 26,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 7,
-                "input": {
-                    "type": "midi",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 26,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 8,
-                "input": {
-                    "type": "midi",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 26,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 9,
-                "input": {
-                    "type": "midi",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 26,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 10,
-                "input": {
-                    "type": "midi",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 26,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 18,
-                "input": {
-                    "type": "midi",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 26,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 19,
-                "input": {
-                    "type": "midi",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 22,
+                "number": 30,
                 "output": {
                     "type": "audio",
                     "number": 0
@@ -1395,168 +1087,298 @@
                 "voice": "all"
             },
             "to": {
-                "number": 21,
+                "number": 31,
                 "input": {
-                    "type": "hardware",
-                    "number": 1
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 0,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": 1
-            },
-            "to": {
-                "number": 27,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 12,
-                "output": {
                     "type": "audio",
                     "number": 0
                 },
                 "voice": "all"
             },
-            "to": {
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.75,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
                 "number": 23,
-                "input": {
+                "output": {
                     "type": "hardware",
                     "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 0.5105680307650751,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 2,
-                "output": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 29,
-                "input": {
-                    "type": "midi",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 30,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 25,
-                "input": {
-                    "type": "hardware",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 29,
-                "output": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "to": {
-                "number": 30,
-                "input": {
-                    "type": "audio",
-                    "number": 0
-                },
-                "voice": "all"
-            },
-            "conversion": {
-                "mute": 0,
-                "scale": 1,
-                "vector": 0,
-                "projectionAngle": 0,
-                "offset": 0.5,
-                "offset2": 0.5
-            }
-        },
-        {
-            "from": {
-                "number": 22,
-                "output": {
-                    "type": "audio",
-                    "number": 1
                 },
                 "voice": "all"
             },
             "to": {
                 "number": 28,
                 "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 9, 10 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 12,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 0,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 34,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 35,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 36,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 33,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 32,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 32,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 28,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 15, 16 ]
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 34,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 35,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 35,
+                "output": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 33,
+                "input": {
+                    "type": "midi",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 36,
+                "output": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 32,
+                "input": {
                     "type": "hardware",
                     "number": 1
                 },
                 "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 32,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": 1
+            },
+            "to": {
+                "number": 37,
+                "input": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "conversion": {
+                "mute": 0,
+                "scale": 1,
+                "vector": 0,
+                "projectionAngle": 0,
+                "offset": 0.5,
+                "offset2": 0.5
+            }
+        },
+        {
+            "from": {
+                "number": 37,
+                "output": {
+                    "type": "hardware",
+                    "number": 0
+                },
+                "voice": "all"
+            },
+            "to": {
+                "number": 28,
+                "input": {
+                    "type": "audio",
+                    "number": 0
+                },
+                "voice": [ 15, 16 ]
             },
             "conversion": {
                 "mute": 0,
@@ -1579,7 +1401,7 @@
                 "choose_mode": "cycle free",
                 "steal_mode": "oldest",
                 "latching_mode": 0,
-                "voices": 1
+                "voices": 3
             },
             "panel": {
                 "enable": 1
@@ -1600,8 +1422,8 @@
                 "brownian": 0
             },
             "space": {
-                "x": -9.25,
-                "y": 5.25,
+                "x": -12.9144066873402,
+                "y": 5.086406291216488,
                 "colour": [ 131, 30, 0 ]
             },
             "mute": 0,
@@ -1715,8 +1537,8 @@
                 "brownian": 0
             },
             "space": {
-                "x": -15.819022580027738,
-                "y": -10.64398384606509,
+                "x": -19.86915063979384,
+                "y": -12.526895101044227,
                 "colour": [ 183, 49, 151 ]
             }
         },
@@ -1753,52 +1575,11 @@
                 "brownian": 0
             },
             "space": {
-                "x": -19.413153089219485,
-                "y": -0.47760109243303406,
-                "colour": [ 127, 55, 0 ]
+                "x": -17.84260483322019,
+                "y": 4.015877934793734,
+                "colour": [ 137, 60, 0 ]
             },
             "automap_to": 0,
-            "mute": 0
-        },
-        {        },
-        {
-            "patcher": "mix.bus",
-            "name": "mixer.bus",
-            "label": "mixer.bus",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -15.292080781721484,
-                "y": -8.799687551993209,
-                "colour": [ 57, 78, 225 ]
-            },
-            "upsample": 2,
-            "subvoices": 2,
             "mute": 0
         },
         {
@@ -1835,10 +1616,134 @@
                 "brownian": 0
             },
             "space": {
-                "x": -11.687639597814034,
-                "y": 1.354036949427642,
-                "colour": [ 127, 55, 0 ]
+                "x": -10.819566931543434,
+                "y": 1.337402907443554,
+                "colour": [ 137, 60, 0 ]
             },
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "mix.bus",
+            "name": "mixer.bus",
+            "label": "mixer.bus",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -21.16704887421076,
+                "y": -7.071299846599842,
+                "colour": [ 57, 78, 225 ]
+            },
+            "upsample": 2,
+            "subvoices": 2,
+            "mute": 0
+        },
+        {
+            "patcher": "voice.xkick",
+            "name": "voice.xkick",
+            "label": "voice.xkick",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching": 0,
+                "voices": 4
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2, 3, 4 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0.13905328995640978,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -17.73146279566134,
+                "y": -0.04080643610431345,
+                "colour": [ 67, 119, 29 ]
+            },
+            "upsample": 1,
+            "subvoices": 1,
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "voice.xsnare",
+            "name": "voice.xsnare",
+            "label": "voice.xsnare",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 2, 3, 4, 8 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -10.826449810714031,
+                "y": 0.00439804433392732,
+                "colour": [ 57, 109, 40 ]
+            },
+            "upsample": 1,
+            "subvoices": 1,
             "automap_to": 0,
             "mute": 0
         },
@@ -1876,517 +1781,18 @@
                 "brownian": 0
             },
             "space": {
-                "x": -9.687639597814034,
-                "y": 1.104036949427642,
-                "colour": [ 127, 55, 0 ]
+                "x": -6.9582280047561795,
+                "y": 0.5042081022128295,
+                "colour": [ 137, 60, 0 ]
             },
             "automap_to": 0,
             "mute": 0
         },
         {
-            "patcher": "midi.rhythmes.alpes",
-            "name": "midi.rhythmes.alpes",
-            "label": "midi.rhythmes.alpes",
+            "patcher": "midi.velocity",
+            "name": "midi.velocity",
+            "label": "midi.velocity",
             "type": "note",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 4 ],
-                "enable": 1,
-                "parameters,enable,parameters,enable,parameters,enable": [ 0, 1, 4 ]
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -7.687639597814034,
-                "y": 0.8540369494276421,
-                "colour": [ 127, 55, 0 ]
-            },
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "midi.rhythmes.alpes",
-            "name": "midi.rhythmes.alpes",
-            "label": "midi.rhythmes.alpes",
-            "type": "note",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 4 ],
-                "enable": 1,
-                "parameters,enable,parameters,enable,parameters,enable,parameters,enable": [ 0, 1, 4 ]
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -5.687639597814034,
-                "y": 0.6040369494276421,
-                "colour": [ 127, 55, 0 ]
-            },
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "voice.xclap",
-            "name": "voice.xclap",
-            "label": "voice.xclap",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "first free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 2, 3, 4, 5 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -11,
-                "y": -1,
-                "colour": [ 0, 92, 2 ]
-            },
-            "upsample": 1,
-            "subvoices": 1,
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "voice.xcowbell",
-            "name": "voice.xcowbell",
-            "label": "voice.xcowbell",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "first free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -6.487954122959231,
-                "y": -3.8578801665519586,
-                "colour": [ 87, 116, 11 ]
-            },
-            "upsample": 1,
-            "subvoices": 1,
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "voice.xhihat",
-            "name": "voice.xhihat",
-            "label": "voice.xhihat",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "first free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 2, 3 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -6.990630468843582,
-                "y": -1.0852405117321284,
-                "colour": [ 80, 117, 27 ]
-            },
-            "upsample": 1,
-            "subvoices": 1,
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "voice.xkick",
-            "name": "voice.xkick",
-            "label": "voice.xkick",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 2, 3, 4 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -18.982856037180383,
-                "y": -2.1543198830259795,
-                "colour": [ 67, 119, 29 ]
-            },
-            "upsample": 1,
-            "subvoices": 1,
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "voice.xsnare",
-            "name": "voice.xsnare",
-            "label": "voice.xsnare",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "first free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 2, 3, 4, 8 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -13.363486090950168,
-                "y": -1.1545106815376354,
-                "colour": [ 57, 109, 40 ]
-            },
-            "upsample": 1,
-            "subvoices": 1,
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "voice.xtom",
-            "name": "voice.xtom",
-            "label": "voice.xtom",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "first free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 3, 4 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -1.6014680521148081,
-                "y": -1.613069882190664,
-                "colour": [ 0, 92, 2 ]
-            },
-            "upsample": 1,
-            "subvoices": 1,
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "voice.xhihat",
-            "name": "voice.xhihat",
-            "label": "voice.xhihat",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "first free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 2, 3 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -8.912877680946384,
-                "y": -0.9293826296697398,
-                "colour": [ 80, 117, 27 ]
-            },
-            "upsample": 1,
-            "subvoices": 1,
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "midi.rhythmes.alpes",
-            "name": "midi.rhythmes.alpes",
-            "label": "midi.rhythmes.alpes",
-            "type": "note",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 4 ],
-                "enable": 1,
-                "parameters,enable,parameters,enable,parameters,enable,parameters,enable,parameters,enable": [ 0, 1, 4 ]
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -3.6876395978140337,
-                "y": 0.3540369494276421,
-                "colour": [ 127, 55, 0 ]
-            },
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "midi.rhythmes.alpes",
-            "name": "midi.rhythmes.alpes",
-            "label": "midi.rhythmes.alpes",
-            "type": "note",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 4 ],
-                "enable": 1,
-                "parameters,enable,parameters,enable,parameters,enable,parameters,enable,parameters,enable,parameters,enable": [ 0, 1, 4 ]
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -1.6876395978140337,
-                "y": 0.10403694942764208,
-                "colour": [ 127, 55, 0 ]
-            },
-            "automap_to": 0,
-            "mute": 0
-        },
-        {
-            "patcher": "mix.stereo.channel",
-            "name": "mixer.stereo.basic",
-            "label": "mixer.stereo.basic",
-            "type": "audio",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 5
-            },
-            "panel": {
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -10.551969805545053,
-                "y": -7.12568030780926,
-                "colour": [ 57, 78, 225 ]
-            },
-            "upsample": 2,
-            "subvoices": 2,
-            "automap_to": 0,
-            "channel_names": [ 1, 2, 3, 4, 5 ]
-        },
-        {
-            "name": "hardware.sem",
-            "substitute": [],
-            "label": "hardware.sem",
-            "type": "hardware",
             "poly": {
                 "stack_mode": "1x",
                 "choose_mode": "cycle free",
@@ -2414,10 +1820,186 @@
                 "brownian": 0
             },
             "space": {
-                "x": -13.878261738608654,
-                "y": -4.797423558147291,
-                "colour": [ 0, 98, 191 ]
-            }
+                "x": -17.04608689738176,
+                "y": 2.0894159504403227,
+                "colour": [ 116, 57, 6 ]
+            },
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "voice.noise",
+            "name": "voice.noise",
+            "label": "voice.noise",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 3
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2, 3 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -7.116518009980705,
+                "y": -1.6316493669405945,
+                "colour": [ 80, 117, 27 ]
+            },
+            "upsample": 1,
+            "subvoices": 1,
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "midi.rhythmes.alpes",
+            "name": "midi.rhythmes.alpes",
+            "label": "midi.rhythmes.alpes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 4 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -0.6154596517915927,
+                "y": -0.7426718782785016,
+                "colour": [ 137, 60, 0 ]
+            },
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "voice.harmonic",
+            "name": "voice.harmonic",
+            "label": "voice.harmonic",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 11, 12, 13 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 0.1743205749654302,
+                "y": -6.699122054586887,
+                "colour": [ 80, 117, 27 ]
+            },
+            "upsample": 2,
+            "subvoices": 1,
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "seq.values",
+            "name": "seq.values",
+            "label": "seq.values",
+            "type": "note",
+            "poly": {
+                "stack_mode": "unison all",
+                "choose_mode": "blind cycle",
+                "steal_mode": "cyclic",
+                "return_mode": 1,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 7 ],
+                "enable": 1
+            },
+            "patterns": {
+                "parameter": 7,
+                "pattern_storage": "data",
+                "playhead_offset": 0,
+                "pattern_size": 128,
+                "pattern_start": 1,
+                "names": [ "1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ]
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -0.4192845004853183,
+                "y": -1.845166486354774,
+                "colour": [ 114, 42, 0 ]
+            },
+            "automap_to": 4,
+            "voice_data": {
+                "0": [ 0.6666666865348816, 0.4219101071357727, 0.43630120158195496, 0.5477198958396912, 0.44511401653289795, 0.5721498131752014, 0.435342013835907, 0.5477198958396912 ]
+            },
+            "mute": 0
         },
         {
             "patcher": "source.random",
@@ -2452,13 +2034,53 @@
                 "brownian": 0
             },
             "space": {
-                "x": -18,
-                "y": 2,
+                "x": -12.982426187982195,
+                "y": 2.6926892264287234,
                 "colour": [ 146, 96, 28 ]
             },
             "upsample": 1,
             "subvoices": 1,
-            "automap_to": 0
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "midi.delay",
+            "name": "midi.delay",
+            "label": "midi.delay",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -2.704535400798097,
+                "y": -0.940380924177056,
+                "colour": [ 116, 57, 6 ]
+            },
+            "automap_to": 0,
+            "mute": 0
         },
         {
             "name": "hardware.Res4",
@@ -2492,161 +2114,10 @@
                 "brownian": 0
             },
             "space": {
-                "x": -5.5536616551757625,
-                "y": -6.054566876853151,
-                "colour": [ 0, 98, 191 ]
+                "x": -9.648059658512686,
+                "y": -2.9049044359862712,
+                "colour": [ 0, 84, 172 ]
             }
-        },
-        {
-            "name": "hardware.ddelay",
-            "substitute": [],
-            "label": "hardware.ddelay",
-            "type": "hardware",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "enable": 0
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -12,
-                "y": -3,
-                "colour": [ 0, 96, 195 ]
-            }
-        },
-        {
-            "name": "hardware.FXboy",
-            "substitute": [],
-            "label": "hardware.FXboy",
-            "type": "hardware",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "enable": 0
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -17,
-                "y": -5,
-                "colour": [ 59, 95, 169 ]
-            }
-        },
-        {
-            "patcher": "abb.eight.step",
-            "name": "seq.eight.step.rhythm",
-            "label": "seq.eight.step.rhythm",
-            "type": "note",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "parameters": [ 0, 1, 2, 3, 4, 5, 6 ],
-                "enable": 1
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -18,
-                "y": 5,
-                "colour": [ 167, 83, 39 ]
-            },
-            "automap_to": 0
-        },
-        {
-            "name": "hardware.Metal1",
-            "substitute": [],
-            "label": "hardware.Metal1",
-            "type": "hardware",
-            "poly": {
-                "stack_mode": "1x",
-                "choose_mode": "cycle free",
-                "steal_mode": "oldest",
-                "return_mode": 1,
-                "latching_mode": 0,
-                "voices": 1
-            },
-            "panel": {
-                "enable": 0
-            },
-            "error": {
-                "spread": 0,
-                "drift": 0,
-                "lockup": 0
-            },
-            "flock": {
-                "weight": 0.2,
-                "tension": 0.2,
-                "friction": 0.4,
-                "bounce": 0.7,
-                "attrep": 0.5,
-                "align": 0.5,
-                "twist": 0.5,
-                "brownian": 0
-            },
-            "space": {
-                "x": -0.820108623613768,
-                "y": -4.577551512051711,
-                "colour": [ 0, 65, 136 ]
-            },
-            "automap_to": 0
         },
         {
             "name": "hardware.ripples_lpg2",
@@ -2680,11 +2151,239 @@
                 "brownian": 0
             },
             "space": {
-                "x": -18.378159471443404,
-                "y": -6.124427840581124,
-                "colour": [ 0, 96, 195 ]
+                "x": -13.044973545263137,
+                "y": -1.4115582326634715,
+                "colour": [ 59, 95, 169 ]
             },
             "automap_to": 0
+        },
+        {
+            "name": "hardware.FXboy",
+            "substitute": [],
+            "label": "hardware.FXboy",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -18.328542151084676,
+                "y": -4.318947252167168,
+                "colour": [ 59, 95, 169 ]
+            }
+        },
+        {
+            "patcher": "midi.scale.quantise",
+            "name": "midi.scale.quantise",
+            "label": "midi.scale.quantise",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 1.0345298935962302,
+                "y": -4.911817508053515,
+                "colour": [ 116, 57, 6 ]
+            },
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "patcher": "core.scales.shapes",
+            "name": "core.scales.shapes",
+            "label": "core.scales.shapes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 0,
+                "latching": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -1.3244248725636294,
+                "y": 6.433929291649232,
+                "colour": [ 183, 70, 41 ]
+            },
+            "automap_to": 0,
+            "mute": 0
+        },
+        {
+            "name": "hardware.ddelay",
+            "substitute": [],
+            "label": "hardware.ddelay",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -3,
+                "y": -7,
+                "colour": [ 59, 95, 169 ]
+            }
+        },
+        {
+            "name": "hardware.polyphaser",
+            "substitute": [],
+            "label": "hardware.polyphaser",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -4.3505510888303345,
+                "y": -9.501843278267645,
+                "colour": [ 0, 98, 191 ]
+            }
+        },
+        {
+            "patcher": "midi.scale.quantise",
+            "name": "midi.scale.quantise",
+            "label": "midi.scale.quantise",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 3
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -3.842723138255307,
+                "y": -3.73260535688601,
+                "colour": [ 116, 57, 6 ]
+            },
+            "automap_to": 0,
+            "mute": 0
         },
         {
             "patcher": "voice.basic",
@@ -2697,7 +2396,7 @@
                 "steal_mode": "oldest",
                 "return_mode": 1,
                 "latching_mode": 0,
-                "voices": 2
+                "voices": 3
             },
             "panel": {
                 "parameters": [ 0, 1, 6, 7, 8 ],
@@ -2719,13 +2418,203 @@
                 "brownian": 0
             },
             "space": {
-                "x": -0.5025160311187298,
-                "y": 3.4055553545631234,
+                "x": -7.330836527760569,
+                "y": -5.946925979383018,
                 "colour": [ 80, 117, 27 ]
             },
             "upsample": 1,
             "subvoices": 1,
-            "automap_to": 0
+            "mute": 0
+        },
+        {
+            "name": "hardware.sem",
+            "substitute": [],
+            "label": "hardware.sem",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -8.344820336409878,
+                "y": -9.39024599625463,
+                "colour": [ 0, 84, 172 ]
+            }
+        },
+        {
+            "name": "hardware.Metal1",
+            "substitute": [],
+            "label": "hardware.Metal1",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -12.293337304797681,
+                "y": -2.7400824691565724,
+                "colour": [ 0, 98, 191 ]
+            }
+        },
+        {
+            "patcher": "mix.stereo.channel",
+            "name": "mixer.stereo.basic",
+            "label": "mixer.stereo.basic",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 8
+            },
+            "panel": {
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -14.701712534718418,
+                "y": -7.901895250092746,
+                "colour": [ 57, 78, 225 ]
+            },
+            "upsample": 2,
+            "subvoices": 2,
+            "mute": 0
+        },
+        {
+            "name": "hardware.MIC2",
+            "substitute": [],
+            "label": "hardware.MIC2",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 4.34269741490542,
+                "y": 6.766783040367027,
+                "colour": [ 0, 96, 195 ]
+            }
+        },
+        {
+            "patcher": "vst.loader",
+            "name": "vst.Little.AlterBoy",
+            "label": "vst.Little.AlterBoy",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 4,
+                "y": 3,
+                "colour": [ 173, 61, 154 ]
+            },
+            "upsample": 1,
+            "subvoices": 2
         },
         {
             "patcher": "vst.loader",
@@ -2759,20 +2648,250 @@
                 "brownian": 0
             },
             "space": {
-                "x": 1,
-                "y": 2,
-                "colour": [ 136, 0, 119 ]
+                "x": 6,
+                "y": 1,
+                "colour": [ 157, 59, 141 ]
             },
             "upsample": 1,
             "subvoices": 2
         },
-        {        },
-        {        },
-        {        },
-        {        },
-        {        },
-        {        },
-        {        },
+        {
+            "name": "hardware.wasp",
+            "substitute": [],
+            "label": "hardware.wasp",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -0.3344378005446753,
+                "y": 0.899989588149976,
+                "colour": [ 0, 65, 136 ]
+            }
+        },
+        {
+            "name": "hardware.Kick",
+            "substitute": [],
+            "label": "hardware.Kick",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 1.8493803829994504,
+                "y": 2.3814295678248767,
+                "colour": [ 0, 84, 172 ]
+            }
+        },
+        {
+            "patcher": "midi.rhythmes.alpes",
+            "name": "midi.rhythmes.alpes",
+            "label": "midi.rhythmes.alpes",
+            "type": "note",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 4 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": -3,
+                "y": 4,
+                "colour": [ 137, 60, 0 ]
+            }
+        },
+        {
+            "patcher": "seq.values",
+            "name": "seq.values",
+            "label": "seq.values",
+            "type": "note",
+            "poly": {
+                "stack_mode": "unison all",
+                "choose_mode": "blind cycle",
+                "steal_mode": "cyclic",
+                "return_mode": 1,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 7 ],
+                "enable": 1
+            },
+            "patterns": {
+                "parameter": 7,
+                "pattern_storage": "data",
+                "playhead_offset": 0,
+                "pattern_size": 128,
+                "pattern_start": 1,
+                "names": [ "1", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ]
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 2,
+                "y": 5,
+                "colour": [ 114, 42, 0 ]
+            },
+            "voice_data": {
+                "0": [ 0.0, 0.43314605951309204 ]
+            }
+        },
+        {
+            "patcher": "utility.env.asr",
+            "name": "utility.env.asr",
+            "label": "utility.env.asr",
+            "type": "audio",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "parameters": [ 0, 1, 2 ],
+                "enable": 1
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 0,
+                "y": 3,
+                "colour": [ 0, 69, 206 ]
+            },
+            "upsample": 1,
+            "subvoices": 1
+        },
+        {
+            "name": "hardware.delaySara",
+            "substitute": [],
+            "label": "hardware.delaySara",
+            "type": "hardware",
+            "poly": {
+                "stack_mode": "1x",
+                "choose_mode": "cycle free",
+                "steal_mode": "oldest",
+                "return_mode": 1,
+                "latching_mode": 0,
+                "voices": 1
+            },
+            "panel": {
+                "enable": 0
+            },
+            "error": {
+                "spread": 0,
+                "drift": 0,
+                "lockup": 0
+            },
+            "flock": {
+                "weight": 0.2,
+                "tension": 0.2,
+                "friction": 0.4,
+                "bounce": 0.7,
+                "attrep": 0.5,
+                "align": 0.5,
+                "twist": 0.5,
+                "brownian": 0
+            },
+            "space": {
+                "x": 3,
+                "y": 0,
+                "colour": [ 0, 84, 172 ]
+            }
+        },
         {        },
         {        },
         {        },
@@ -2867,50 +2986,73 @@
     "states": {
         "current": {
             "static_mod": {
+                "0": {
+                    "0": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.019400352612137794, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                },
                 "2": {
-                    "0": [ 0.0, 0.0, 0.44999998807907104, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                    "0": [ 0.0, 0.0, 0.44999998807907104, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0 ]
                 },
-                "20": {
-                    "0": [ -0.3297755718231201, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
-                    "1": [ 0.1614164263010025, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                "11": {
+                    "0": [ -0.22159099578857422, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                },
+                "14": {
+                    "0": [ 0.0, -0.0234375, 0.0078125, -0.1015625, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                },
+                "21": {
+                    "0": [ 0.0918181836605072, 0.19920960068702698 ]
+                },
+                "28": {
+                    "0": [ -0.699999988079071, -0.0026455025654286146, 0.22276896238327026, 0.5, -0.5, 0.0, 0.0, 0.0 ],
+                    "1": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
                     "2": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
-                    "3": [ -0.2778445780277252, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
-                    "4": [ -0.17278695106506348, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                    "3": [ -0.692187488079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "4": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "5": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "6": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+                    "7": [ -0.699999988079071, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
                 },
-                "26": {
-                    "0": [ 0.05692214146256447, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+                "35": {
+                    "0": [ 0.0, 0.0, 0.0, -0.125, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
                 }
             },
-            "0": [ 0, 0.5131468772888184, 0.16075462102890015, 0.4169861972332001, 0.09000000357627869, 0.40625, 0.0234375, 0.0, 0.2109375, 0.6000000238418579, 0.5, 0.25, 0.5, 0.5, 0.5, 0.5, 0.0, 0.0 ],
+            "0": [ 0, 0.40833333134651184, 0.5407459735870361, 0.37635183334350586, 0.4872336685657501, 0.551019549369812, 0.0, 0.0, 0.12091706693172455, 0.6000000238418579, 0.5, 0.25, 0.5, 0.5, 0.5, 0.5, 0.0, 0.0 ],
             "1": [ 0, 0.3712500035762787, 0.8999999761581421 ],
-            "2": [ 0, 0.0, 0.0, 0.550000011920929, 0.0, 0.75, 0.06666667014360428, 0.12399999797344208, 0.0, 0.0, 0.5 ],
+            "2": [ 0, 0.0, 0.6000000238418579, 0.800000011920929, 0.0, 0.75, 0.06666667014360428, 0.12399999797344208, 0.0, 0.0, 0.6000000238418579 ],
             "3": [ 0 ],
-            "4": [ 0, 0.7074417471885681, 0.25999999046325684, 0.5, 0.5, 0.16111856698989868, 0.0 ],
+            "4": [ 0, 0.6568975448608398, 0.515625, 0.3165784776210785, 0.5246913433074951, 0.03374102711677551, 0.0 ],
+            "5": [ 0, 0.6550430655479431, 0.0, 0.7641814351081848, 0.37901803851127625, 0.02009427547454834, 0.0 ],
             "6": [ 0, 0.0, 0.25 ],
-            "7": [ 0, 0.6660425662994385, 0.25999999046325684, 0.5, 0.5, 0.20334236323833466, 0.0 ],
-            "8": [ 0, 0.9999998807907104, 0.15508311986923218, 0.5, 0.5, 0.1642007678747177, 0.0 ],
-            "9": [ 0, 0.5641638040542603, 0.25999999046325684, 0.5, 0.5, 0.0, 0.0 ],
-            "10": [ 0, 0.826092004776001, 0.25999999046325684, 0.5, 0.5, 0.1614825278520584, 0.0 ],
-            "11": [ 0, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.9247627854347229 ],
-            "12": [ 0, 0.31109619140625, 0.06453486531972885, 0.5, 0.7625892758369446, 0.892743706703186 ],
-            "13": [ 0, 0.4077986180782318, 0.3532979190349579, 0.4930330812931061, 0.4953503906726837, 0.5, 0.8122029304504395, 0.7101976871490479, 0.8373069167137146, 0.8907533884048462, 0.7788255214691162 ],
-            "14": [ 0, 0.4172811508178711, 0.5, 0.5, 0.10272391140460968, 0.02781294286251068, 0.0, 0.5, 0.7793821096420288, 0.576500415802002, 0.7187390923500061, 0.7615941166877747, 0.8836677670478821 ],
-            "15": [ 0, 0.1953125, 0.1171875, 0.1953125, 0.1953125, 0.2578125, 0.3125, 0.3125, 0.0, 0.08183643966913223, 0.5, 0.5, 0.5, 0.5, 0.8153818249702454, 0.5, 0.6357473134994507, 0.9065510630607605, 0.8830365538597107 ],
-            "16": [ 0, 0.390625, 0.390625, 0.0, 0.0, 0.390625, 0.5, 0.6133615970611572, 0.6896317005157471, 0.9372848868370056, 0.9431450366973877 ],
-            "17": [ 0, 0.5, 0.0, 0.7000519037246704, 0.42103371024131775, 0.5, 0.5, 0.5, 0.5, 0.7782533168792725, 0.0 ],
-            "18": [ 0, 0.5860363245010376, 0.25999999046325684, 0.5, 0.5, 0.0, 0.0 ],
-            "19": [ 0, 0.4625665545463562, 0.25999999046325684, 0.5, 0.5, 0.08680187165737152, 0.0 ],
-            "20": [ 0, 0.699999988079071, 0.5, 0.0, 0.5, 0.5, 0.0, 0.0, 0.10000000149011612 ],
-            "21": [ 0 ],
-            "22": [ 0, 0.3186793923377991, 0.125, 1.0, 1.0, 0.0, 1.0 ],
+            "7": [ 0, 0.2977551519870758, 0.355379194021225, 0.0, 0.0, 0.0, 0.0, 0.5864197611808777, 0.6022163033485413, 0.640285313129425, 0.7098780870437622, 0.746947169303894, 0.9999998807907104 ],
+            "8": [ 0, 0.0, 0.27856317162513733, 0.09347443282604218, 0.11859293282032013, 0.5878983736038208, 0.07264109700918198, 0.14296068251132965, 0.0, 0.15867504477500916, 0.5326278805732727, 0.5, 0.5, 0.5, 0.7794189453125, 0.5, 0.7998236417770386, 0.5, 0.9999998807907104 ],
+            "9": [ 0, 0.0, 0.4934959411621094, 0.12083326280117035, 0.5, 0.11368861049413681, 0.0 ],
+            "10": [ 0, 0.203125, 1.0, 0.5, 0.19244015216827393, 0.327160507440567, 1.0 ],
+            "11": [ 0, 0.5563380122184753, 0.0, 0.0, 0.06437389552593231, 0.43957236409187317, 0.360190212726593, 1.0, 0.8036245703697205, 0.9999998807907104, 0.008080808445811272, 0.5, 0.30000001192092896, 0.5298925042152405 ],
+            "12": [ 0, 0.6090846061706543, 0.6337178945541382, 0.5, 0.5, 0.21348384022712708, 0.0 ],
+            "13": [ 0, 1.0, 0.8281342387199402, 0.5265754461288452, 0.3550505042076111, 0.2596478760242462, 0.34484171867370605, 0.2622184455394745, 0.125, 0.5, 0.5, 0.5, 0.0, 0.09393145889043808, 0.4200389087200165, 0.20000000298023224, 0.0, 1.0, 0.5, 0.6471701264381409, 0.0, 0.30000001192092896 ],
+            "14": [ 0, 0.5600000023841858, 0.5, 0.0, 0.125, 0.6000000238418579, 0.0, 0.0, 0.03125, 0.0, 0.0 ],
+            "15": [ 0, 0.11824864894151688, 0.125, 1.0, 1.0, 0.0, 1.0 ],
+            "16": [ 0, 0.2210526317358017, 0.5, 0.0, 1.0, 0.20000000298023224, 0.4964202046394348, 0.0, 0.5, 0.0, 0.4503486752510071 ],
+            "17": [ 0 ],
+            "18": [ 0 ],
+            "19": [ 0 ],
+            "20": [ 0, 0.162222221493721, 0.0, 0.671875, 0.0, 0.10000000149011612 ],
+            "21": [ 0, 0.0, 0.0 ],
+            "22": [ 0 ],
             "23": [ 0 ],
-            "24": [ 0 ],
-            "25": [ 0 ],
-            "26": [ 0, 0.0787210613489151, 0.0, 0.0, 0.9800000190734863, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.7870000004768372, 0.0, 0.0 ],
+            "24": [ 0, 0.162222221493721, 0.0, 0.37671560049057007, 0.0, 0.10000000149011612 ],
+            "25": [ 0, 0.25661376118659973, 0.7154708504676819, 0.019999999552965164, 0.019999999552965164, 0.5, 0.30000001192092896, 0.0, 0.9999998807907104, 0.5407407283782959, 0.20000000298023224, 0.0, 1.0, 0.5, 0.0, 0.75, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.30000001192092896 ],
+            "26": [ 0 ],
             "27": [ 0, 0.0 ],
-            "28": [ 0 ],
-            "29": [ 0, 0.11322347819805145, 0.9367204904556274, 0.019999999552965164, 0.019999999552965164, 0.5, 0.30000001192092896, 0.009999999776482582, 0.6029784083366394, 0.3606060743331909, 0.20000000298023224, 0.0, 1.0, 0.5, 0.0, 0.75, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.30000001192092896 ],
-            "30": [ 0, 0.48200371861457825, 0.25, 0.42048031091690063, 1.0, 0.5, 0.6230387687683105, 0.3810649514198303, 0.0, 0.5, 1.0, 1.0, 0.2454545646905899, 0.3799999952316284, 0.5905388593673706, 0.0, 0.3333333432674408, 0.0416666679084301, 0.0 ]
+            "28": [ 0, 0.699999988079071, 0.5, 0.0, 0.5, 0.5, 0.0, 0.0, 0.10000000149011612 ],
+            "29": [ 0 ],
+            "30": [ 0, 0.0, 0.5, 0.5, 1.0, 1.0, 0.0, 0.0 ],
+            "31": [ 0, 0.22219236195087433, 0.25, 0.42048031091690063, 1.0, 0.5, 0.6230387687683105, 0.3810649514198303, 0.0, 0.5, 1.0, 1.0, 0.2454545646905899, 0.3799999952316284, 0.5905388593673706, 0.0, 0.3333333432674408, 0.0416666679084301, 0.0 ],
+            "32": [ 0 ],
+            "33": [ 0, 0.0, 0.0 ],
+            "34": [ 0, 0.5567582845687866, 0.3875698447227478, 0.5, 0.5, 0.10981880873441696, 0.0 ],
+            "35": [ 0, 0.5600000023841858, 0.5, 0.0, 0.0, 0.25, 0.0, 0.0, 0.03125, 0.25, 0.0 ],
+            "36": [ 0, 0.0, 0.0, 0.25, 0.20000000298023224, 0.0, 1.0, 0.5, 0.15000000596046448, 0.0, 0.0, 1.0, 0.30000001192092896 ],
+            "37": [ 0 ]
         }
     }
 }

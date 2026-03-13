@@ -1,0 +1,63 @@
+{
+    "midi.clock.ratios" : {
+        "patcher" : "midi.clock.ratios",
+        "type" : "note",
+        "block_ui_patcher" : "blank.ui",
+        "help_text" : "Measures time between incoming trigger events and derives a new event stream using musical clock divide/multiply ratios on one knob.££Ratios below 1 act as dividers, ratios above 1 insert multiplied pulses. Transition length smooths ratio changes over several incoming ticks. Velocity controls let you morph accent shape, push curve depth from subtle to extreme, and invert the curve direction.",
+        "synonyms" : ["divider", "multiplier", "clock divider", "clock multiplier"],
+        "max_polyphony" : 0,
+        "connections" : {
+            "in" : {
+                "midi" : [ "clock in", "resync" ]
+            },
+            "out" : {
+                "midi" : [ "clock out" ]
+            }
+        },
+        "groups" : [
+            {
+                "contains" : [0, 1, 2, 3, 4]
+            }
+        ],
+        "panel" : {
+            "parameters" : [0, 4, 1, 2, 3]
+        },
+        "parameters" : [
+            {
+                "name" : "ratio",
+                "type" : "menu_i",
+                "values" : ["1/8", "1/6", "1/4", "1/3", "1/2", "2/3", "3/4", "1", "4/3", "3/2", "2", "9/4", "7/3", "5/2", "8/3", "11/4", "3", "13/4", "10/3", "7/2", "11/3", "15/4", "4", "6", "8"],
+                "wrap" : 0,
+                "default" : 0.2916666667
+            },
+            {
+                "name" : "velocity shape",
+                "type" : "float",
+                "values" : ["uni", 0, 1, "lin"],
+                "wrap" : 0,
+                "default" : 0.5
+            },
+            {
+                "name" : "velocity depth",
+                "type" : "float",
+                "values" : ["uni", 0, 1, "lin"],
+                "wrap" : 0,
+                "default" : 0.35
+            },
+            {
+                "name" : "invert velocity curve",
+                "type" : "menu_b",
+                "values" : ["off", "on"],
+                "wrap" : 0,
+                "default" : 0
+            },
+            {
+                "name" : "transition length",
+                "type" : "float",
+                "values" : ["uni", 0, 1, "lin"],
+                "wrap" : 0,
+                "default" : 0
+            }
+        ]
+    }
+}

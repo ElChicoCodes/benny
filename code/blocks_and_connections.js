@@ -345,13 +345,14 @@ function new_block(block_name,x,y, no_smart_stuff){ //final param =1 if pasting 
 			new_connection.replace("to::input::type","audio");
 			new_connection.replace("from::output::number",0);
 			new_connection.replace("from::output::type","audio");
-			connections.append("connections",new_connection);
-			if(check_for_connection_overlap(new_connection)){
-				connections.remove("connections["+new_connection+"]");
-				error("\ntried to add a connection that seems to already exist");
-			}else{
-				make_connection(connections.getsize("connections")-1,0);
-			}
+				var new_connection_index = connections.getsize("connections");
+				connections.append("connections",new_connection);
+				if(check_for_connection_overlap(new_connection_index)){
+					connections.remove("connections["+new_connection_index+"]");
+					error("\ntried to add a connection that seems to already exist");
+				}else{
+					make_connection(new_connection_index,0);
+				}
 			if(bottombar.block==bus){
 				bottombar.right = -1;
 				setup_bottom_bar(bus);
@@ -2644,7 +2645,7 @@ function check_for_connection_overlap(n){
 	var f_v = connections.get("connections["+n+"]::from::voice");
 	if(!Array.isArray(f_v)) f_v = [f_v];
 	var t_v = connections.get("connections["+n+"]::to::voice");
-	if(!Array.isArray(t_v)) f_v = [t_v];
+	if(!Array.isArray(t_v)) t_v = [t_v];
 	var f_i = connections.get("connections["+n+"]::from::output::number");
 	var t_i = connections.get("connections["+n+"]::to::input::number");
 	for(var ti=0;ti<l;ti++){

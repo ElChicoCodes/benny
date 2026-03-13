@@ -1,0 +1,254 @@
+{
+  "source.ensemble.osc": {
+    "patcher": "source.ensemble.osc",
+    "type": "audio",
+    "block_ui_patcher": "blank.ui",
+    "help_text": "Ensemble oscillator wrapper for osc.enosc. MIDI notes drive pitch via proper 1V/oct conversion; supports direct pitch and Cross FM audio-rate CV inputs.",
+    "max_polyphony": 0,
+    "upsample": 1,
+    "subvoices": 2,
+    "connections": {
+      "in": {
+        "audio": [
+          "pitch cv",
+          "cross fm cv"
+        ],
+        "midi": [
+          "notes"
+        ]
+      },
+      "out": {
+        "audio": [
+          "out"
+        ],
+        "midi": [
+          "through"
+        ]
+      }
+    },
+    "groups": [
+      {
+        "contains": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "height": 2,
+        "colour": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "contains": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "height": 2,
+        "colour": [
+          190,
+          190,
+          190
+        ]
+      }
+    ],
+    "panel": {
+      "parameters": [
+        0,
+        1
+      ]
+    },
+    "parameters": [
+      {
+        "name": "root",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.5
+      },
+      {
+        "name": "scale",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.453125
+      },
+      {
+        "name": "balance",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.5
+      },
+      {
+        "name": "spread",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.375
+      },
+      {
+        "name": "twist",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "warp",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "Cross FM",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "Scale mode",
+        "type": "menu_l",
+        "force_label": 1,
+        "values": [
+          "free",
+          "oct",
+          "12tet"
+        ],
+        "wrap": 1,
+        "default": 1.0
+      },
+      {
+        "name": "FM mode",
+        "type": "menu_l",
+        "force_label": 1,
+        "values": [
+          "down",
+          "all",
+          "up"
+        ],
+        "wrap": 1,
+        "default": 1.0
+      },
+      {
+        "name": "Warp mode",
+        "type": "menu_l",
+        "force_label": 1,
+        "values": [
+          "segment",
+          "cheb",
+          "fold"
+        ],
+        "wrap": 1,
+        "default": 1.0
+      },
+      {
+        "name": "detune",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "Fine Tune",
+        "type": "float",
+        "values": [
+          "uni",
+          0,
+          1,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.5
+      },
+      {
+        "name": "Twist mode",
+        "type": "menu_l",
+        "force_label": 1,
+        "values": [
+          "chrush",
+          "pulsar",
+          "ramp"
+        ],
+        "wrap": 1,
+        "default": 0.5
+      },
+      {
+        "name": "# Oscs",
+        "type": "menu_i",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "wrap": 0,
+        "default": 1.0
+      }
+    ]
+  }
+}

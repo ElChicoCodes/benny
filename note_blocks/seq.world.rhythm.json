@@ -1,0 +1,894 @@
+{
+  "seq.world.rhythm": {
+    "patcher": "seq.world.rhythm",
+    "type": "note",
+    "block_ui_patcher": "blank.ui",
+    "help_text": "World Rhythm generator block. Clock/reset/generate/fill/tap can be triggered by MIDI inputs. Outputs 8 MIDI trigger lanes (2 per role). Layer amount knobs act as intensity and disable that layer when set to 0.",
+    "max_polyphony": 1,
+    "connections": {
+      "in": {
+        "midi": [
+          "midi_clock_in",
+          "reset",
+          "generate",
+          "fill_now",
+          "tap_feel"
+        ],
+        "default": 0
+      },
+      "out": {
+        "midi": [
+          "timeline v1",
+          "timeline v2",
+          "foundation v1",
+          "foundation v2",
+          "groove v1",
+          "groove v2",
+          "lead v1",
+          "lead v2"
+        ],
+        "default": 0
+      }
+    },
+    "groups": [
+      {
+        "contains": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "contains": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "contains": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "contains": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      {
+        "contains": [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "colour": 11
+      },
+      {
+        "contains": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "colour": 6
+      },
+      {
+        "contains": [
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        "colour": 9
+      },
+      {
+        "contains": [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "colour": 13
+      },
+      {
+        "contains": [
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61
+        ],
+        "colour": 5
+      }
+    ],
+    "parameters": [
+      {
+        "name": "style",
+        "type": "menu_i",
+        "values": [
+          "West African",
+          "Afro-Cuban",
+          "Brazilian",
+          "Balkan",
+          "Indian",
+          "Gamelan",
+          "Jazz",
+          "Electronic",
+          "Breakbeat",
+          "Techno"
+        ],
+        "wrap": 1,
+        "default": 0
+      },
+      {
+        "name": "bars",
+        "type": "int",
+        "values": [
+          "uni",
+          1,
+          64,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "seed",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          999999,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 1e-06
+      },
+      {
+        "name": "generate",
+        "type": "button",
+        "default": 0,
+        "error_scale": 0,
+        "wrap": 0,
+        "values": [
+          "global",
+          "generate",
+          "generate"
+        ]
+      },
+      {
+        "name": "fill_beats",
+        "type": "int",
+        "values": [
+          "uni",
+          1,
+          16,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.2
+      },
+      {
+        "name": "fill_intensity",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.7
+      },
+      {
+        "name": "fill_now",
+        "type": "button",
+        "default": 0,
+        "error_scale": 0,
+        "wrap": 0,
+        "values": [
+          "global",
+          "fill_now",
+          "fill_now"
+        ]
+      },
+      {
+        "name": "tap_amount",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "tap_gate_ms",
+        "type": "int",
+        "values": [
+          "uni",
+          10,
+          300,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.2413793103448276
+      },
+      {
+        "name": "tap_feel",
+        "type": "button",
+        "default": 0,
+        "error_scale": 0,
+        "wrap": 0,
+        "values": [
+          "global",
+          "tap_feel",
+          "tap_feel"
+        ]
+      },
+      {
+        "name": "reset",
+        "type": "button",
+        "default": 0,
+        "error_scale": 0,
+        "wrap": 0,
+        "values": [
+          "global",
+          "reset",
+          "reset"
+        ]
+      },
+      {
+        "name": "velocity_scale",
+        "type": "float",
+        "values": [
+          "uni",
+          0.1,
+          2.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.4736842105263158
+      },
+      {
+        "name": "meter_amount",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "meter_index",
+        "type": "menu_i",
+        "values": [
+          "4/4",
+          "7/8",
+          "9/8",
+          "11/8"
+        ],
+        "wrap": 0,
+        "default": 0
+      },
+      {
+        "name": "clave_amount",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "clave_index",
+        "type": "menu_i",
+        "values": [
+          "son_3_2",
+          "son_2_3",
+          "rumba_3_2",
+          "rumba_2_3"
+        ],
+        "wrap": 0,
+        "default": 0
+      },
+      {
+        "name": "asymm_amount",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "asymm_index",
+        "type": "menu_i",
+        "values": [
+          "random",
+          "2+2+3",
+          "3+2+2",
+          "3+3+2",
+          "2+3+2",
+          "2+3+3"
+        ],
+        "wrap": 0,
+        "default": 0
+      },
+      {
+        "name": "euclid_amount",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "restlayer_amount",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "irama_amount",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.0
+      },
+      {
+        "name": "irama_level",
+        "type": "menu_i",
+        "values": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "wrap": 0,
+        "default": 0
+      },
+      {
+        "name": "timeline_length",
+        "type": "int",
+        "values": [
+          "uni",
+          1,
+          64,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.23809523809523808
+      },
+      {
+        "name": "timeline_density",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.55
+      },
+      {
+        "name": "timeline_variation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.25
+      },
+      {
+        "name": "timeline_rest",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.1
+      },
+      {
+        "name": "timeline_fillprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.15
+      },
+      {
+        "name": "timeline_fillintensity",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.7
+      },
+      {
+        "name": "timeline_callprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.1
+      },
+      {
+        "name": "timeline_articulation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.1
+      },
+      {
+        "name": "foundation_length",
+        "type": "int",
+        "values": [
+          "uni",
+          1,
+          64,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.23809523809523808
+      },
+      {
+        "name": "foundation_density",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.25
+      },
+      {
+        "name": "foundation_variation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.2
+      },
+      {
+        "name": "foundation_rest",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.15
+      },
+      {
+        "name": "foundation_fillprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.2
+      },
+      {
+        "name": "foundation_fillintensity",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.75
+      },
+      {
+        "name": "foundation_callprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.1
+      },
+      {
+        "name": "foundation_articulation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.1
+      },
+      {
+        "name": "groove_length",
+        "type": "int",
+        "values": [
+          "uni",
+          1,
+          64,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.23809523809523808
+      },
+      {
+        "name": "groove_density",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.5
+      },
+      {
+        "name": "groove_variation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.35
+      },
+      {
+        "name": "groove_rest",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.1
+      },
+      {
+        "name": "groove_fillprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.3
+      },
+      {
+        "name": "groove_fillintensity",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.8
+      },
+      {
+        "name": "groove_callprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.15
+      },
+      {
+        "name": "groove_articulation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.2
+      },
+      {
+        "name": "lead_length",
+        "type": "int",
+        "values": [
+          "uni",
+          1,
+          64,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.23809523809523808
+      },
+      {
+        "name": "lead_density",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.35
+      },
+      {
+        "name": "lead_variation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.5
+      },
+      {
+        "name": "lead_rest",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.25
+      },
+      {
+        "name": "lead_fillprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.25
+      },
+      {
+        "name": "lead_fillintensity",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.85
+      },
+      {
+        "name": "lead_callprob",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.25
+      },
+      {
+        "name": "lead_articulation",
+        "type": "float",
+        "values": [
+          "uni",
+          0.0,
+          1.0,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.3
+      },
+      {
+        "name": "timeline_v1_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.28346456692913385
+      },
+      {
+        "name": "timeline_v2_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.2992125984251969
+      },
+      {
+        "name": "foundation_v1_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.31496062992125984
+      },
+      {
+        "name": "foundation_v2_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.33070866141732286
+      },
+      {
+        "name": "groove_v1_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.3464566929133858
+      },
+      {
+        "name": "groove_v2_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.36220472440944884
+      },
+      {
+        "name": "lead_v1_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.3779527559055118
+      },
+      {
+        "name": "lead_v2_note",
+        "type": "int",
+        "values": [
+          "uni",
+          0,
+          127,
+          "lin"
+        ],
+        "wrap": 0,
+        "default": 0.3937007874015748
+      }
+    ]
+  }
+}

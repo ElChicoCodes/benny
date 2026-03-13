@@ -1,0 +1,37 @@
+{
+  "midi.qwerty": {
+    "patcher": "midi.qwerty",
+    "type": "note",
+    "block_ui_patcher": "blank.ui",
+    "help_text": "Splits Caps Lock qwerty-midi keys into dedicated outputs, one output per mapped letter key.",
+    "max_polyphony": 1,
+    "connections": {
+      "out": {
+        "midi": [
+          "Z",
+          "S",
+          "X",
+          "D",
+          "C",
+          "V",
+          "G",
+          "B",
+          "H",
+          "N",
+          "J",
+          "M",
+          "Q",
+          "W",
+          "E",
+          "R",
+          "T",
+          "Y",
+          "U",
+          "I",
+          "O",
+          "P"
+        ]
+      }
+    }
+  }
+}
