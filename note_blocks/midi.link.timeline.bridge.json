@@ -1,0 +1,70 @@
+{
+    "midi.link.timeline.bridge" : {
+        "patcher" : "midi.link.timeline.bridge",
+        "type" : "note",
+        "block_ui_patcher" : "blank.ui",
+        "help_text" : "Bridges incoming trigger ticks into Ableton Link beat-time mapping through abl.link. Feed lane 0 with ticks and lane 1 with reset triggers. Tick mode chooses request (cooperative) or force (master) mapping. Offset shifts local Link timing in milliseconds. Tempo follow controls how fast tempo adapts when tick interval changes.",
+        "synonyms" : ["link bridge", "link tick bridge", "link timeline"],
+        "max_polyphony" : 0,
+        "connections" : {
+            "in" : {
+                "midi" : [ "tick in", "reset" ]
+            },
+            "out" : {
+                "midi" : [ "passthrough" ]
+            }
+        },
+        "groups" : [
+            {
+                "contains" : [0, 1, 2, 3, 4, 5]
+            }
+        ],
+        "panel" : {
+            "parameters" : [0, 1, 2, 3, 4, 5]
+        },
+        "parameters" : [
+            {
+                "name" : "tick size",
+                "type" : "menu_i",
+                "values" : ["1/24", "1/16", "1/12", "1/8", "1/6", "1/4", "1/2", "1"],
+                "wrap" : 0,
+                "default" : 0.7142857143
+            },
+            {
+                "name" : "tick mode",
+                "type" : "menu_b",
+                "values" : ["request", "force"],
+                "wrap" : 0,
+                "default" : 1
+            },
+            {
+                "name" : "send every",
+                "type" : "int",
+                "values" : ["uni", 1, 24, "lin"],
+                "wrap" : 0,
+                "default" : 0
+            },
+            {
+                "name" : "start beat",
+                "type" : "float",
+                "values" : ["uni", 0, 256, "lin"],
+                "wrap" : 0,
+                "default" : 0
+            },
+            {
+                "name" : "offset ms",
+                "type" : "float",
+                "values" : ["bi", -200, 200, "lin"],
+                "wrap" : 0,
+                "default" : 0.5
+            },
+            {
+                "name" : "tempo follow",
+                "type" : "float",
+                "values" : ["uni", 0, 1, "lin"],
+                "wrap" : 0,
+                "default" : 0.2
+            }
+        ]
+    }
+}

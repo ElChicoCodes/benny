@@ -73,8 +73,10 @@ function toggle_ableton_link(){
 	set_ableton_link_enable(1 - ext_sync.link_enabled);
 }
 function set_ableton_link_enable(l){
-	ext_sync.link_enabled = l;
-	messnamed("link_enable",ext_sync.link_enabled);
+	// Legacy global_transport Link path is intentionally disabled.
+	// Link is driven only by midi.link.timeline.bridge -> abl.link.
+	ext_sync.link_enabled = 0;
+	messnamed("link_enable",0);
 	redraw_flag.flag |= 2;
 }
 function clock_link_button(){
